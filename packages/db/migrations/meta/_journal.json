@@ -15,6 +15,13 @@
       "when": 1786547093982,
       "tag": "0001_ledger_guarantees",
       "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1786553321223,
+      "tag": "0002_journal_requires_lines",
+      "breakpoints": true
     }
   ]
 }

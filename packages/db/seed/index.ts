@@ -15,7 +15,8 @@ import { productSeeds } from './products';
 import { providerSeeds } from './providers';
 import { buildFiscalPeriods } from './fiscal-periods';
 
-const FISCAL_YEAR = process.env.SEED_FISCAL_YEAR ?? '2082/83';
+// 2083/84 runs 17 Jul 2026 – 16 Jul 2027; it is the year in progress.
+const FISCAL_YEAR = process.env.SEED_FISCAL_YEAR ?? '2083/84';
 
 async function main(): Promise<void> {
   // Headers before leaves: parent_code is a foreign key onto accounts itself.

@@ -127,26 +127,12 @@ describe('guarantee 1 — a journal cannot commit unbalanced', () => {
   });
 
   /**
-   * KNOWN GAP — docs/DATABASE.md §2.1 and docs/schema.sql both state the
-   * database rejects a journal with no lines. It does not.
-   *
-   * `assert_journal_balanced()` contains the check, but its trigger is
-   * `AFTER INSERT ON ledger_entries`. A journal_entries row with zero lines
-   * never inserts a ledger row, so the trigger never fires and the journal
-   * commits. The check only ever runs when at least one line exists, and in
-   * that case it is unreachable.
-   *
-   * Not fixed here: repairing it means adding a constraint trigger on
-   * journal_entries, which is a schema decision on the money path — the
-   * founder decides (docs/RULES.md §1, §3). `postJournal()` rejects an empty
-   * line list in application code, so no code path in this repository can
-   * create one today.
-   *
-   * `test.fails` keeps CI honest: it passes while the gap exists and starts
-   * failing the moment the database enforces the rule, at which point delete
-   * this wrapper.
+   * Enforced by `journal_entries_have_lines`, a deferred constraint trigger
+   * added in migration 0002. The check in `assert_journal_balanced()` cannot
+   * do this on its own: it fires AFTER INSERT ON ledger_entries, and a journal
+   * with no lines never inserts one.
    */
-  test.fails('a journal with no lines is rejected', async () => {
+  test('a journal with no lines is rejected', async () => {
     await expect(
       db.transaction(async (tx) => {
         await insertJournal(tx as typeof db, openPeriodId);

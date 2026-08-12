@@ -5,11 +5,16 @@
  * Gregorian months and BS month lengths vary year to year (docs/MEMORY.md,
  * decisions). A computed calendar would silently misfile revenue.
  *
- * BLOCKED — two founder answers are required before this can be filled in
- * (docs/MEMORY.md, blocked items 1–2):
- *   * the go-live date, which decides which BS year to seed;
- *   * the AD boundary dates for that year's twelve BS months, taken from an
- *     authoritative Nepali calendar, not from memory.
+ * The table below is generated, never hand-typed:
+ *
+ *   pnpm --filter @softmato/db gen:bs-calendar 2084/85
+ *
+ * `scripts/gen-bs-calendar.ts` derives the boundaries from the published BS
+ * calendar tables in `nepali-date-converter` and refuses to emit anything whose
+ * months are not contiguous, 29–32 days each, and 365 or 366 days in total.
+ * Paste its output here and check it once by eye against a patro. Do not call
+ * the converter at seed time — a library upgrade must not be able to move a
+ * period boundary under posted history.
  *
  * Boundaries are Asia/Kathmandu midnight (UTC+05:45), stored as timestamptz.
  * `startsAt` is inclusive, `endsAt` is the exclusive start of the next month —
@@ -33,13 +38,26 @@ export interface BsMonthBoundary {
 }
 
 /**
- * Keyed by fiscal year, e.g. '2082/83'.
- *
- * Intentionally empty. Fill in from a verified BS calendar once the founder
- * confirms the go-live year; `pnpm db:seed` fails loudly until then rather
- * than inventing dates.
+ * Keyed by fiscal year, e.g. '2083/84'. Add the next year before Ashadh ends —
+ * a journal dated past the last boundary has no period to resolve into and
+ * `postJournal()` will refuse it.
  */
-export const bsCalendar: Record<string, BsMonthBoundary[]> = {};
+export const bsCalendar: Record<string, BsMonthBoundary[]> = {
+  '2083/84': [
+    { periodNo: 1, startsOn: '2026-07-17', endsOn: '2026-08-17' }, // Shrawan 2083
+    { periodNo: 2, startsOn: '2026-08-17', endsOn: '2026-09-17' }, // Bhadra 2083
+    { periodNo: 3, startsOn: '2026-09-17', endsOn: '2026-10-18' }, // Ashwin 2083
+    { periodNo: 4, startsOn: '2026-10-18', endsOn: '2026-11-17' }, // Kartik 2083
+    { periodNo: 5, startsOn: '2026-11-17', endsOn: '2026-12-16' }, // Mangsir 2083
+    { periodNo: 6, startsOn: '2026-12-16', endsOn: '2027-01-15' }, // Poush 2083
+    { periodNo: 7, startsOn: '2027-01-15', endsOn: '2027-02-13' }, // Magh 2083
+    { periodNo: 8, startsOn: '2027-02-13', endsOn: '2027-03-15' }, // Falgun 2083
+    { periodNo: 9, startsOn: '2027-03-15', endsOn: '2027-04-14' }, // Chaitra 2083
+    { periodNo: 10, startsOn: '2027-04-14', endsOn: '2027-05-15' }, // Baisakh 2084
+    { periodNo: 11, startsOn: '2027-05-15', endsOn: '2027-06-16' }, // Jestha 2084
+    { periodNo: 12, startsOn: '2027-06-16', endsOn: '2027-07-17' }, // Ashadh 2084
+  ],
+};
 
 export function buildFiscalPeriods(fiscalYear: string): FiscalPeriodSeed[] {
   const months = bsCalendar[fiscalYear];
@@ -47,9 +65,9 @@ export function buildFiscalPeriods(fiscalYear: string): FiscalPeriodSeed[] {
   if (!months || months.length !== 12) {
     throw new Error(
       `No verified BS calendar for fiscal year ${fiscalYear}. ` +
-        'Add its twelve month boundaries to bsCalendar in ' +
-        'packages/db/seed/fiscal-periods.ts. See docs/MEMORY.md (blocked on ' +
-        'the founder: go-live date). Do not guess these dates.',
+        'Generate it with `pnpm --filter @softmato/db gen:bs-calendar ' +
+        `${fiscalYear}\` and paste the twelve boundaries into bsCalendar in ` +
+        'packages/db/seed/fiscal-periods.ts. Do not type these dates by hand.',
     );
   }
 
