@@ -1,0 +1,79 @@
+name: CI
+
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  # Ephemeral, generated per run. Never a real credential — a preview or CI
+  # environment must not hold live secrets (docs/ENVIRONMENT.md §4).
+  DATABASE_URL: postgresql://postgres:softmato@localhost:5432/softmato_test
+  AUTH_SECRET: ci-only-not-a-real-secret-value-32chars
+  CRON_SECRET: ci-only-cron-secret-value
+  ENCRYPTION_KEY: '0000000000000000000000000000000000000000000000000000000000000000'
+  APP_ENV: local
+  PAYMENT_MODE: sandbox
+  NEXT_PUBLIC_APP_URL: http://localhost:3000
+  NEXT_PUBLIC_CHECKOUT_URL: http://localhost:3000
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+
+    services:
+      postgres:
+        # Matches the Neon major. See docs/MEMORY.md, deviations.
+        image: postgres:18-alpine
+        env:
+          POSTGRES_PASSWORD: softmato
+          POSTGRES_DB: softmato_test
+        ports: ['5432:5432']
+        options: >-
+          --health-cmd "pg_isready -U postgres -d softmato_test"
+          --health-interval 5s
+          --health-timeout 5s
+          --health-retries 10
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 9.15.4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+
+      - run: pnpm install --frozen-lockfile
+
+      - name: Typecheck
+        run: pnpm run typecheck
+
+      - name: Lint
+        run: pnpm run lint
+
+      - name: Apply migrations
+        run: pnpm db:migrate
+
+      - name: Migrate check — schema and migrations must not have drifted
+        run: pnpm --filter @softmato/db exec drizzle-kit check
+
+      - name: Test
+        run: pnpm run test
+
+      - name: No secret may reach a client bundle
+        run: |
+          pnpm --filter @softmato/web build
+          if grep -rEl 'AUTH_SECRET|CRON_SECRET|ENCRYPTION_KEY|SECRET_KEY' \
+               apps/web/.next/static 2>/dev/null; then
+            echo "::error::A secret name appears in the client bundle"
+            exit 1
+          fi
+          echo "Client bundle is clean."

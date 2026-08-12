@@ -1,0 +1,16 @@
+{
+  "name": "@softmato/sdk",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "main": "./index.ts",
+  "types": "./index.ts",
+  "exports": { ".": "./index.ts" },
+  "scripts": {
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@softmato/config": "workspace:*",
+    "typescript": "^5.7.3"
+  }
+}

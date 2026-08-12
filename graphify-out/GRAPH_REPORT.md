@@ -9,6 +9,11 @@
 - Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS · INFERRED: 2 edges (avg confidence: 0.8)
 - Token cost: 0 input · 0 output
 
+## Graph Freshness
+- Built from commit: `normalized-for-git`
+- Commit-specific freshness metadata is normalized for stable Git diffs.
+- Run `graphify update .` after code changes (no API cost).
+
 ## Community Hubs (Navigation)
 - [[_COMMUNITY_Community 0|Community 0]]
 - [[_COMMUNITY_Community 1|Community 1]]

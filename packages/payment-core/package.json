@@ -1,0 +1,20 @@
+{
+  "name": "@softmato/payment-core",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "main": "./index.ts",
+  "types": "./index.ts",
+  "exports": { ".": "./index.ts" },
+  "scripts": {
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@softmato/db": "workspace:*",
+    "zod": "^3.24.1"
+  },
+  "devDependencies": {
+    "@softmato/config": "workspace:*",
+    "typescript": "^5.7.3"
+  }
+}

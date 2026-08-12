@@ -1,0 +1,41 @@
+# Dependencies
+node_modules/
+
+# Build output
+build/
+dist/
+.next/
+.turbo/
+next-env.d.ts
+
+# Logs
+*.log
+
+# Environment files
+.env
+.env.*
+!.env.example
+
+# Tool caches
+.cache/
+coverage/
+
+# OS and editor files
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# Agent-local hook config. These can contain machine-specific paths.
+.codex/
+
+# Keep portable Graphify context tracked for agents.
+!graphify-out/
+!graphify-out/GRAPH_REPORT.md
+!graphify-out/graph.json
+!graphify-out/graph.html
+
+# Ignore local/cache Graphify data.
+graphify-out/cache/
+graphify-out/.graphify_root
+graphify-out/manifest.json
