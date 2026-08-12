@@ -12,7 +12,46 @@ is lost — fill in the rest as you build.
 
 **Phase:** 1 — Foundation, in progress
 **Last session:** 2026-08-12 (session 1)
-**Next action:** Commit and push to trigger CI (acceptance 7). Then Phase 2.
+**Repo:** pushed to `origin/main` (`SiddTheCoder/soft-cuddle`)
+
+**Next action:** confirm the CI run is green (acceptance 7), then Phase 2 —
+but read "Blocked on the founder" first: two Phase 1 answers are still missing
+and one of them stops any real journal being posted.
+
+**Uncommitted at hand-off:** `packages/db/migrations/meta/0001_snapshot.json`
+— corrects the snapshot chain so `drizzle-kit check` passes. CI runs that step,
+so the first run will fail until this is committed.
+
+**Development admin:** `admin@softmato.com` / `12345678`, TOTP enrolled.
+Deliberately weak, local only — `pnpm admin:create` refuses a password under 12
+characters unless `APP_ENV=local`. **This account must never exist in preview or
+production.** Replace it before the first real deployment.
+
+---
+
+## Where the code is
+
+| What | Where |
+|---|---|
+| Ledger primitive | `packages/accounting/post-journal.ts` |
+| Gapless numbering | `packages/accounting/numbering.ts` |
+| Schema (11 modules) | `packages/db/schema/` |
+| The four guarantees | `packages/db/migrations/0001_ledger_guarantees.sql` |
+| Ledger tests | `packages/db/tests/ledger.test.ts` |
+| Auth (argon2id + TOTP) | `apps/web/lib/auth.ts` |
+| Encryption at rest | `apps/web/lib/crypto.core.ts` |
+| Subdomain routing | `apps/web/middleware.ts` |
+| Admin shell | `apps/web/app/(admin)/admin/` |
+
+```bash
+pnpm install && pnpm dev      # localhost:3000, admin.localhost:3000
+pnpm test                     # 23 tests, needs DATABASE_URL
+pnpm db:migrate               # deliberate step, never automatic
+pnpm admin:create -- --email <email> --name <name>   # ADMIN_PASSWORD in env
+```
+
+`.env.local` lives at the repository root (not in `apps/web`) and is loaded by
+`next.config.ts`, both vitest configs, and the `tsx` scripts.
 
 **Development admin:** `admin@softmato.com` / `12345678`, TOTP enrolled.
 Deliberately weak, local only — `pnpm admin:create` refuses a password under 12
@@ -25,7 +64,7 @@ production.** Replace it before the first real deployment.
 
 | Phase | Status | Notes |
 |---|---|---|
-| 1 — Foundation | 🟡 In progress | Everything built. Acceptance 1–6 verified end to end; 7 pending the first CI run (nothing committed yet). |
+| 1 — Foundation | 🟡 In progress | Everything built. Acceptance 1–6 verified end to end; 7 pending confirmation of the first CI run. |
 | 2 — Public site + CMS | ⬜ Not started | |
 | 3 — Payment core + manual QR | ⬜ Not started | |
 | 4 — Khalti | ⬜ Not started | |
@@ -109,6 +148,12 @@ mistake.
   `mode: 'bigint'` regardless — that part is not negotiable.
 - **Drizzle Kit cannot resolve `.js` import specifiers** in schema files. Schema
   modules use extensionless relative imports.
+- **A hand-written migration needs its own snapshot with a correct chain.**
+  Adding `0001_ledger_guarantees.sql` means adding a `meta/0001_snapshot.json`
+  whose `prevId` is the previous snapshot's `id` and whose own `id` is fresh.
+  Copying the previous snapshot verbatim makes `drizzle-kit check` fail with a
+  "collision" error — which CI runs, so it fails the build rather than going
+  unnoticed. Repeat this whenever another hand-written migration is added.
 
 ---
 
