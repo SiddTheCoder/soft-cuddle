@@ -1,11 +1,11 @@
-# Graph Report - company  (2026-08-12)
+# Graph Report - company  (2026-08-14)
 
 ## Corpus Check
-- 83 files · ~38,931 words
+- 83 files · ~39,559 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 564 nodes · 621 edges · 51 communities (44 shown, 7 thin omitted)
+- 567 nodes · 628 edges · 51 communities (44 shown, 7 thin omitted)
 - Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS · INFERRED: 2 edges (avg confidence: 0.8)
 - Token cost: 0 input · 0 output
 
@@ -82,7 +82,7 @@
 
 ### Community 0 - "Community 0"
 Cohesion: 0.06
-Nodes (40): db, Account, accountClass, accounts, normalBalance, Product, productKind, products (+32 more)
+Nodes (39): Account, accountClass, accounts, normalBalance, Product, productKind, products, FiscalPeriod (+31 more)
 
 ### Community 1 - "Community 1"
 Cohesion: 0.06
@@ -137,32 +137,32 @@ Cohesion: 0.13
 Nodes (17): 1. Local setup, 2. Variables, 3. File storage, 4. Environments, 5. Deployment, 6. Cron, 7. Cost, 8. Secrets (+9 more)
 
 ### Community 14 - "Community 14"
+Cohesion: 0.12
+Nodes (17): Blocked on external parties, Blocked on the founder, code:bash (pnpm install && pnpm dev      # localhost:3000, admin.localh), code:markdown (### Session N — YYYY-MM-DD), Current status, Decisions made, Deviations from the docs, Memory (+9 more)
+
+### Community 15 - "Community 15"
 Cohesion: 0.22
 Nodes (14): decryptSecret(), encryptSecret(), key(), timingSafeEquals(), createTotpEnrolment(), TotpEnrolment, totpFor(), verifyTotp() (+6 more)
 
-### Community 15 - "Community 15"
+### Community 16 - "Community 16"
 Cohesion: 0.12
 Nodes (16): `apps/web`, code:block1 (softmato/), code:block2 (apps/web/), code:block3 (db/), code:block4 (payment-core/), code:block5 (accounting/), code:block6 (sdk/), code:block7 (ui/) (+8 more)
-
-### Community 16 - "Community 16"
-Cohesion: 0.13
-Nodes (15): Blocked on external parties, Blocked on the founder, code:bash (pnpm install && pnpm dev      # localhost:3000, admin.localh), code:markdown (### Session N — YYYY-MM-DD), Current status, Decisions made, Deviations from the docs, Memory (+7 more)
 
 ### Community 17 - "Community 17"
 Cohesion: 0.14
 Nodes (13): 1. When to stop and ask, 2. Money — absolute rules, 3. Never weaken a constraint, 4. Libraries, 5. Error handling, 6. Security, 7. Wrong even if it works, 8. Working method (+5 more)
 
 ### Community 18 - "Community 18"
+Cohesion: 0.2
+Nodes (6): closeDb(), db, DbTx, isNeon, teardown(), result
+
+### Community 19 - "Community 19"
 Cohesion: 0.17
 Nodes (11): Ongoing after each phase, Phase 1 — Foundation, Phase 2 — Public site + CMS, Phase 3 — Payment core + manual QR, Phase 4 — Khalti, Phase 5 — eSewa, Phase 6 — Invoicing + subscriptions, Phase 7 — Accounting depth (+3 more)
 
-### Community 19 - "Community 19"
-Cohesion: 0.2
-Nodes (5): closeDb(), DbTx, isNeon, teardown(), result
-
 ### Community 20 - "Community 20"
-Cohesion: 0.22
-Nodes (8): Added, Changelog, code:markdown (## [Phase N] — YYYY-MM-DD), Entry template, Migration, Notes, Security, [Unreleased]
+Cohesion: 0.29
+Nodes (9): Added, Changelog, code:markdown (## [Phase N] — YYYY-MM-DD), Entry template, Migration, Notes, [Phase 1] — 2026-08-14, Security (+1 more)
 
 ### Community 21 - "Community 21"
 Cohesion: 0.33
@@ -205,7 +205,7 @@ Cohesion: 0.5
 Nodes (3): envPath, [, key, rawValue], match
 
 ## Knowledge Gaps
-- **303 isolated node(s):** `eslintConfig`, `Surface`, `SUBDOMAIN_SURFACE`, `SURFACE_PREFIX`, `config` (+298 more)
+- **301 isolated node(s):** `eslintConfig`, `Surface`, `SUBDOMAIN_SURFACE`, `SURFACE_PREFIX`, `config` (+296 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **7 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
@@ -213,13 +213,13 @@ Nodes (3): envPath, [, key, rawValue], match
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `9. Posting rules` connect `Community 7` to `Community 11`?**
-  _High betweenness centrality (0.004) - this node is a cross-community bridge._
+  _High betweenness centrality (0.003) - this node is a cross-community bridge._
 - **Why does `Softmato Technology Pvt Ltd — Chart of Accounts & Posting Rules` connect `Community 11` to `Community 7`?**
   _High betweenness centrality (0.003) - this node is a cross-community bridge._
 - **Why does `products` connect `Community 0` to `Community 1`?**
   _High betweenness centrality (0.003) - this node is a cross-community bridge._
 - **What connects `eslintConfig`, `Surface`, `SUBDOMAIN_SURFACE` to the rest of the system?**
-  _303 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _301 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Community 0` be split into smaller, more focused modules?**
   _Cohesion score 0.06 - nodes in this community are weakly interconnected._
 - **Should `Community 1` be split into smaller, more focused modules?**

@@ -3811,6 +3811,16 @@
       "relation": "contains",
       "source": "docs_changelog_changelog",
       "source_file": "docs/CHANGELOG.md",
+      "source_location": "L19",
+      "target": "docs_changelog_phase_1_2026_08_14",
+      "weight": 1.0
+    },
+    {
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "relation": "contains",
+      "source": "docs_changelog_changelog",
+      "source_file": "docs/CHANGELOG.md",
       "source_location": "L30",
       "target": "docs_changelog_entry_template",
       "weight": 1.0
@@ -3852,6 +3862,46 @@
       "source": "docs_changelog_unreleased",
       "source_file": "docs/CHANGELOG.md",
       "source_location": "L23",
+      "target": "docs_changelog_notes",
+      "weight": 1.0
+    },
+    {
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "relation": "contains",
+      "source": "docs_changelog_phase_1_2026_08_14",
+      "source_file": "docs/CHANGELOG.md",
+      "source_location": "L23",
+      "target": "docs_changelog_added",
+      "weight": 1.0
+    },
+    {
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "relation": "contains",
+      "source": "docs_changelog_phase_1_2026_08_14",
+      "source_file": "docs/CHANGELOG.md",
+      "source_location": "L41",
+      "target": "docs_changelog_security",
+      "weight": 1.0
+    },
+    {
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "relation": "contains",
+      "source": "docs_changelog_phase_1_2026_08_14",
+      "source_file": "docs/CHANGELOG.md",
+      "source_location": "L61",
+      "target": "docs_changelog_migration",
+      "weight": 1.0
+    },
+    {
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "relation": "contains",
+      "source": "docs_changelog_phase_1_2026_08_14",
+      "source_file": "docs/CHANGELOG.md",
+      "source_location": "L70",
       "target": "docs_changelog_notes",
       "weight": 1.0
     },
@@ -5651,6 +5701,26 @@
       "relation": "contains",
       "source": "docs_memory_session_log",
       "source_file": "docs/MEMORY.md",
+      "source_location": "L217",
+      "target": "docs_memory_session_3_2026_08_14",
+      "weight": 1.0
+    },
+    {
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "relation": "contains",
+      "source": "docs_memory_session_log",
+      "source_file": "docs/MEMORY.md",
+      "source_location": "L249",
+      "target": "docs_memory_session_2_2026_08_12",
+      "weight": 1.0
+    },
+    {
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "relation": "contains",
+      "source": "docs_memory_session_log",
+      "source_file": "docs/MEMORY.md",
       "source_location": "L157",
       "target": "docs_memory_session_1_2026_08_12",
       "weight": 1.0
@@ -6844,7 +6914,7 @@
       "source_location": "L144"
     },
     {
-      "community": 14,
+      "community": 15,
       "file_type": "code",
       "id": "apps_web_lib_crypto_core_ts",
       "label": "crypto.core.ts",
@@ -6853,7 +6923,7 @@
       "source_location": "L1"
     },
     {
-      "community": 14,
+      "community": 15,
       "file_type": "code",
       "id": "lib_crypto_core_key",
       "label": "key()",
@@ -6862,7 +6932,7 @@
       "source_location": "L23"
     },
     {
-      "community": 14,
+      "community": 15,
       "file_type": "code",
       "id": "lib_crypto_core_encryptsecret",
       "label": "encryptSecret()",
@@ -6871,7 +6941,7 @@
       "source_location": "L41"
     },
     {
-      "community": 14,
+      "community": 15,
       "file_type": "code",
       "id": "lib_crypto_core_decryptsecret",
       "label": "decryptSecret()",
@@ -6880,7 +6950,7 @@
       "source_location": "L58"
     },
     {
-      "community": 14,
+      "community": 15,
       "file_type": "code",
       "id": "lib_crypto_core_timingsafeequals",
       "label": "timingSafeEquals()",
@@ -6952,7 +7022,7 @@
       "source_location": "L53"
     },
     {
-      "community": 14,
+      "community": 15,
       "file_type": "code",
       "id": "apps_web_lib_totp_core_ts",
       "label": "totp.core.ts",
@@ -6961,7 +7031,7 @@
       "source_location": "L1"
     },
     {
-      "community": 14,
+      "community": 15,
       "file_type": "code",
       "id": "lib_totp_core_totpfor",
       "label": "totpFor()",
@@ -6970,7 +7040,7 @@
       "source_location": "L15"
     },
     {
-      "community": 14,
+      "community": 15,
       "file_type": "code",
       "id": "lib_totp_core_totpenrolment",
       "label": "TotpEnrolment",
@@ -6979,7 +7049,7 @@
       "source_location": "L26"
     },
     {
-      "community": 14,
+      "community": 15,
       "file_type": "code",
       "id": "lib_totp_core_createtotpenrolment",
       "label": "createTotpEnrolment()",
@@ -6988,7 +7058,7 @@
       "source_location": "L33"
     },
     {
-      "community": 14,
+      "community": 15,
       "file_type": "code",
       "id": "lib_totp_core_verifytotp",
       "label": "verifyTotp()",
@@ -7006,7 +7076,7 @@
       "source_location": "L1"
     },
     {
-      "community": 14,
+      "community": 15,
       "file_type": "code",
       "id": "apps_web_tests_crypto_test_ts",
       "label": "crypto.test.ts",
@@ -7015,7 +7085,7 @@
       "source_location": "L1"
     },
     {
-      "community": 14,
+      "community": 15,
       "file_type": "code",
       "id": "tests_crypto_test_encoded",
       "label": "encoded",
@@ -7024,7 +7094,7 @@
       "source_location": "L29"
     },
     {
-      "community": 14,
+      "community": 15,
       "file_type": "code",
       "id": "tests_crypto_test_version_iv_tag_data",
       "label": "[version, iv, tag, data]",
@@ -7033,7 +7103,7 @@
       "source_location": "L30"
     },
     {
-      "community": 14,
+      "community": 15,
       "file_type": "code",
       "id": "tests_crypto_test_enrolment",
       "label": "enrolment",
@@ -7042,7 +7112,7 @@
       "source_location": "L60"
     },
     {
-      "community": 14,
+      "community": 15,
       "file_type": "code",
       "id": "tests_crypto_test_plaintext",
       "label": "plaintext",
@@ -7051,7 +7121,7 @@
       "source_location": "L65"
     },
     {
-      "community": 14,
+      "community": 15,
       "file_type": "code",
       "id": "tests_crypto_test_code",
       "label": "code",
@@ -7060,7 +7130,7 @@
       "source_location": "L71"
     },
     {
-      "community": 14,
+      "community": 15,
       "file_type": "code",
       "id": "tests_crypto_test_generated",
       "label": "generated",
@@ -7285,7 +7355,7 @@
       "source_location": "L18"
     },
     {
-      "community": 19,
+      "community": 18,
       "file_type": "code",
       "id": "packages_db_client_ts",
       "label": "client.ts",
@@ -7294,7 +7364,7 @@
       "source_location": "L1"
     },
     {
-      "community": 19,
+      "community": 18,
       "file_type": "code",
       "id": "db_client_isneon",
       "label": "isNeon",
@@ -7303,7 +7373,7 @@
       "source_location": "L25"
     },
     {
-      "community": 19,
+      "community": 18,
       "file_type": "code",
       "id": "db_client_createdb",
       "label": "createDb()",
@@ -7312,7 +7382,7 @@
       "source_location": "L35"
     },
     {
-      "community": 0,
+      "community": 18,
       "file_type": "code",
       "id": "db_client_db",
       "label": "db",
@@ -7321,7 +7391,7 @@
       "source_location": "L49"
     },
     {
-      "community": 19,
+      "community": 18,
       "file_type": "code",
       "id": "db_client_closedb",
       "label": "closeDb()",
@@ -7330,7 +7400,7 @@
       "source_location": "L52"
     },
     {
-      "community": 19,
+      "community": 18,
       "file_type": "code",
       "id": "db_client_dbtx",
       "label": "DbTx",
@@ -7636,7 +7706,7 @@
       "source_location": "L49"
     },
     {
-      "community": 19,
+      "community": 18,
       "file_type": "code",
       "id": "packages_db_schema_index_ts",
       "label": "index.ts",
@@ -8311,7 +8381,7 @@
       "source_location": "L13"
     },
     {
-      "community": 19,
+      "community": 18,
       "file_type": "code",
       "id": "packages_db_tests_global_setup_ts",
       "label": "global-setup.ts",
@@ -8320,7 +8390,7 @@
       "source_location": "L1"
     },
     {
-      "community": 19,
+      "community": 18,
       "file_type": "code",
       "id": "tests_global_setup_setup",
       "label": "setup()",
@@ -8329,7 +8399,7 @@
       "source_location": "L8"
     },
     {
-      "community": 19,
+      "community": 18,
       "file_type": "code",
       "id": "tests_global_setup_teardown",
       "label": "teardown()",
@@ -8401,7 +8471,7 @@
       "source_location": "L170"
     },
     {
-      "community": 19,
+      "community": 18,
       "file_type": "code",
       "id": "packages_db_tests_pg_version_test_ts",
       "label": "pg-version.test.ts",
@@ -8410,7 +8480,7 @@
       "source_location": "L1"
     },
     {
-      "community": 19,
+      "community": 18,
       "file_type": "code",
       "id": "tests_pg_version_test_result",
       "label": "result",
@@ -9069,11 +9139,20 @@
     {
       "community": 20,
       "file_type": "document",
+      "id": "docs_changelog_phase_1_2026_08_14",
+      "label": "[Phase 1] — 2026-08-14",
+      "norm_label": "[phase 1] — 2026-08-14",
+      "source_file": "docs/CHANGELOG.md",
+      "source_location": "L19"
+    },
+    {
+      "community": 20,
+      "file_type": "document",
       "id": "docs_changelog_added",
       "label": "Added",
       "norm_label": "added",
       "source_file": "docs/CHANGELOG.md",
-      "source_location": "L15"
+      "source_location": "L23"
     },
     {
       "community": 20,
@@ -9082,7 +9161,7 @@
       "label": "Security",
       "norm_label": "security",
       "source_file": "docs/CHANGELOG.md",
-      "source_location": "L33"
+      "source_location": "L41"
     },
     {
       "community": 20,
@@ -9091,7 +9170,7 @@
       "label": "Migration",
       "norm_label": "migration",
       "source_file": "docs/CHANGELOG.md",
-      "source_location": "L50"
+      "source_location": "L61"
     },
     {
       "community": 20,
@@ -9100,7 +9179,7 @@
       "label": "Notes",
       "norm_label": "notes",
       "source_file": "docs/CHANGELOG.md",
-      "source_location": "L56"
+      "source_location": "L70"
     },
     {
       "community": 20,
@@ -9109,7 +9188,7 @@
       "label": "Entry template",
       "norm_label": "entry template",
       "source_file": "docs/CHANGELOG.md",
-      "source_location": "L65"
+      "source_location": "L80"
     },
     {
       "community": 20,
@@ -9118,7 +9197,7 @@
       "label": "code:markdown (## [Phase N] — YYYY-MM-DD)",
       "norm_label": "code:markdown (## [phase n] — yyyy-mm-dd)",
       "source_file": "docs/CHANGELOG.md",
-      "source_location": "L67"
+      "source_location": "L82"
     },
     {
       "community": 11,
@@ -10480,7 +10559,7 @@
       "source_location": "L247"
     },
     {
-      "community": 15,
+      "community": 16,
       "file_type": "document",
       "id": "docs_folder_structure_md",
       "label": "FOLDER_STRUCTURE.md",
@@ -10489,7 +10568,7 @@
       "source_location": "L1"
     },
     {
-      "community": 15,
+      "community": 16,
       "file_type": "document",
       "id": "docs_folder_structure_folder_structure",
       "label": "Folder Structure",
@@ -10498,7 +10577,7 @@
       "source_location": "L1"
     },
     {
-      "community": 15,
+      "community": 16,
       "file_type": "document",
       "id": "docs_folder_structure_root",
       "label": "Root",
@@ -10507,7 +10586,7 @@
       "source_location": "L3"
     },
     {
-      "community": 15,
+      "community": 16,
       "file_type": "document",
       "id": "docs_folder_structure_codeblock_1",
       "label": "code:block1 (softmato/)",
@@ -10516,7 +10595,7 @@
       "source_location": "L5"
     },
     {
-      "community": 15,
+      "community": 16,
       "file_type": "document",
       "id": "docs_folder_structure_apps_web",
       "label": "`apps/web`",
@@ -10525,7 +10604,7 @@
       "source_location": "L25"
     },
     {
-      "community": 15,
+      "community": 16,
       "file_type": "document",
       "id": "docs_folder_structure_codeblock_2",
       "label": "code:block2 (apps/web/)",
@@ -10534,7 +10613,7 @@
       "source_location": "L29"
     },
     {
-      "community": 15,
+      "community": 16,
       "file_type": "document",
       "id": "docs_folder_structure_packages_db",
       "label": "`packages/db`",
@@ -10543,7 +10622,7 @@
       "source_location": "L125"
     },
     {
-      "community": 15,
+      "community": 16,
       "file_type": "document",
       "id": "docs_folder_structure_codeblock_3",
       "label": "code:block3 (db/)",
@@ -10552,7 +10631,7 @@
       "source_location": "L127"
     },
     {
-      "community": 15,
+      "community": 16,
       "file_type": "document",
       "id": "docs_folder_structure_packages_payment_core",
       "label": "`packages/payment-core`",
@@ -10561,7 +10640,7 @@
       "source_location": "L159"
     },
     {
-      "community": 15,
+      "community": 16,
       "file_type": "document",
       "id": "docs_folder_structure_codeblock_4",
       "label": "code:block4 (payment-core/)",
@@ -10570,7 +10649,7 @@
       "source_location": "L163"
     },
     {
-      "community": 15,
+      "community": 16,
       "file_type": "document",
       "id": "docs_folder_structure_packages_accounting",
       "label": "`packages/accounting`",
@@ -10579,7 +10658,7 @@
       "source_location": "L195"
     },
     {
-      "community": 15,
+      "community": 16,
       "file_type": "document",
       "id": "docs_folder_structure_codeblock_5",
       "label": "code:block5 (accounting/)",
@@ -10588,7 +10667,7 @@
       "source_location": "L199"
     },
     {
-      "community": 15,
+      "community": 16,
       "file_type": "document",
       "id": "docs_folder_structure_packages_sdk",
       "label": "`packages/sdk`",
@@ -10597,7 +10676,7 @@
       "source_location": "L229"
     },
     {
-      "community": 15,
+      "community": 16,
       "file_type": "document",
       "id": "docs_folder_structure_codeblock_6",
       "label": "code:block6 (sdk/)",
@@ -10606,7 +10685,7 @@
       "source_location": "L233"
     },
     {
-      "community": 15,
+      "community": 16,
       "file_type": "document",
       "id": "docs_folder_structure_packages_ui",
       "label": "`packages/ui`",
@@ -10615,7 +10694,7 @@
       "source_location": "L243"
     },
     {
-      "community": 15,
+      "community": 16,
       "file_type": "document",
       "id": "docs_folder_structure_codeblock_7",
       "label": "code:block7 (ui/)",
@@ -10624,7 +10703,7 @@
       "source_location": "L248"
     },
     {
-      "community": 15,
+      "community": 16,
       "file_type": "document",
       "id": "docs_folder_structure_naming",
       "label": "Naming",
@@ -10633,7 +10712,7 @@
       "source_location": "L260"
     },
     {
-      "community": 16,
+      "community": 14,
       "file_type": "document",
       "id": "docs_memory_md",
       "label": "MEMORY.md",
@@ -10642,7 +10721,7 @@
       "source_location": "L1"
     },
     {
-      "community": 16,
+      "community": 14,
       "file_type": "document",
       "id": "docs_memory_memory",
       "label": "Memory",
@@ -10651,7 +10730,7 @@
       "source_location": "L1"
     },
     {
-      "community": 16,
+      "community": 14,
       "file_type": "document",
       "id": "docs_memory_current_status",
       "label": "Current status",
@@ -10660,124 +10739,142 @@
       "source_location": "L11"
     },
     {
-      "community": 16,
+      "community": 14,
       "file_type": "document",
       "id": "docs_memory_where_the_code_is",
       "label": "Where the code is",
       "norm_label": "where the code is",
       "source_file": "docs/MEMORY.md",
-      "source_location": "L32"
+      "source_location": "L36"
     },
     {
-      "community": 16,
+      "community": 14,
       "file_type": "document",
       "id": "docs_memory_codeblock_1",
       "label": "code:bash (pnpm install && pnpm dev      # localhost:3000, admin.localh)",
       "norm_label": "code:bash (pnpm install && pnpm dev      # localhost:3000, admin.localh)",
       "source_file": "docs/MEMORY.md",
-      "source_location": "L46"
+      "source_location": "L50"
     },
     {
-      "community": 16,
+      "community": 14,
       "file_type": "document",
       "id": "docs_memory_phase_progress",
       "label": "Phase progress",
       "norm_label": "phase progress",
       "source_file": "docs/MEMORY.md",
-      "source_location": "L63"
+      "source_location": "L67"
     },
     {
-      "community": 16,
+      "community": 14,
       "file_type": "document",
       "id": "docs_memory_blocked_on_the_founder",
       "label": "Blocked on the founder",
       "norm_label": "blocked on the founder",
       "source_file": "docs/MEMORY.md",
-      "source_location": "L81"
+      "source_location": "L85"
     },
     {
-      "community": 16,
+      "community": 14,
       "file_type": "document",
       "id": "docs_memory_blocked_on_external_parties",
       "label": "Blocked on external parties",
       "norm_label": "blocked on external parties",
       "source_file": "docs/MEMORY.md",
-      "source_location": "L99"
+      "source_location": "L103"
     },
     {
-      "community": 16,
+      "community": 14,
       "file_type": "document",
       "id": "docs_memory_decisions_made",
       "label": "Decisions made",
       "norm_label": "decisions made",
       "source_file": "docs/MEMORY.md",
-      "source_location": "L110"
+      "source_location": "L114"
     },
     {
-      "community": 16,
+      "community": 14,
       "file_type": "document",
       "id": "docs_memory_things_learned_the_hard_way",
       "label": "Things learned the hard way",
       "norm_label": "things learned the hard way",
       "source_file": "docs/MEMORY.md",
-      "source_location": "L129"
+      "source_location": "L133"
     },
     {
-      "community": 16,
+      "community": 14,
       "file_type": "document",
       "id": "docs_memory_deviations_from_the_docs",
       "label": "Deviations from the docs",
       "norm_label": "deviations from the docs",
       "source_file": "docs/MEMORY.md",
-      "source_location": "L160"
+      "source_location": "L175"
     },
     {
-      "community": 16,
+      "community": 14,
       "file_type": "document",
       "id": "docs_memory_session_log",
       "label": "Session log",
       "norm_label": "session log",
       "source_file": "docs/MEMORY.md",
-      "source_location": "L198"
+      "source_location": "L213"
     },
     {
-      "community": 16,
+      "community": 14,
+      "file_type": "document",
+      "id": "docs_memory_session_3_2026_08_14",
+      "label": "Session 3 — 2026-08-14",
+      "norm_label": "session 3 — 2026-08-14",
+      "source_file": "docs/MEMORY.md",
+      "source_location": "L217"
+    },
+    {
+      "community": 14,
+      "file_type": "document",
+      "id": "docs_memory_session_2_2026_08_12",
+      "label": "Session 2 — 2026-08-12",
+      "norm_label": "session 2 — 2026-08-12",
+      "source_file": "docs/MEMORY.md",
+      "source_location": "L249"
+    },
+    {
+      "community": 14,
       "file_type": "document",
       "id": "docs_memory_session_1_2026_08_12",
       "label": "Session 1 — 2026-08-12",
       "norm_label": "session 1 — 2026-08-12",
       "source_file": "docs/MEMORY.md",
-      "source_location": "L202"
+      "source_location": "L273"
     },
     {
-      "community": 16,
+      "community": 14,
       "file_type": "document",
       "id": "docs_memory_session_0_2026_08_12_planning",
       "label": "Session 0 — 2026-08-12 (planning)",
       "norm_label": "session 0 — 2026-08-12 (planning)",
       "source_file": "docs/MEMORY.md",
-      "source_location": "L231"
+      "source_location": "L302"
     },
     {
-      "community": 16,
+      "community": 14,
       "file_type": "document",
       "id": "docs_memory_template_for_a_new_entry",
       "label": "Template for a new entry",
       "norm_label": "template for a new entry",
       "source_file": "docs/MEMORY.md",
-      "source_location": "L242"
+      "source_location": "L313"
     },
     {
-      "community": 16,
+      "community": 14,
       "file_type": "document",
       "id": "docs_memory_codeblock_2",
       "label": "code:markdown (### Session N — YYYY-MM-DD)",
       "norm_label": "code:markdown (### session n — yyyy-mm-dd)",
       "source_file": "docs/MEMORY.md",
-      "source_location": "L244"
+      "source_location": "L315"
     },
     {
-      "community": 18,
+      "community": 19,
       "file_type": "document",
       "id": "docs_phases_md",
       "label": "PHASES.md",
@@ -10786,7 +10883,7 @@
       "source_location": "L1"
     },
     {
-      "community": 18,
+      "community": 19,
       "file_type": "document",
       "id": "docs_phases_phases",
       "label": "Phases",
@@ -10795,7 +10892,7 @@
       "source_location": "L1"
     },
     {
-      "community": 18,
+      "community": 19,
       "file_type": "document",
       "id": "docs_phases_phase_1_foundation",
       "label": "Phase 1 — Foundation",
@@ -10804,7 +10901,7 @@
       "source_location": "L10"
     },
     {
-      "community": 18,
+      "community": 19,
       "file_type": "document",
       "id": "docs_phases_phase_2_public_site_cms",
       "label": "Phase 2 — Public site + CMS",
@@ -10813,7 +10910,7 @@
       "source_location": "L43"
     },
     {
-      "community": 18,
+      "community": 19,
       "file_type": "document",
       "id": "docs_phases_phase_3_payment_core_manual_qr",
       "label": "Phase 3 — Payment core + manual QR",
@@ -10822,7 +10919,7 @@
       "source_location": "L66"
     },
     {
-      "community": 18,
+      "community": 19,
       "file_type": "document",
       "id": "docs_phases_phase_4_khalti",
       "label": "Phase 4 — Khalti",
@@ -10831,7 +10928,7 @@
       "source_location": "L97"
     },
     {
-      "community": 18,
+      "community": 19,
       "file_type": "document",
       "id": "docs_phases_phase_5_esewa",
       "label": "Phase 5 — eSewa",
@@ -10840,7 +10937,7 @@
       "source_location": "L123"
     },
     {
-      "community": 18,
+      "community": 19,
       "file_type": "document",
       "id": "docs_phases_phase_6_invoicing_subscriptions",
       "label": "Phase 6 — Invoicing + subscriptions",
@@ -10849,7 +10946,7 @@
       "source_location": "L146"
     },
     {
-      "community": 18,
+      "community": 19,
       "file_type": "document",
       "id": "docs_phases_phase_7_accounting_depth",
       "label": "Phase 7 — Accounting depth",
@@ -10858,7 +10955,7 @@
       "source_location": "L171"
     },
     {
-      "community": 18,
+      "community": 19,
       "file_type": "document",
       "id": "docs_phases_phase_8_client_portal",
       "label": "Phase 8 — Client portal",
@@ -10867,7 +10964,7 @@
       "source_location": "L197"
     },
     {
-      "community": 18,
+      "community": 19,
       "file_type": "document",
       "id": "docs_phases_phase_9_fonepay",
       "label": "Phase 9 — Fonepay",
@@ -10876,7 +10973,7 @@
       "source_location": "L217"
     },
     {
-      "community": 18,
+      "community": 19,
       "file_type": "document",
       "id": "docs_phases_ongoing_after_each_phase",
       "label": "Ongoing after each phase",

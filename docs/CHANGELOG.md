@@ -12,6 +12,14 @@ this file tracks what was delivered.
 
 ## [Unreleased]
 
+Nothing yet — Phase 2 begins here.
+
+---
+
+## [Phase 1] — 2026-08-14
+
+Foundation accepted: all seven acceptance criteria in `PHASES.md` pass.
+
 ### Added
 - Documentation set: PRD, architecture, rules, phases, database, API, design,
   folder structure, coding standards, environment, testing
@@ -35,6 +43,9 @@ this file tracks what was delivered.
   unbalanced journal is rejected at COMMIT, posted ledger rows cannot be
   changed or removed, a closed period accepts nothing but a closing entry, and
   an active admin without 2FA cannot be created.
+- A journal with no lines is now rejected at COMMIT by the database, not only
+  by `postJournal()`. Guarantee 1 previously had a hole in exactly the case
+  `DATABASE.md` §2.1 described.
 - Header accounts reject postings; only leaf accounts accept them.
 - Admin sign-in requires password **and** TOTP in a single step — there is no
   half-authenticated session. TOTP secrets are AES-256-GCM encrypted at rest.
@@ -52,13 +63,17 @@ this file tracks what was delivered.
 - `0001` — hand-written: balance/immutability/period/postable triggers and the
   three reporting views. Drizzle Kit does not generate these; a regeneration
   must never drop them.
+- `0002` — hand-written: `journal_entries_have_lines`, a deferred constraint
+  trigger completing guarantee 1. Must stay deferred — `postJournal()` inserts
+  the header before its lines within one transaction.
 
 ### Notes
 - Chart of accounts is a working draft pending review by a licensed accountant.
 - Design direction in `DESIGN.md` is a proposal pending founder approval.
-- Fiscal periods are **not** seeded — blocked on the go-live date and a verified
-  BS calendar. `pnpm db:seed` fails loudly rather than inventing dates.
-- Known gap: a journal with no lines can still be committed. See `MEMORY.md`.
+- Fiscal periods for BS 2083/84 (17 Jul 2026 – 16 Jul 2027) are seeded, with
+  boundaries generated from published BS calendar tables rather than typed by
+  hand. Later years are not seeded; `pnpm db:seed` fails loudly for a year it
+  has no verified calendar for, rather than inventing dates.
 
 ---
 
