@@ -89,6 +89,7 @@ founder decides whether to relax it. Until they say so, leave it.
 | Object storage   | `@aws-sdk/client-s3` against R2                 |
 | Email            | `resend` + `@react-email/components`            |
 | UI               | `shadcn/ui`, `tailwindcss`, `lucide-react`      |
+| Markdown         | `react-markdown` + `remark-gfm`                 |
 | Tables           | `@tanstack/react-table`                         |
 | Charts           | `recharts`                                      |
 | Dates            | `date-fns` + a BS conversion library            |
@@ -97,16 +98,17 @@ founder decides whether to relax it. Until they say so, leave it.
 
 ### Do not use
 
-| Avoid                                     | Why                                                            |
-| ----------------------------------------- | -------------------------------------------------------------- |
-| **Prisma**                                | Hides the SQL we need explicit control over                    |
-| **`bcrypt`**                              | argon2id is the current standard                               |
-| **`moment`**                              | Unmaintained, huge                                             |
-| **`decimal.js` for currency**             | We use integer paisa; a decimal library invites float thinking |
-| **`crypto-js`**                           | Use Node's `crypto`                                            |
-| **Any ORM auto-migration in production**  | Migrations are reviewed files                                  |
-| **`localStorage` for anything sensitive** | Session cookies only                                           |
-| **A second database**                     | One Postgres. Use `JSONB` for document-shaped data             |
+| Avoid                                     | Why                                                                                                       |
+| ----------------------------------------- | --------------------------------------------------------------------------------------------------------- |
+| **Prisma**                                | Hides the SQL we need explicit control over                                                               |
+| **`bcrypt`**                              | argon2id is the current standard                                                                          |
+| **`moment`**                              | Unmaintained, huge                                                                                        |
+| **`decimal.js` for currency**             | We use integer paisa; a decimal library invites float thinking                                            |
+| **`crypto-js`**                           | Use Node's `crypto`                                                                                       |
+| **Markdown → HTML string + a sanitiser**  | `react-markdown` renders React elements, so no `dangerouslySetInnerHTML` and no sanitiser to misconfigure |
+| **Any ORM auto-migration in production**  | Migrations are reviewed files                                                                             |
+| **`localStorage` for anything sensitive** | Session cookies only                                                                                      |
+| **A second database**                     | One Postgres. Use `JSONB` for document-shaped data                                                        |
 
 Adding a dependency not on this list requires asking first. Every dependency is
 a maintenance liability for a two-person team.

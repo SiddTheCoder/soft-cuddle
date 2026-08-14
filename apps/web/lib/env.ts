@@ -31,6 +31,16 @@ const serverSchema = z.object({
   PAYMENT_MODE: z.enum(['sandbox', 'live']).default('sandbox'),
 
   COMPANY_NAME: z.string().default('Softmato Technology Pvt Ltd'),
+
+  /*
+   * Email. Optional: the contact form always writes to the database, and only
+   * additionally emails when these are set. A missing key must not lose an
+   * enquiry, so it degrades rather than throwing (docs/PRD.md §5.1).
+   */
+  RESEND_API_KEY: z.string().optional(),
+  EMAIL_FROM: z.string().optional(),
+  /** Where contact enquiries are sent. */
+  COMPANY_EMAIL: z.string().email().optional(),
 });
 
 const publicSchema = z.object({

@@ -15,15 +15,20 @@ is lost — fill in the rest as you build.
 **Repo:** `origin/main` (`SiddTheCoder/soft-cuddle`)
 
 **Done in Phase 2:** CMS schema (migration `0003`), design tokens, placeholder
-content, and the admin editors — a founder can edit and publish every content
-kind. **Still to build:** the public pages that consume it, the contact form
-(DB + email, rate limit, honeypot), SEO metadata / sitemap / robots, and R2
-image upload.
+content, admin editors, the whole public site reading from the CMS, the contact
+form, and SEO (metadata, Open Graph, sitemap, robots).
 
-**Next action:** the public pages. `lib/cms/queries.ts` deliberately holds
-admin-side reads only, which return drafts — public reads must filter on
-`status = 'published'` and belong in a separate module. Getting that wrong
-publishes every draft, so it is worth doing carefully first.
+**Still to build:** R2 public bucket + image upload from the CMS (photo and
+image fields currently take a URL typed by hand), and a Lighthouse run to
+confirm ≥ 95 performance and accessibility. Then real content, which is the
+founder's part.
+
+**Next action:** R2 upload. `@aws-sdk/client-s3` is already the approved
+choice (`RULES.md` §4) and `ENVIRONMENT.md` §3 fixes the key layout as
+`cms/{uuid}-{slug}.{ext}` in the public bucket. Team photos and blog covers
+are `<img>` rather than `next/image` on purpose — the R2 host is not in
+`next.config.ts` `remotePatterns`, and an unconfigured host fails the build
+rather than degrading. Add the host and switch them over together.
 
 **Uncommitted at hand-off:** nothing.
 
@@ -36,20 +41,25 @@ production.** Replace it before the first real deployment.
 
 ## Where the code is
 
-| What                           | Where                                               |
-| ------------------------------ | --------------------------------------------------- |
-| Ledger primitive               | `packages/accounting/post-journal.ts`               |
-| Gapless numbering              | `packages/accounting/numbering.ts`                  |
-| Schema (12 modules)            | `packages/db/schema/`                               |
-| CMS content models             | `packages/db/schema/cms.ts`                         |
-| CMS registry (add a kind here) | `apps/web/lib/cms/kinds/`                           |
-| CMS admin editors              | `apps/web/app/(admin)/admin/cms/`                   |
-| The four guarantees            | `packages/db/migrations/0001_ledger_guarantees.sql` |
-| Ledger tests                   | `packages/db/tests/ledger.test.ts`                  |
-| Auth (argon2id + TOTP)         | `apps/web/lib/auth.ts`                              |
-| Encryption at rest             | `apps/web/lib/crypto.core.ts`                       |
-| Subdomain routing              | `apps/web/middleware.ts`                            |
-| Admin shell                    | `apps/web/app/(admin)/admin/`                       |
+| What                              | Where                                               |
+| --------------------------------- | --------------------------------------------------- |
+| Ledger primitive                  | `packages/accounting/post-journal.ts`               |
+| Gapless numbering                 | `packages/accounting/numbering.ts`                  |
+| Schema (12 modules)               | `packages/db/schema/`                               |
+| CMS content models                | `packages/db/schema/cms.ts`                         |
+| CMS registry (add a kind here)    | `apps/web/lib/cms/kinds/`                           |
+| CMS admin editors                 | `apps/web/app/(admin)/admin/cms/`                   |
+| **Public reads (published only)** | `apps/web/lib/cms/public-queries.ts`                |
+| Admin reads (returns drafts)      | `apps/web/lib/cms/queries.ts`                       |
+| Public pages                      | `apps/web/app/(public)/`                            |
+| Contact form                      | `apps/web/app/(public)/contact/`, `lib/contact/`    |
+| BS date formatting                | `apps/web/lib/format/date.ts`                       |
+| The four guarantees               | `packages/db/migrations/0001_ledger_guarantees.sql` |
+| Ledger tests                      | `packages/db/tests/ledger.test.ts`                  |
+| Auth (argon2id + TOTP)            | `apps/web/lib/auth.ts`                              |
+| Encryption at rest                | `apps/web/lib/crypto.core.ts`                       |
+| Subdomain routing                 | `apps/web/middleware.ts`                            |
+| Admin shell                       | `apps/web/app/(admin)/admin/`                       |
 
 ```bash
 pnpm install && pnpm dev      # localhost:3000, admin.localhost:3000
@@ -73,7 +83,7 @@ production.** Replace it before the first real deployment.
 | Phase                         | Status         | Notes                                                                                                                            |
 | ----------------------------- | -------------- | -------------------------------------------------------------------------------------------------------------------------------- |
 | 1 — Foundation                | ✅ Accepted    | All seven criteria pass. 1–6 verified end to end against Neon 18.4; 7 verified by running every CI step locally — see session 3. |
-| 2 — Public site + CMS         | 🟡 In progress | Schema, design tokens, placeholder content and the admin editors are in. Next: public pages, contact form, SEO, R2 uploads.      |
+| 2 — Public site + CMS         | 🟡 In progress | Schema, tokens, editors, public site, contact form and SEO all in. Left: R2 image upload, Lighthouse ≥ 95, real content.         |
 | 3 — Payment core + manual QR  | ⬜ Not started |                                                                                                                                  |
 | 4 — Khalti                    | ⬜ Not started |                                                                                                                                  |
 | 5 — eSewa                     | ⬜ Not started |                                                                                                                                  |
@@ -156,6 +166,18 @@ mistake.
   journal. Any future whole-journal invariant needs the same treatment.
   The unreachable branch inside `assert_journal_balanced()` was left in place
   deliberately — removing a money-path check to tidy up is not a good trade.
+- **Two modules read the CMS, and only one is safe for the public.**
+  `lib/cms/queries.ts` is admin-side and returns drafts by design.
+  `lib/cms/public-queries.ts` filters every query on `status = 'published'`.
+  A public page importing the wrong one publishes every draft silently. The
+  sitemap goes through the public module for the same reason — advertising a
+  draft to a crawler is the same leak, slower and more public.
+- **Rate limiting is done in Postgres, not Upstash.** The
+  `contact_submissions_rate_idx` index on `(ip_hash, created_at)` exists for
+  it, the limit is per hour, and it needs nothing stubbed in CI. This is a
+  marketing form; if the payment API later needs per-request limiting, that is
+  a different problem with different latency requirements — do not assume this
+  choice carries over.
 - **Admin sign-in used to 404 on the admin subdomain.** The admin layout
   redirects to `/login`; `middleware.ts` rewrote that to `/admin/login`, which
   does not exist. Signing in only worked through the public host, so nobody hit

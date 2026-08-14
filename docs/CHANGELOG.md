@@ -23,6 +23,14 @@ this file tracks what was delivered.
   usable before real copy exists. All of it is draft.
 - The design system from `DESIGN.md` is live as Tailwind tokens, with the
   palette and typography taken from the founder's reference project.
+- The public site is live and reads from the CMS: home, about, services,
+  products, team, blog, careers, contact, and legal documents, each with its
+  own page and index. Dates display in Bikram Sambat.
+- A visitor can send an enquiry from the contact page. It is stored in the
+  database and emailed to the company, rate limited to five an hour per
+  address, with a honeypot that silently absorbs bots.
+- Search engines get a sitemap covering every published page, and a
+  `robots.txt` that blocks indexing entirely outside production.
 
 ### Fixed
 
@@ -37,6 +45,14 @@ this file tracks what was delivered.
   POST endpoint reachable without rendering the layout.
 - Every save, publish and unpublish is written to the audit log with before and
   after state.
+- Public pages read through a separate module in which every query filters on
+  `status = 'published'`, so a draft cannot reach a visitor or the sitemap.
+  Tests seed a draft beside a published row and assert only one comes back.
+- CMS bodies render through `react-markdown`, which produces React elements —
+  raw HTML in a body is escaped, not executed, and there is no
+  `dangerouslySetInnerHTML` in the path.
+- The contact form never stores a raw IP address; it stores a salted SHA-256
+  hash, used only for rate limiting.
 
 ### Migration
 

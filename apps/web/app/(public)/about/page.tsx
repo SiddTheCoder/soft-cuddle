@@ -5,10 +5,10 @@ import { metadataFor } from '@/lib/cms/metadata';
 import { CmsPage } from '@/components/public/cms-page';
 
 export async function generateMetadata(): Promise<Metadata> {
-  const page = await getPage('home');
-  return page ? metadataFor(page) : { title: 'Home' };
+  const page = await getPage('about');
+  return page ? metadataFor(page) : { title: 'About' };
 }
 
-export default function HomePage() {
-  return <CmsPage slug="home" />;
+export default function AboutPage() {
+  return <CmsPage slug="about" />;
 }
