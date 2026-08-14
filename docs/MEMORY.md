@@ -35,18 +35,20 @@ production.** Replace it before the first real deployment.
 
 ## Where the code is
 
-| What                   | Where                                               |
-| ---------------------- | --------------------------------------------------- |
-| Ledger primitive       | `packages/accounting/post-journal.ts`               |
-| Gapless numbering      | `packages/accounting/numbering.ts`                  |
-| Schema (12 modules)    | `packages/db/schema/`                               |
-| CMS content models     | `packages/db/schema/cms.ts`                         |
-| The four guarantees    | `packages/db/migrations/0001_ledger_guarantees.sql` |
-| Ledger tests           | `packages/db/tests/ledger.test.ts`                  |
-| Auth (argon2id + TOTP) | `apps/web/lib/auth.ts`                              |
-| Encryption at rest     | `apps/web/lib/crypto.core.ts`                       |
-| Subdomain routing      | `apps/web/middleware.ts`                            |
-| Admin shell            | `apps/web/app/(admin)/admin/`                       |
+| What                           | Where                                               |
+| ------------------------------ | --------------------------------------------------- |
+| Ledger primitive               | `packages/accounting/post-journal.ts`               |
+| Gapless numbering              | `packages/accounting/numbering.ts`                  |
+| Schema (12 modules)            | `packages/db/schema/`                               |
+| CMS content models             | `packages/db/schema/cms.ts`                         |
+| CMS registry (add a kind here) | `apps/web/lib/cms/kinds/`                           |
+| CMS admin editors              | `apps/web/app/(admin)/admin/cms/`                   |
+| The four guarantees            | `packages/db/migrations/0001_ledger_guarantees.sql` |
+| Ledger tests                   | `packages/db/tests/ledger.test.ts`                  |
+| Auth (argon2id + TOTP)         | `apps/web/lib/auth.ts`                              |
+| Encryption at rest             | `apps/web/lib/crypto.core.ts`                       |
+| Subdomain routing              | `apps/web/middleware.ts`                            |
+| Admin shell                    | `apps/web/app/(admin)/admin/`                       |
 
 ```bash
 pnpm install && pnpm dev      # localhost:3000, admin.localhost:3000
@@ -70,7 +72,7 @@ production.** Replace it before the first real deployment.
 | Phase                         | Status         | Notes                                                                                                                            |
 | ----------------------------- | -------------- | -------------------------------------------------------------------------------------------------------------------------------- |
 | 1 — Foundation                | ✅ Accepted    | All seven criteria pass. 1–6 verified end to end against Neon 18.4; 7 verified by running every CI step locally — see session 3. |
-| 2 — Public site + CMS         | 🟡 In progress | CMS schema + migration `0003` done. Next: admin editors, then design tokens and public pages.                                    |
+| 2 — Public site + CMS         | 🟡 In progress | Schema, design tokens, placeholder content and the admin editors are in. Next: public pages, contact form, SEO, R2 uploads.      |
 | 3 — Payment core + manual QR  | ⬜ Not started |                                                                                                                                  |
 | 4 — Khalti                    | ⬜ Not started |                                                                                                                                  |
 | 5 — eSewa                     | ⬜ Not started |                                                                                                                                  |
@@ -153,6 +155,16 @@ mistake.
   journal. Any future whole-journal invariant needs the same treatment.
   The unreachable branch inside `assert_journal_balanced()` was left in place
   deliberately — removing a money-path check to tidy up is not a good trade.
+- **Admin sign-in used to 404 on the admin subdomain.** The admin layout
+  redirects to `/login`; `middleware.ts` rewrote that to `/admin/login`, which
+  does not exist. Signing in only worked through the public host, so nobody hit
+  it in Phase 1. `/login` is now excluded from surface rewriting alongside
+  `/api/auth`. Any other route that must be reachable from more than one
+  subdomain needs the same treatment — the rewrite is unconditional otherwise.
+- **`exactOptionalPropertyTypes` is on.** A prop declared `hint?: string` will
+  not accept an explicitly-passed `undefined`, which is what spreading an
+  optional field spec does. Component props that receive optional values need
+  `hint?: string | undefined`.
 - **There is no Prettier config, and `pnpm format` would rewrite the whole
   repo.** `package.json` exposes `format` as `prettier --write "**/*"`, but no
   `.prettierrc` exists anywhere, so Prettier falls back to its defaults —

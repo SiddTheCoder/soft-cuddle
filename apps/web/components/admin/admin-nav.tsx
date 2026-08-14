@@ -42,7 +42,7 @@ const SECTIONS: { title: string; items: NavItem[] }[] = [
     items: [
       { label: 'Products', phase: 3 },
       { label: 'Providers', phase: 3 },
-      { label: 'CMS', phase: 2 },
+      { label: 'Content', href: '/admin/cms' },
       { label: 'Clients', phase: 8 },
       { label: 'Audit log', phase: 1 },
       { label: 'Settings', phase: 1 },

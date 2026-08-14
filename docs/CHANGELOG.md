@@ -16,7 +16,27 @@ this file tracks what was delivered.
 
 - Content models behind the public site: pages, blog posts, team members,
   services, product pages, legal documents, and contact form submissions.
-  Nothing is editable from the admin panel yet — this is the storage layer.
+- A founder can edit every page, service, product page, team member, blog post
+  and legal document from the admin panel, and publish or unpublish each one
+  without a deploy. Drafts are invisible on the public site.
+- Placeholder content is loaded for every content kind so the editors are
+  usable before real copy exists. All of it is draft.
+- The design system from `DESIGN.md` is live as Tailwind tokens, with the
+  palette and typography taken from the founder's reference project.
+
+### Fixed
+
+- Admin sign-in 404'd on `admin.softmato.com`. The layout redirects to
+  `/login`, which subdomain rewriting turned into `/admin/login` — a route that
+  does not exist. Signing in previously only worked through the public host.
+
+### Security
+
+- Every CMS mutation re-checks the session and the TOTP flag inside the server
+  action rather than relying on the layout guard, because a server action is a
+  POST endpoint reachable without rendering the layout.
+- Every save, publish and unpublish is written to the audit log with before and
+  after state.
 
 ### Migration
 
