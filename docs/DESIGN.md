@@ -1,64 +1,65 @@
 # Design
 
-> **This is a proposal.** We hadn't discussed visuals, so this direction is
-> derived from what the product actually is. The founder should review and
-> change anything. Once approved, follow it exactly — do not substitute
-> defaults mid-build.
+> **Approved 2026-08-14**, with the palette and typography replaced by the
+> founder's reference project (`D:\Jiwan-Mijhar`). Follow this exactly — do not
+> substitute defaults mid-build.
+>
+> The original proposal here was a greenbar-stationery direction built on
+> `--ink` / `--paper` / `--bar` / `--tomato`. It was not adopted. What survives
+> from it is everything that concerns reading money correctly: tabular mono
+> figures, right-aligned amount columns, distinct credit/debit colour, and the
+> structural (never hover-only) table band. Those are legibility requirements,
+> not taste, and they carry over onto the new palette unchanged.
 
 ---
 
-## 1. Direction: the ledger
+## 1. Direction: warm paper, quiet emerald
 
-Softmato's real subject is not "startup software company." It is **a
-well-kept account book**. The whole platform exists to record money correctly:
-debits and credits, ruled columns, entries that cannot be erased, corrections
-made in the margin rather than by rubbing out.
+Warm off-white surfaces, a deep emerald primary, terracotta reserved for
+emphasis, soft depth from long low-opacity shadows rather than hard borders.
+Panels either float (`.glass-panel`, blurred translucent surface) or sit framed
+(`.section-frame`, hairline border on solid warm paper). Headings are tightly
+tracked; small uppercase mono eyebrows label real sections.
 
-So the design comes from accounting stationery — specifically **greenbar
-paper**, the continuous-feed accounting stock with alternating pale green bands
-that let your eye track a row across a wide table. That band is the signature
-element. It is functional first: it genuinely helps a founder read a transaction
-row across eight columns. It also ties every surface together — the same band
-appears in an admin ledger table, on the checkout receipt, and in the pricing
-block on the marketing site.
+The product's subject is still a well-kept account book, and that shows in how
+data is set rather than in the colour of the page: ruled columns, aligned
+figures, corrections visible in the margin rather than rubbed out. The
+stationery metaphor governs **tables and numbers** (§4, §5). It no longer
+governs the palette.
 
-Everything else stays quiet. One signature, executed precisely.
-
-**What this deliberately is not:** not the cream-and-serif-and-terracotta look,
-not black-with-an-acid-accent, not newspaper broadsheet. Hairline rules appear
-here as _column_ rules on ruled paper, always paired with the green band — the
-reference is a bill book, not a front page.
+Everything else stays quiet. Restraint over decoration.
 
 ---
 
 ## 2. Palette
 
-Six values. Nothing else without asking.
+Defined once as CSS custom properties in `apps/web/app/globals.css` and exposed
+to Tailwind through `@theme inline`. **Read the tokens there, not a copy here** —
+a palette duplicated into a doc is a palette that drifts. The shape:
 
-```css
---ink: #14191c; /* fountain-pen near-black, cool cast — text, headings */
---paper: #fafaf8; /* base surface */
---bar: #e6ede7; /* greenbar band — the signature */
---rule: #c5cec6; /* hairline column rules, borders */
---tomato: #c9321f; /* brand, primary action */
---credit: #1b6b4a; /* money in, positive, success */
---flag: #a81e12; /* corrections, reversals, negative amounts, danger */
-```
-
-Derived neutrals only, no new hues:
-
-```css
---ink-70: #14191cb3; /* secondary text */
---ink-45: #14191c73; /* tertiary, captions */
---surface: #ffffff; /* cards lifted off paper */
-```
+| Token                            | Role                                             |
+| -------------------------------- | ------------------------------------------------ |
+| `--background` / `--foreground`  | Page ground and text                             |
+| `--surface` / `--surface-strong` | Translucent glass panel / solid warm paper panel |
+| `--card`, `--popover`            | Lifted containers                                |
+| `--primary`                      | Emerald. Primary action.                         |
+| `--accent-strong`                | Terracotta `#b84a1a`. Emphasis, never a number.  |
+| `--teal`, `--sky`                | Secondary hues, sparingly                        |
+| `--muted` / `--muted-foreground` | Recessed surfaces, secondary text                |
+| `--border`, `--input`, `--ring`  | Hairlines and focus                              |
+| `--destructive`                  | Destructive UI actions                           |
+| `--credit` / `--flag`            | **Money in / money out.** See below.             |
+| `--sidebar-*`                    | Admin navigation                                 |
 
 **Colour carries meaning in this product.** `--credit` and `--flag` are not
 decoration — green means money in, red means money out or something reversed.
-Never use either for emphasis on non-financial text. Never use `--tomato` for a
-number.
+Never use either for emphasis on non-financial text, and never set an amount in
+`--accent-strong`. `--destructive` is for destructive _actions_ (delete, revoke);
+`--flag` is for _figures_. They are different tokens on purpose.
 
-Dark mode: admin only, deferred to Phase 7. Public and checkout are light only.
+Dark mode: the full dark palette ships in `globals.css` under `.dark`, but
+nothing toggles it yet. Scope stays admin-only, deferred to Phase 7 — public and
+checkout are light.
 
 ---
 
@@ -66,17 +67,17 @@ Dark mode: admin only, deferred to Phase 7. Public and checkout are light only.
 
 Three roles, three faces.
 
-| Role       | Face                     | Source    | Use                                  |
-| ---------- | ------------------------ | --------- | ------------------------------------ |
-| Display    | **Bespoke Slab**         | Fontshare | Headings, page titles. Restraint.    |
-| Body       | **Switzer**              | Fontshare | All running text, UI labels, buttons |
-| Data       | **IBM Plex Mono**        | Google    | Every number, ID, code, amount       |
-| Devanagari | **Noto Sans Devanagari** | Google    | Fallback for Nepali text             |
+| Role       | Face                     | Source | Variable         | Use                                  |
+| ---------- | ------------------------ | ------ | ---------------- | ------------------------------------ |
+| Display    | **DM Sans**              | Google | `--font-heading` | Headings, page titles. Restraint.    |
+| Body       | **Inter**                | Google | `--font-sans`    | All running text, UI labels, buttons |
+| Data       | **IBM Plex Mono**        | Google | `--font-mono`    | Every number, ID, code, amount       |
+| Devanagari | **Noto Sans Devanagari** | Google | —                | Fallback for Nepali text             |
 
-Bespoke Slab reads as stamped and official — the register of a printed receipt
-or a rubber-stamped document. It is used sparingly: page titles and section
-heads only. Switzer stays out of the way. Plex Mono exists for one reason, and
-it is the important one:
+Loaded in `apps/web/app/layout.tsx` via `next/font/google`, so they self-host and
+cost no third-party request. DM Sans is used sparingly and always tightly
+tracked (`.headline`, `-0.04em`). Inter stays out of the way. Plex Mono exists
+for one reason, and it is the important one:
 
 **Every number in this product is set in tabular mono.**
 
@@ -89,6 +90,9 @@ align vertically in a column so a mis-keyed figure is visible at a glance. This
 is not aesthetic preference — it is how you catch a NPR 50,000 that should have
 been NPR 5,000.
 
+Use the `.numeric` class (`globals.css`) rather than reaching for the font and
+`font-variant-numeric` by hand. One class, one place to get it right.
+
 ### Scale
 
 ```css
@@ -99,37 +103,40 @@ been NPR 5,000.
   1.1 /* hero, public only */;
 ```
 
-Weights: 400 body, 500 UI labels, 600 display. Never 700+ — the slab is heavy
-enough. Never faux-bold a mono figure.
+Weights: 400 body, 500 UI labels, 600 display. Never 700+. Never faux-bold a
+mono figure.
 
-Tracking: display `-0.02em`. Body 0. Mono 0. All-caps eyebrows `0.08em`, and
-eyebrows appear only where they label a real section, never as decoration.
+Tracking: display `-0.04em` (`.headline`). Body 0. Mono 0. All-caps mono
+eyebrows `0.18em` (`.eyebrow`), and eyebrows appear only where they label a real
+section, never as decoration.
 
 ---
 
-## 4. The signature: greenbar tables
+## 4. The signature: ruled data tables
 
-The one thing this product is remembered by.
+Where the account-book thinking still lives. The band is now a warm neutral
+rather than green, but every rule below is unchanged — they are about reading a
+row of figures correctly, not about the colour of the stock.
 
 ```
 ┌──────────────────────────────────────────────────────────────┐
-│ DATE        TXN                PRODUCT     METHOD      AMOUNT│  ← ink, caps, xs
+│ DATE        TXN                PRODUCT     METHOD      AMOUNT│  ← mono caps, xs
 ├──────────────────────────────────────────────────────────────┤
-│ 12 Bhadra   TXN-2082/83-00041  HostelHub   Khalti   12,000.00│  ← paper
-│ 12 Bhadra   TXN-2082/83-00042  QuestionCa… eSewa     2,500.00│  ← bar
-│ 11 Bhadra   TXN-2082/83-00043  HostelHub   Manual   45,000.00│  ← paper
-│ 11 Bhadra   TXN-2082/83-00044  HostelHub   Khalti  −3,000.00 │  ← bar, flag
+│ 12 Bhadra   TXN-2082/83-00041  HostelHub   Khalti   12,000.00│  ← background
+│ 12 Bhadra   TXN-2082/83-00042  QuestionCa… eSewa     2,500.00│  ← muted band
+│ 11 Bhadra   TXN-2082/83-00043  HostelHub   Manual   45,000.00│  ← background
+│ 11 Bhadra   TXN-2082/83-00044  HostelHub   Khalti  −3,000.00 │  ← band, flag
 └──────────────────────────────────────────────────────────────┘
 ```
 
 Rules:
 
-- Odd rows `--paper`, even rows `--bar`. Never a hover-only stripe — the band
-  is structural, always visible.
-- Column rules are 1px `--rule`, vertical only between numeric columns where
+- Odd rows `--background`, even rows `--muted`. Never a hover-only stripe — the
+  band is structural, always visible.
+- Column rules are 1px `--border`, vertical only between numeric columns where
   alignment matters. No full grid.
-- Header row: `--ink`, `--text-xs`, uppercase, `0.08em` tracking, 1px bottom
-  rule.
+- Header row: `--muted-foreground`, `--text-xs`, uppercase mono, `0.18em`
+  tracking, 1px bottom rule.
 - **Every amount column is right-aligned, mono, tabular.** No exceptions.
 - Negative amounts get `--flag` and a true minus sign `−` (U+2212), not a
   hyphen.
@@ -232,7 +239,7 @@ Generous space, one accent, restraint. The hero opens with what the company
 actually does, in plain words — not a gradient and a big number.
 
 The ledger motif appears once, where it is true: the pricing block is set as a
-receipt with greenbar rows. That is the connection between the marketing promise
+receipt with banded rows. That is the connection between the marketing promise
 and the product.
 
 ### Admin
@@ -241,7 +248,7 @@ Dense and data-first. Numbers are the interface. Tables use the full band
 treatment. Sidebar navigation, breadcrumbs, no marketing tone anywhere.
 
 Money uses colour semantically throughout: `--credit` for received, `--flag`
-for refunded or reversed, `--ink` for neutral.
+for refunded or reversed, `--foreground` for neutral.
 
 ### Checkout — different rules apply
 
@@ -270,21 +277,23 @@ the order carries information a client needs.
 `shadcn/ui` as the base, restyled to these tokens. Do not ship default shadcn
 appearance.
 
-**Buttons.** Primary `--tomato` on white text. Secondary `--ink` outline on
-paper. Destructive `--flag`. Ghost for tertiary. 40px tall, 48px on touch.
+**Buttons.** Primary `--primary` with `--primary-foreground` text. Secondary
+`--border` outline on `--surface-strong`. Destructive `--destructive`. Ghost for
+tertiary. Terracotta `--accent-strong` is for emphasis, not a third button
+variant. 40px tall, 48px on touch.
 
 **Forms.** Label above input, always visible — never placeholder-as-label.
-1px `--rule` border, 2px `--ink` on focus. Error text `--flag` below the field,
-naming the problem and the fix.
+1px `--input` border, `--ring` on focus. Error text `--destructive` below the
+field, naming the problem and the fix.
 
 **Status.** Small caps, `--text-xs`, 3px radius, tinted background:
 
-| Status                        | Colour     |
-| ----------------------------- | ---------- |
-| succeeded, active, reconciled | `--credit` |
-| pending, created, polling     | `--ink-70` |
-| failed, cancelled, expired    | `--ink-45` |
-| refunded, reversed, mismatch  | `--flag`   |
+| Status                        | Colour               |
+| ----------------------------- | -------------------- |
+| succeeded, active, reconciled | `--credit`           |
+| pending, created, polling     | `--foreground`       |
+| failed, cancelled, expired    | `--muted-foreground` |
+| refunded, reversed, mismatch  | `--flag`             |
 
 **Empty states.** A sentence describing what will appear here, and the action
 that creates the first one. Never an illustration, never "Nothing here yet!"
@@ -317,11 +326,12 @@ Not negotiable, not announced:
 - Visible keyboard focus on every interactive element — never `outline: none`
   without a replacement
 - `prefers-reduced-motion` respected; all motion becomes instant
-- WCAG 2.1 AA contrast. Verify `--tomato` on `--paper` and `--credit` on
-  `--bar` specifically.
+- WCAG 2.1 AA contrast. Verify `--accent-strong` on `--surface-strong`, and
+  `--credit` and `--flag` on `--muted`, specifically — the banded rows are where
+  a marginal contrast ratio actually bites.
 - Touch targets ≥ 44px
 - Semantic HTML; tables are `<table>`, not divs — screen readers need the
-  row/column relationship the greenbar communicates visually
+  row/column relationship the band communicates visually
 - Fonts: `font-display: swap`, subset, preloaded
 - Lighthouse ≥ 95 performance and accessibility on public pages
 
@@ -332,4 +342,5 @@ Not negotiable, not announced:
 Ask: does this help someone understand or act? If it is there to look
 finished, remove it.
 
-The greenbar band is the one bold move. Everything around it stays disciplined.
+The banded data table is the one bold move. Everything around it stays
+disciplined.

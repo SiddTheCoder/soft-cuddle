@@ -1,11 +1,11 @@
 # Graph Report - company  (2026-08-14)
 
 ## Corpus Check
-- 86 files · ~42,912 words
+- 86 files · ~43,159 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 593 nodes · 664 edges · 55 communities (48 shown, 7 thin omitted)
+- 598 nodes · 677 edges · 55 communities (49 shown, 6 thin omitted)
 - Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS · INFERRED: 2 edges (avg confidence: 0.8)
 - Token cost: 0 input · 0 output
 
@@ -59,9 +59,9 @@
 - [[_COMMUNITY_Community 46|Community 46]]
 
 ## God Nodes (most connected - your core abstractions)
-1. `Coding Standards` - 13 edges
-2. `Softmato Technology Pvt Ltd — Chart of Accounts & Posting Rules` - 12 edges
-3. `Design` - 12 edges
+1. `Design` - 14 edges
+2. `Coding Standards` - 13 edges
+3. `Softmato Technology Pvt Ltd — Chart of Accounts & Posting Rules` - 12 edges
 4. `Testing` - 12 edges
 5. `products` - 11 edges
 6. `9. Posting rules` - 11 edges
@@ -82,7 +82,7 @@
 - `verifyTotp()` --calls--> `decryptSecret()`  [EXTRACTED]
   apps/web/lib/totp.core.ts → apps/web/lib/crypto.core.ts
 
-## Communities (55 total, 7 thin omitted)
+## Communities (55 total, 6 thin omitted)
 
 ### Community 0 - "Community 0"
 Cohesion: 0.06
@@ -97,12 +97,12 @@ Cohesion: 0.06
 Nodes (31): 1. Conventions, 2. Authentication, 3. Endpoints, 4. Outbound webhooks, 5.1 `manual_qr`, 5.2 Khalti (KPG v2), 5.3 eSewa, 5.4 Fonepay (+23 more)
 
 ### Community 3 - "Community 3"
-Cohesion: 0.07
-Nodes (28): 10. Comments, 11. Commits, 12. Formatting, 1. TypeScript, 2. Money in code, 3. Validation, 4. Database access, 5. API routes (+20 more)
+Cohesion: 0.08
+Nodes (31): 10. Quality floor, 11. Before adding anything visual, 1. Direction: the ledger, 1. Direction: warm paper, quiet emerald, 2. Palette, 3. Typography, 4. The signature: greenbar tables, 4. The signature: ruled data tables (+23 more)
 
 ### Community 4 - "Community 4"
 Cohesion: 0.07
-Nodes (29): 10. Quality floor, 11. Before adding anything visual, 1. Direction: the ledger, 2. Palette, 3. Typography, 4. The signature: greenbar tables, 5. Money and date formatting, 6. Layout (+21 more)
+Nodes (28): 10. Comments, 11. Commits, 12. Formatting, 1. TypeScript, 2. Money in code, 3. Validation, 4. Database access, 5. API routes (+20 more)
 
 ### Community 5 - "Community 5"
 Cohesion: 0.1
@@ -117,8 +117,8 @@ Cohesion: 0.1
 Nodes (20): 10. Before accepting any phase, 11. What not to test, 1. Stack, 2. Ledger — must pass before any provider goes live, 3. Idempotency, 4. Forgery and trust, 5. Amount integrity, 6. Authorization (+12 more)
 
 ### Community 8 - "Community 8"
-Cohesion: 0.13
-Nodes (16): products, entryDirection, journalEntries, JournalEntry, journalSource, ledgerEntries, LedgerEntry, NewJournalEntry (+8 more)
+Cohesion: 0.14
+Nodes (16): products, Application, APPLICATION_SCOPES, applications, ApplicationScope, Customer, customers, Invoice (+8 more)
 
 ### Community 9 - "Community 9"
 Cohesion: 0.1
@@ -130,7 +130,7 @@ Nodes (14): AccountingError, allocateDocumentNo(), allocateSequence(), COLUMN, f
 
 ### Community 11 - "Community 11"
 Cohesion: 0.13
-Nodes (15): Application, APPLICATION_SCOPES, applications, ApplicationScope, Customer, customers, Invoice, InvoiceLine (+7 more)
+Nodes (15): entryDirection, journalEntries, JournalEntry, journalSource, ledgerEntries, LedgerEntry, NewJournalEntry, NewLedgerEntry (+7 more)
 
 ### Community 12 - "Community 12"
 Cohesion: 0.11
@@ -198,36 +198,40 @@ Nodes (5): Always read graph nodes before editing, graphify - READ THIS FIRST th
 
 ### Community 28 - "Community 28"
 Cohesion: 0.33
-Nodes (4): env, hex32, publicSchema, serverSchema
+Nodes (4): dmSans, inter, metadata, plexMono
 
 ### Community 29 - "Community 29"
 Cohesion: 0.33
-Nodes (3): cjsRequire, loaded, MONTH_NAMES
+Nodes (4): env, hex32, publicSchema, serverSchema
 
 ### Community 30 - "Community 30"
-Cohesion: 0.4
-Nodes (4): code:bash (npm run dev), Deploy on Vercel, Getting Started, Learn More
+Cohesion: 0.33
+Nodes (3): cjsRequire, loaded, MONTH_NAMES
 
 ### Community 31 - "Community 31"
 Cohesion: 0.4
-Nodes (4): Before you end a session, Before you start a session, Softmato Platform — Documentation, The one-paragraph version
+Nodes (4): code:bash (npm run dev), Deploy on Vercel, Getting Started, Learn More
 
 ### Community 32 - "Community 32"
-Cohesion: 0.5
-Nodes (3): envPath, [, key, rawValue], match
+Cohesion: 0.4
+Nodes (4): Before you end a session, Before you start a session, Softmato Platform — Documentation, The one-paragraph version
 
 ### Community 33 - "Community 33"
 Cohesion: 0.5
-Nodes (3): JWT, Session, User
+Nodes (3): envPath, [, key, rawValue], match
 
 ### Community 34 - "Community 34"
+Cohesion: 0.5
+Nodes (3): JWT, Session, User
+
+### Community 35 - "Community 35"
 Cohesion: 0.5
 Nodes (3): envPath, [, key, rawValue], match
 
 ## Knowledge Gaps
-- **317 isolated node(s):** `eslintConfig`, `Surface`, `SUBDOMAIN_SURFACE`, `SURFACE_PREFIX`, `config` (+312 more)
+- **313 isolated node(s):** `eslintConfig`, `Surface`, `SUBDOMAIN_SURFACE`, `SURFACE_PREFIX`, `config` (+308 more)
   These have ≤1 connection - possible missing edges or undocumented components.
-- **7 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **6 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
@@ -239,7 +243,7 @@ _Questions this graph is uniquely positioned to answer:_
 - **Why does `Softmato Technology Pvt Ltd — Chart of Accounts & Posting Rules` connect `Community 12` to `Community 6`?**
   _High betweenness centrality (0.003) - this node is a cross-community bridge._
 - **What connects `eslintConfig`, `Surface`, `SUBDOMAIN_SURFACE` to the rest of the system?**
-  _317 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _313 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Community 0` be split into smaller, more focused modules?**
   _Cohesion score 0.06 - nodes in this community are weakly interconnected._
 - **Should `Community 1` be split into smaller, more focused modules?**

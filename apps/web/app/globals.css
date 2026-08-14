@@ -1,26 +1,246 @@
 @import 'tailwindcss';
 
+/*
+ * Design tokens.
+ *
+ * Palette, surfaces and type are ported from the founder's reference project
+ * (D:\Jiwan-Mijhar) — warm paper, emerald primary, terracotta accent, glass
+ * panels. See docs/DESIGN.md, which was rewritten to match; do not reintroduce
+ * the old greenbar palette.
+ *
+ * Two things survive from the original direction because they are functional
+ * rather than stylistic, and both concern money:
+ *
+ *   1. Every figure is set in tabular mono (`.numeric` below). Digits must
+ *      align in a column so a mis-keyed NPR 50,000 is visible at a glance.
+ *   2. --credit and --flag carry meaning. Green is money in, red is money out
+ *      or reversed. Never use either to emphasise non-financial text, and
+ *      never set an amount in --accent-strong.
+ */
+
+@custom-variant dark (&:is(.dark *));
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Warm paper surfaces. */
+  --background: oklch(1 0 0);
+  --foreground: oklch(0.147 0.004 49.25);
+  --surface: rgba(255, 250, 244, 0.78);
+  --surface-strong: #fff8ef;
+  --shadow: 0 24px 80px rgba(100, 63, 24, 0.12);
+
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.147 0.004 49.25);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.147 0.004 49.25);
+
+  /* Emerald primary, terracotta accent. */
+  --primary: oklch(0.508 0.118 165.612);
+  --primary-foreground: oklch(0.979 0.021 166.113);
+  --secondary: oklch(0.967 0.001 286.375);
+  --secondary-foreground: oklch(0.21 0.006 285.885);
+  --accent: oklch(0.97 0.001 106.424);
+  --accent-foreground: oklch(0.216 0.006 56.043);
+  --accent-strong: #b84a1a;
+  --teal: #1f766e;
+  --sky: #2176ae;
+
+  --muted: oklch(0.97 0.001 106.424);
+  --muted-foreground: oklch(0.553 0.013 58.071);
+  --border: oklch(0.923 0.003 48.717);
+  --input: oklch(0.923 0.003 48.717);
+  --ring: oklch(0.709 0.01 56.259);
+  --destructive: oklch(0.577 0.245 27.325);
+
+  /*
+   * Money semantics. Not decoration — see the note above.
+   * --credit: money in, positive. --flag: money out, reversed, negative.
+   */
+  --credit: #1b6b4a;
+  --flag: #a81e12;
+
+  --radius: 0.625rem;
+
+  /* Admin sidebar. */
+  --sidebar: #e2e6e3;
+  --sidebar-foreground: oklch(0.147 0.004 49.25);
+  --sidebar-primary: oklch(0.596 0.145 163.225);
+  --sidebar-primary-foreground: oklch(0.979 0.021 166.113);
+  --sidebar-accent: #d3d8d4;
+  --sidebar-accent-foreground: oklch(0.216 0.006 56.043);
+  --sidebar-border: rgba(108, 121, 113, 0.3);
+  --sidebar-ring: oklch(0.709 0.01 56.259);
+}
+
+/*
+ * Dark mode ships with the palette but nothing toggles it yet. docs/DESIGN.md
+ * scopes dark to the admin surface; public and checkout stay light.
+ */
+.dark {
+  --background: oklch(0.147 0.004 49.25);
+  --foreground: oklch(0.985 0.001 106.423);
+  --surface: rgba(28, 32, 30, 0.72);
+  --surface-strong: #1b211e;
+
+  --card: oklch(0.216 0.006 56.043);
+  --card-foreground: oklch(0.985 0.001 106.423);
+  --popover: oklch(0.216 0.006 56.043);
+  --popover-foreground: oklch(0.985 0.001 106.423);
+
+  --primary: oklch(0.432 0.095 166.913);
+  --primary-foreground: oklch(0.979 0.021 166.113);
+  --secondary: oklch(0.274 0.006 286.033);
+  --secondary-foreground: oklch(0.985 0 0);
+  --accent: oklch(0.268 0.007 34.298);
+  --accent-foreground: oklch(0.985 0.001 106.423);
+
+  --muted: oklch(0.268 0.007 34.298);
+  --muted-foreground: oklch(0.709 0.01 56.259);
+  --border: oklch(1 0 0 / 10%);
+  --input: oklch(1 0 0 / 15%);
+  --ring: oklch(0.553 0.013 58.071);
+  --destructive: oklch(0.704 0.191 22.216);
+
+  /* Lightened so they still read against a dark ground. */
+  --credit: #4bbd8b;
+  --flag: #e8705f;
+
+  --sidebar: #16211d;
+  --sidebar-foreground: oklch(0.985 0.001 106.423);
+  --sidebar-primary: oklch(0.696 0.17 162.48);
+  --sidebar-primary-foreground: oklch(0.262 0.051 172.552);
+  --sidebar-accent: #20302a;
+  --sidebar-accent-foreground: oklch(0.985 0.001 106.423);
+  --sidebar-border: rgba(114, 148, 131, 0.24);
+  --sidebar-ring: oklch(0.553 0.013 58.071);
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-surface: var(--surface);
+  --color-surface-strong: var(--surface-strong);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent-strong: var(--accent-strong);
+  --color-teal: var(--teal);
+  --color-sky: var(--sky);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-destructive: var(--destructive);
+  --color-credit: var(--credit);
+  --color-flag: var(--flag);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+
+  --font-sans: var(--font-sans);
+  --font-heading: var(--font-heading);
+  --font-mono: var(--font-mono);
+
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.4);
+  --radius-2xl: calc(var(--radius) * 1.8);
+  --radius-3xl: calc(var(--radius) * 2.2);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer base {
+  * {
+    border-color: var(--border);
+  }
+
+  html {
+    scroll-behavior: smooth;
+    font-family: var(--font-sans);
+  }
+
+  body {
+    background: var(--background);
+    color: var(--foreground);
+    overflow-x: hidden;
+  }
+
+  img,
+  video,
+  canvas,
+  svg {
+    max-width: 100%;
+    height: auto;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  ::selection {
+    background: rgba(223, 106, 52, 0.22);
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@layer components {
+  .glass-panel {
+    background: var(--surface);
+    box-shadow: var(--shadow);
+    backdrop-filter: blur(18px);
+  }
+
+  .section-frame {
+    border: 1px solid var(--border);
+    background: var(--surface-strong);
+    box-shadow: var(--shadow);
+  }
+
+  .eyebrow {
+    font-family: var(--font-mono);
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+  }
+
+  .headline {
+    font-family: var(--font-heading);
+    letter-spacing: -0.04em;
+  }
+
+  /*
+   * Every amount, account code, invoice number, transaction id and date.
+   * tabular-nums is the point: it keeps digits in a column so a figure with
+   * the wrong number of zeros is visible without reading it.
+   */
+  .numeric {
+    font-family: var(--font-mono);
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+/* Respect the OS setting — docs/PHASES.md Phase 2, acceptance 5. */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }
