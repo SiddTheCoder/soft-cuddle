@@ -1,7 +1,7 @@
 # Graph Report - company  (2026-08-14)
 
 ## Corpus Check
-- 119 files · ~49,635 words
+- 119 files · ~49,756 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
@@ -155,7 +155,7 @@ Nodes (14): decryptSecret(), encryptSecret(), key(), timingSafeEquals(), createT
 
 ### Community 17 - "Community 17"
 Cohesion: 0.13
-Nodes (13): FiscalPeriod, fiscalPeriods, periodStatus, entryDirection, JournalEntry, journalSource, ledgerEntries, LedgerEntry (+5 more)
+Nodes (13): FiscalPeriod, fiscalPeriods, periodStatus, entryDirection, journalEntries, JournalEntry, journalSource, LedgerEntry (+5 more)
 
 ### Community 18 - "Community 18"
 Cohesion: 0.12
@@ -163,7 +163,7 @@ Nodes (16): `apps/web`, code:block1 (softmato/), code:block2 (apps/web/), code:b
 
 ### Community 19 - "Community 19"
 Cohesion: 0.15
-Nodes (10): journalEntries, AccountSeed, accountSeeds, ProductSeed, productSeeds, headers, insertJournal(), leaves (+2 more)
+Nodes (10): ledgerEntries, AccountSeed, accountSeeds, ProductSeed, productSeeds, headers, insertJournal(), leaves (+2 more)
 
 ### Community 20 - "Community 20"
 Cohesion: 0.38

@@ -12225,7 +12225,7 @@
       "source_location": "L31"
     },
     {
-      "community": 19,
+      "community": 17,
       "file_type": "code",
       "id": "schema_ledger_journalentries",
       "label": "journalEntries",
@@ -12243,7 +12243,7 @@
       "source_location": "L85"
     },
     {
-      "community": 17,
+      "community": 19,
       "file_type": "code",
       "id": "schema_ledger_ledgerentries",
       "label": "ledgerEntries",
@@ -15390,7 +15390,7 @@
       "label": "Where the code is",
       "norm_label": "where the code is",
       "source_file": "docs/MEMORY.md",
-      "source_location": "L36"
+      "source_location": "L37"
     },
     {
       "community": 15,
@@ -15399,7 +15399,7 @@
       "label": "code:bash (pnpm install && pnpm dev      # localhost:3000, admin.localh)",
       "norm_label": "code:bash (pnpm install && pnpm dev      # localhost:3000, admin.localh)",
       "source_file": "docs/MEMORY.md",
-      "source_location": "L53"
+      "source_location": "L54"
     },
     {
       "community": 15,
@@ -15408,7 +15408,7 @@
       "label": "Phase progress",
       "norm_label": "phase progress",
       "source_file": "docs/MEMORY.md",
-      "source_location": "L70"
+      "source_location": "L71"
     },
     {
       "community": 15,
@@ -15417,7 +15417,7 @@
       "label": "Blocked on the founder",
       "norm_label": "blocked on the founder",
       "source_file": "docs/MEMORY.md",
-      "source_location": "L88"
+      "source_location": "L89"
     },
     {
       "community": 15,
@@ -15426,7 +15426,7 @@
       "label": "Blocked on external parties",
       "norm_label": "blocked on external parties",
       "source_file": "docs/MEMORY.md",
-      "source_location": "L106"
+      "source_location": "L107"
     },
     {
       "community": 15,
@@ -15435,7 +15435,7 @@
       "label": "Decisions made",
       "norm_label": "decisions made",
       "source_file": "docs/MEMORY.md",
-      "source_location": "L117"
+      "source_location": "L118"
     },
     {
       "community": 15,
@@ -15444,7 +15444,7 @@
       "label": "Things learned the hard way",
       "norm_label": "things learned the hard way",
       "source_file": "docs/MEMORY.md",
-      "source_location": "L139"
+      "source_location": "L140"
     },
     {
       "community": 15,
@@ -15453,7 +15453,7 @@
       "label": "Deviations from the docs",
       "norm_label": "deviations from the docs",
       "source_file": "docs/MEMORY.md",
-      "source_location": "L200"
+      "source_location": "L201"
     },
     {
       "community": 15,
@@ -15462,7 +15462,7 @@
       "label": "Session log",
       "norm_label": "session log",
       "source_file": "docs/MEMORY.md",
-      "source_location": "L238"
+      "source_location": "L239"
     },
     {
       "community": 15,
@@ -15471,7 +15471,7 @@
       "label": "Session 3 — 2026-08-14",
       "norm_label": "session 3 — 2026-08-14",
       "source_file": "docs/MEMORY.md",
-      "source_location": "L242"
+      "source_location": "L243"
     },
     {
       "community": 15,
@@ -15480,7 +15480,7 @@
       "label": "Session 2 — 2026-08-12",
       "norm_label": "session 2 — 2026-08-12",
       "source_file": "docs/MEMORY.md",
-      "source_location": "L274"
+      "source_location": "L282"
     },
     {
       "community": 15,
@@ -15489,7 +15489,7 @@
       "label": "Session 1 — 2026-08-12",
       "norm_label": "session 1 — 2026-08-12",
       "source_file": "docs/MEMORY.md",
-      "source_location": "L298"
+      "source_location": "L309"
     },
     {
       "community": 15,
@@ -15498,7 +15498,7 @@
       "label": "Session 0 — 2026-08-12 (planning)",
       "norm_label": "session 0 — 2026-08-12 (planning)",
       "source_file": "docs/MEMORY.md",
-      "source_location": "L327"
+      "source_location": "L338"
     },
     {
       "community": 15,
@@ -15507,7 +15507,7 @@
       "label": "Template for a new entry",
       "norm_label": "template for a new entry",
       "source_file": "docs/MEMORY.md",
-      "source_location": "L338"
+      "source_location": "L349"
     },
     {
       "community": 15,
@@ -15516,7 +15516,7 @@
       "label": "code:markdown (### Session N — YYYY-MM-DD)",
       "norm_label": "code:markdown (### session n — yyyy-mm-dd)",
       "source_file": "docs/MEMORY.md",
-      "source_location": "L340"
+      "source_location": "L351"
     },
     {
       "community": 24,
