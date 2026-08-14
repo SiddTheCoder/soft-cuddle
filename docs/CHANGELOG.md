@@ -12,7 +12,15 @@ this file tracks what was delivered.
 
 ## [Unreleased]
 
-Nothing yet — Phase 2 begins here.
+### Added
+- Content models behind the public site: pages, blog posts, team members,
+  services, product pages, legal documents, and contact form submissions.
+  Nothing is editable from the admin panel yet — this is the storage layer.
+
+### Migration
+- `0003` — CMS tables, generated. Purely additive; the `0001`/`0002` triggers
+  and views are untouched. Marketing product pages reference the existing
+  `products` ledger dimension rather than duplicating it.
 
 ---
 

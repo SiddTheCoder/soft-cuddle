@@ -39,7 +39,8 @@ production.** Replace it before the first real deployment.
 |---|---|
 | Ledger primitive | `packages/accounting/post-journal.ts` |
 | Gapless numbering | `packages/accounting/numbering.ts` |
-| Schema (11 modules) | `packages/db/schema/` |
+| Schema (12 modules) | `packages/db/schema/` |
+| CMS content models | `packages/db/schema/cms.ts` |
 | The four guarantees | `packages/db/migrations/0001_ledger_guarantees.sql` |
 | Ledger tests | `packages/db/tests/ledger.test.ts` |
 | Auth (argon2id + TOTP) | `apps/web/lib/auth.ts` |
@@ -69,7 +70,7 @@ production.** Replace it before the first real deployment.
 | Phase | Status | Notes |
 |---|---|---|
 | 1 — Foundation | ✅ Accepted | All seven criteria pass. 1–6 verified end to end against Neon 18.4; 7 verified by running every CI step locally — see session 3. |
-| 2 — Public site + CMS | ⬜ Not started | |
+| 2 — Public site + CMS | 🟡 In progress | CMS schema + migration `0003` done. Next: admin editors, then design tokens and public pages. |
 | 3 — Payment core + manual QR | ⬜ Not started | |
 | 4 — Khalti | ⬜ Not started | |
 | 5 — eSewa | ⬜ Not started | |
@@ -126,6 +127,9 @@ these — if one looks wrong, ask before changing it.
 | 2026-08-12 | No auto-debit subscriptions | Nepali wallets have no reliable server-initiated charge. Customer initiates each payment. |
 | 2026-08-12 | `manual_qr` as a first-class provider | Replaces today's flow and stays as a permanent fallback when a gateway is down. |
 | 2026-08-12 | No platform fee between products | One legal entity — an inter-product fee nets to zero. Product P&L via ledger dimension instead. |
+| 2026-08-14 | CMS: one typed table per content kind, not a generic `content_entries` with a JSON body | A founder editing the refund policy should meet a form with the right fields on it; a public page should read a column, not validate a blob. Phase 2 acceptance turns on editing *every* page and legal document, which is exactly where a generic table gets expensive. |
+| 2026-08-14 | Marketing product pages are a separate table referencing `products` | `products` is a ledger dimension — `ledger_entries.product_id` drives product-level P&L. Renaming a product for a campaign must not be able to move posted revenue. |
+| 2026-08-14 | Legal documents are versioned rows, superseded not overwritten | What a customer agreed to on a given date has to stay knowable. Other content kinds carry one row. |
 | 2026-08-12 | Fiscal periods seeded, not computed | BS month boundaries don't align with Gregorian and month lengths vary. |
 
 ---
@@ -149,6 +153,15 @@ mistake.
   journal. Any future whole-journal invariant needs the same treatment.
   The unreachable branch inside `assert_journal_balanced()` was left in place
   deliberately — removing a money-path check to tidy up is not a good trade.
+- **There is no Prettier config, and `pnpm format` would rewrite the whole
+  repo.** `package.json` exposes `format` as `prettier --write "**/*"`, but no
+  `.prettierrc` exists anywhere, so Prettier falls back to its defaults —
+  double quotes. Every file in the codebase is single-quoted, so *every* file
+  fails `prettier --check` today. Running `pnpm format` would produce a
+  thousand-line diff touching everything. CI runs `eslint`, not Prettier, so
+  nothing catches this. Either add a `.prettierrc` with `singleQuote: true` and
+  format once deliberately, or drop the `format` script — but do not run it
+  casually.
 - **Fiscal periods run out.** `bsCalendar` in `packages/db/seed/fiscal-periods.ts`
   currently holds one year, 2083/84, ending 17 Jul 2027. A journal dated past
   the last boundary has no period to resolve into and `postJournal()` refuses
