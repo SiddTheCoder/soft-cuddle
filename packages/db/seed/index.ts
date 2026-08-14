@@ -2,15 +2,34 @@
  * Seed runner. Idempotent: safe to run repeatedly against a fresh or
  * partially-seeded database.
  *
- * Reference data only — accounts, products, providers, fiscal periods. It never
- * posts a journal entry.
+ * Reference data only — accounts, products, providers, fiscal periods, and
+ * placeholder CMS content. It never posts a journal entry, and it never
+ * publishes a page.
  */
+import { sql } from 'drizzle-orm';
+
 import { db } from '../client';
 import { accounts, products } from '../schema/accounts';
+import {
+  blogPosts,
+  legalDocuments,
+  pages,
+  productPages,
+  services,
+  teamMembers,
+} from '../schema/cms';
 import { fiscalPeriods } from '../schema/fiscal';
 import { paymentProviders } from '../schema/providers';
 
 import { accountSeeds } from './accounts';
+import {
+  blogPostSeeds,
+  legalDocumentSeeds,
+  pageSeeds,
+  productPageSeeds,
+  serviceSeeds,
+  teamMemberSeeds,
+} from './cms';
 import { productSeeds } from './products';
 import { providerSeeds } from './providers';
 import { buildFiscalPeriods } from './fiscal-periods';
@@ -41,6 +60,42 @@ async function main(): Promise<void> {
   const periods = buildFiscalPeriods(FISCAL_YEAR);
   await db.insert(fiscalPeriods).values(periods).onConflictDoNothing();
   console.log(`fiscal periods: ${periods.length} ensured for ${FISCAL_YEAR}`);
+
+  await seedCms();
+}
+
+/**
+ * Placeholder content, all of it draft. See ./cms.ts — nothing here is
+ * publishable copy, and the seeder never publishes anything.
+ */
+async function seedCms(): Promise<void> {
+  await db.insert(pages).values(pageSeeds).onConflictDoNothing();
+  await db.insert(services).values(serviceSeeds).onConflictDoNothing();
+  await db.insert(productPages).values(productPageSeeds).onConflictDoNothing();
+  await db
+    .insert(legalDocuments)
+    .values(legalDocumentSeeds)
+    .onConflictDoNothing();
+  await db.insert(blogPosts).values(blogPostSeeds).onConflictDoNothing();
+
+  /*
+   * team_members has no natural key to conflict on — a person is not
+   * identified by their name. Insert only into an empty table, so a re-run
+   * cannot duplicate the placeholders or resurrect ones the founder deleted.
+   */
+  const [existing] = await db
+    .select({ count: sql<number>`count(*)::int` })
+    .from(teamMembers);
+
+  if ((existing?.count ?? 0) === 0) {
+    await db.insert(teamMembers).values(teamMemberSeeds);
+  }
+
+  console.log(
+    `cms: ${pageSeeds.length} pages, ${serviceSeeds.length} services, ` +
+      `${productPageSeeds.length} product pages, ${legalDocumentSeeds.length} legal ` +
+      `documents, ${blogPostSeeds.length} post — all draft`,
+  );
 }
 
 await main();
