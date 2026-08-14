@@ -10,7 +10,7 @@ Kathmandu. It has two revenue lines:
 
 **Legal shape, and why it matters to the build:**
 
-- One legal entity. Every SaaS product is a *brand*, not a subsidiary.
+- One legal entity. Every SaaS product is a _brand_, not a subsidiary.
 - Softmato collects **its own revenue** from business customers. It never holds
   or routes money belonging to anyone else. HostelHub is sold to hostel owners
   as a subscription; students never pay through this system.
@@ -46,13 +46,13 @@ Khalti integration, its own credentials, and its own reconciliation.
 
 One platform with four surfaces and one financial core.
 
-| Surface | Domain | For |
-|---|---|---|
-| Public site | `softmato.com` | Prospects, candidates, customers |
-| Admin panel | `admin.softmato.com` | Founders only |
-| Hosted checkout | `payment.softmato.com` | Paying customers |
-| Client portal | `agency.softmato.com` | Agency clients |
-| Payment API | `/api/v1/*` | The SaaS products |
+| Surface         | Domain                 | For                              |
+| --------------- | ---------------------- | -------------------------------- |
+| Public site     | `softmato.com`         | Prospects, candidates, customers |
+| Admin panel     | `admin.softmato.com`   | Founders only                    |
+| Hosted checkout | `payment.softmato.com` | Paying customers                 |
+| Client portal   | `agency.softmato.com`  | Agency clients                   |
+| Payment API     | `/api/v1/*`            | The SaaS products                |
 
 **The central idea:** SaaS products never touch a payment provider. They call
 one internal API, receive a checkout URL, redirect the customer, and wait for a
@@ -161,12 +161,12 @@ The build succeeds when:
 
 ## 7. Explicitly out of scope for v1
 
-- Staff admin accounts and role separation *(model the shape; don't build it)*
+- Staff admin accounts and role separation _(model the shape; don't build it)_
 - Payroll beyond recording salary as an expense — no TDS slab computation,
   no SSF filing
 - VAT invoicing and IRD CBMS integration
 - International payments and multi-currency
-- Auto-debit and stored payment mandates *(table exists, unused)*
+- Auto-debit and stored payment mandates _(table exists, unused)_
 - Mobile apps
 - Anything the founder has not asked for
 

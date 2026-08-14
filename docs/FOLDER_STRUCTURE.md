@@ -259,16 +259,16 @@ ui/
 
 ## Naming
 
-| Thing | Convention |
-|---|---|
-| Files | `kebab-case.ts` |
-| React components | `PascalCase.tsx` |
-| Route folders | `kebab-case`, route groups `(parens)` |
-| DB tables/columns | `snake_case` |
-| TS variables | `camelCase` |
-| Types/interfaces | `PascalCase` |
-| Constants | `SCREAMING_SNAKE_CASE` |
-| Money variables | always suffixed `Minor` — `amountMinor`, `feeMinor` |
+| Thing             | Convention                                          |
+| ----------------- | --------------------------------------------------- |
+| Files             | `kebab-case.ts`                                     |
+| React components  | `PascalCase.tsx`                                    |
+| Route folders     | `kebab-case`, route groups `(parens)`               |
+| DB tables/columns | `snake_case`                                        |
+| TS variables      | `camelCase`                                         |
+| Types/interfaces  | `PascalCase`                                        |
+| Constants         | `SCREAMING_SNAKE_CASE`                              |
+| Money variables   | always suffixed `Minor` — `amountMinor`, `feeMinor` |
 
 That last one is a rule, not a preference. `amount` is ambiguous;
 `amountMinor` is not.

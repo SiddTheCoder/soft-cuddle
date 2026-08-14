@@ -4223,8 +4223,8 @@
       "relation": "contains",
       "source": "docs_changelog_phase_1_2026_08_14",
       "source_file": "docs/CHANGELOG.md",
-      "source_location": "L31",
-      "target": "docs_changelog_added_31",
+      "source_location": "L33",
+      "target": "docs_changelog_added_33",
       "weight": 1.0
     },
     {
@@ -4243,8 +4243,8 @@
       "relation": "contains",
       "source": "docs_changelog_phase_1_2026_08_14",
       "source_file": "docs/CHANGELOG.md",
-      "source_location": "L69",
-      "target": "docs_changelog_migration_69",
+      "source_location": "L73",
+      "target": "docs_changelog_migration_73",
       "weight": 1.0
     },
     {
@@ -4255,6 +4255,26 @@
       "source_file": "docs/CHANGELOG.md",
       "source_location": "L70",
       "target": "docs_changelog_notes",
+      "weight": 1.0
+    },
+    {
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "relation": "contains",
+      "source": "docs_changelog_phase_1_2026_08_14",
+      "source_file": "docs/CHANGELOG.md",
+      "source_location": "L31",
+      "target": "docs_changelog_added_31",
+      "weight": 1.0
+    },
+    {
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "relation": "contains",
+      "source": "docs_changelog_phase_1_2026_08_14",
+      "source_file": "docs/CHANGELOG.md",
+      "source_location": "L69",
+      "target": "docs_changelog_migration_69",
       "weight": 1.0
     },
     {
@@ -7209,7 +7229,7 @@
       "label": "requestContext()",
       "norm_label": "requestcontext()",
       "source_file": "apps/web/lib/audit.ts",
-      "source_location": "L86"
+      "source_location": "L83"
     },
     {
       "community": 5,
@@ -7353,7 +7373,7 @@
       "label": "publicSchema",
       "norm_label": "publicschema",
       "source_file": "apps/web/lib/env.ts",
-      "source_location": "L34"
+      "source_location": "L36"
     },
     {
       "community": 28,
@@ -7362,7 +7382,7 @@
       "label": "parse()",
       "norm_label": "parse()",
       "source_file": "apps/web/lib/env.ts",
-      "source_location": "L39"
+      "source_location": "L41"
     },
     {
       "community": 28,
@@ -7371,7 +7391,7 @@
       "label": "env",
       "norm_label": "env",
       "source_file": "apps/web/lib/env.ts",
-      "source_location": "L53"
+      "source_location": "L55"
     },
     {
       "community": 16,
@@ -7488,7 +7508,7 @@
       "label": "generated",
       "norm_label": "generated",
       "source_file": "apps/web/tests/crypto.test.ts",
-      "source_location": "L75"
+      "source_location": "L77"
     },
     {
       "community": 33,
@@ -7905,7 +7925,7 @@
       "source_location": "L73"
     },
     {
-      "community": 8,
+      "community": 11,
       "file_type": "code",
       "id": "packages_db_schema_applications_ts",
       "label": "applications.ts",
@@ -7914,7 +7934,7 @@
       "source_location": "L1"
     },
     {
-      "community": 8,
+      "community": 11,
       "file_type": "code",
       "id": "schema_applications_application_scopes",
       "label": "APPLICATION_SCOPES",
@@ -7923,7 +7943,7 @@
       "source_location": "L20"
     },
     {
-      "community": 8,
+      "community": 11,
       "file_type": "code",
       "id": "schema_applications_applicationscope",
       "label": "ApplicationScope",
@@ -7932,7 +7952,7 @@
       "source_location": "L29"
     },
     {
-      "community": 8,
+      "community": 11,
       "file_type": "code",
       "id": "schema_applications_applications",
       "label": "applications",
@@ -7941,7 +7961,7 @@
       "source_location": "L31"
     },
     {
-      "community": 8,
+      "community": 11,
       "file_type": "code",
       "id": "schema_applications_application",
       "label": "Application",
@@ -7974,7 +7994,7 @@
       "label": "auditLogs",
       "norm_label": "auditlogs",
       "source_file": "packages/db/schema/audit.ts",
-      "source_location": "L47"
+      "source_location": "L45"
     },
     {
       "community": 0,
@@ -7983,7 +8003,7 @@
       "label": "AdminUser",
       "norm_label": "adminuser",
       "source_file": "packages/db/schema/audit.ts",
-      "source_location": "L74"
+      "source_location": "L72"
     },
     {
       "community": 0,
@@ -7992,7 +8012,7 @@
       "label": "AuditLog",
       "norm_label": "auditlog",
       "source_file": "packages/db/schema/audit.ts",
-      "source_location": "L75"
+      "source_location": "L73"
     },
     {
       "community": 0,
@@ -8139,7 +8159,7 @@
       "source_location": "L362"
     },
     {
-      "community": 8,
+      "community": 11,
       "file_type": "code",
       "id": "packages_db_schema_customers_ts",
       "label": "customers.ts",
@@ -8148,7 +8168,7 @@
       "source_location": "L1"
     },
     {
-      "community": 8,
+      "community": 11,
       "file_type": "code",
       "id": "schema_customers_customers",
       "label": "customers",
@@ -8157,7 +8177,7 @@
       "source_location": "L15"
     },
     {
-      "community": 8,
+      "community": 11,
       "file_type": "code",
       "id": "schema_customers_customer",
       "label": "Customer",
@@ -8211,7 +8231,7 @@
       "source_location": "L1"
     },
     {
-      "community": 8,
+      "community": 11,
       "file_type": "code",
       "id": "packages_db_schema_invoices_ts",
       "label": "invoices.ts",
@@ -8220,7 +8240,7 @@
       "source_location": "L1"
     },
     {
-      "community": 8,
+      "community": 11,
       "file_type": "code",
       "id": "schema_invoices_invoicestatus",
       "label": "invoiceStatus",
@@ -8229,7 +8249,7 @@
       "source_location": "L28"
     },
     {
-      "community": 8,
+      "community": 11,
       "file_type": "code",
       "id": "schema_invoices_invoices",
       "label": "invoices",
@@ -8238,34 +8258,34 @@
       "source_location": "L37"
     },
     {
-      "community": 8,
+      "community": 11,
       "file_type": "code",
       "id": "schema_invoices_invoicelines",
       "label": "invoiceLines",
       "norm_label": "invoicelines",
       "source_file": "packages/db/schema/invoices.ts",
-      "source_location": "L109"
+      "source_location": "L113"
     },
     {
-      "community": 8,
+      "community": 11,
       "file_type": "code",
       "id": "schema_invoices_invoice",
       "label": "Invoice",
       "norm_label": "invoice",
       "source_file": "packages/db/schema/invoices.ts",
-      "source_location": "L135"
+      "source_location": "L139"
     },
     {
-      "community": 8,
+      "community": 11,
       "file_type": "code",
       "id": "schema_invoices_invoiceline",
       "label": "InvoiceLine",
       "norm_label": "invoiceline",
       "source_file": "packages/db/schema/invoices.ts",
-      "source_location": "L136"
+      "source_location": "L140"
     },
     {
-      "community": 11,
+      "community": 8,
       "file_type": "code",
       "id": "packages_db_schema_ledger_ts",
       "label": "ledger.ts",
@@ -8274,7 +8294,7 @@
       "source_location": "L1"
     },
     {
-      "community": 11,
+      "community": 8,
       "file_type": "code",
       "id": "schema_ledger_journalsource",
       "label": "journalSource",
@@ -8283,7 +8303,7 @@
       "source_location": "L31"
     },
     {
-      "community": 11,
+      "community": 8,
       "file_type": "code",
       "id": "schema_ledger_journalentries",
       "label": "journalEntries",
@@ -8292,7 +8312,7 @@
       "source_location": "L45"
     },
     {
-      "community": 11,
+      "community": 8,
       "file_type": "code",
       "id": "schema_ledger_entrydirection",
       "label": "entryDirection",
@@ -8301,7 +8321,7 @@
       "source_location": "L85"
     },
     {
-      "community": 11,
+      "community": 8,
       "file_type": "code",
       "id": "schema_ledger_ledgerentries",
       "label": "ledgerEntries",
@@ -8310,7 +8330,7 @@
       "source_location": "L87"
     },
     {
-      "community": 11,
+      "community": 8,
       "file_type": "code",
       "id": "schema_ledger_journalentry",
       "label": "JournalEntry",
@@ -8319,7 +8339,7 @@
       "source_location": "L119"
     },
     {
-      "community": 11,
+      "community": 8,
       "file_type": "code",
       "id": "schema_ledger_newjournalentry",
       "label": "NewJournalEntry",
@@ -8328,7 +8348,7 @@
       "source_location": "L120"
     },
     {
-      "community": 11,
+      "community": 8,
       "file_type": "code",
       "id": "schema_ledger_ledgerentry",
       "label": "LedgerEntry",
@@ -8337,7 +8357,7 @@
       "source_location": "L121"
     },
     {
-      "community": 11,
+      "community": 8,
       "file_type": "code",
       "id": "schema_ledger_newledgerentry",
       "label": "NewLedgerEntry",
@@ -8532,7 +8552,7 @@
       "label": "reconStatus",
       "norm_label": "reconstatus",
       "source_file": "packages/db/schema/reconciliation.ts",
-      "source_location": "L18"
+      "source_location": "L12"
     },
     {
       "community": 26,
@@ -8541,7 +8561,7 @@
       "label": "reconciliationRuns",
       "norm_label": "reconciliationruns",
       "source_file": "packages/db/schema/reconciliation.ts",
-      "source_location": "L25"
+      "source_location": "L19"
     },
     {
       "community": 26,
@@ -8550,7 +8570,7 @@
       "label": "reconciliationItems",
       "norm_label": "reconciliationitems",
       "source_file": "packages/db/schema/reconciliation.ts",
-      "source_location": "L47"
+      "source_location": "L41"
     },
     {
       "community": 26,
@@ -8559,7 +8579,7 @@
       "label": "ReconciliationRun",
       "norm_label": "reconciliationrun",
       "source_file": "packages/db/schema/reconciliation.ts",
-      "source_location": "L62"
+      "source_location": "L56"
     },
     {
       "community": 26,
@@ -8568,10 +8588,10 @@
       "label": "ReconciliationItem",
       "norm_label": "reconciliationitem",
       "source_file": "packages/db/schema/reconciliation.ts",
-      "source_location": "L63"
+      "source_location": "L57"
     },
     {
-      "community": 8,
+      "community": 11,
       "file_type": "code",
       "id": "packages_db_schema_subscriptions_ts",
       "label": "subscriptions.ts",
@@ -8580,7 +8600,7 @@
       "source_location": "L1"
     },
     {
-      "community": 8,
+      "community": 11,
       "file_type": "code",
       "id": "schema_subscriptions_subscriptionstatus",
       "label": "subscriptionStatus",
@@ -8589,7 +8609,7 @@
       "source_location": "L27"
     },
     {
-      "community": 8,
+      "community": 11,
       "file_type": "code",
       "id": "schema_subscriptions_subscriptions",
       "label": "subscriptions",
@@ -8598,7 +8618,7 @@
       "source_location": "L37"
     },
     {
-      "community": 8,
+      "community": 11,
       "file_type": "code",
       "id": "schema_subscriptions_paymentmandates",
       "label": "paymentMandates",
@@ -8607,7 +8627,7 @@
       "source_location": "L91"
     },
     {
-      "community": 8,
+      "community": 11,
       "file_type": "code",
       "id": "schema_subscriptions_subscription",
       "label": "Subscription",
@@ -8631,7 +8651,7 @@
       "label": "vTrialBalance",
       "norm_label": "vtrialbalance",
       "source_file": "packages/db/schema/views.ts",
-      "source_location": "L18"
+      "source_location": "L12"
     },
     {
       "community": 23,
@@ -8640,7 +8660,7 @@
       "label": "vProductPl",
       "norm_label": "vproductpl",
       "source_file": "packages/db/schema/views.ts",
-      "source_location": "L28"
+      "source_location": "L22"
     },
     {
       "community": 23,
@@ -8649,7 +8669,7 @@
       "label": "vUnbalancedJournals",
       "norm_label": "vunbalancedjournals",
       "source_file": "packages/db/schema/views.ts",
-      "source_location": "L39"
+      "source_location": "L33"
     },
     {
       "community": 29,
@@ -8685,7 +8705,7 @@
       "label": "MONTH_NAMES",
       "norm_label": "month_names",
       "source_file": "packages/db/scripts/gen-bs-calendar.ts",
-      "source_location": "L30"
+      "source_location": "L29"
     },
     {
       "community": 29,
@@ -8694,7 +8714,7 @@
       "label": "firstOf()",
       "norm_label": "firstof()",
       "source_file": "packages/db/scripts/gen-bs-calendar.ts",
-      "source_location": "L50"
+      "source_location": "L49"
     },
     {
       "community": 29,
@@ -8703,7 +8723,7 @@
       "label": "main()",
       "norm_label": "main()",
       "source_file": "packages/db/scripts/gen-bs-calendar.ts",
-      "source_location": "L56"
+      "source_location": "L55"
     },
     {
       "community": 19,
@@ -8823,7 +8843,7 @@
       "source_location": "L21"
     },
     {
-      "community": 11,
+      "community": 8,
       "file_type": "code",
       "id": "packages_db_seed_products_ts",
       "label": "products.ts",
@@ -8832,7 +8852,7 @@
       "source_location": "L1"
     },
     {
-      "community": 11,
+      "community": 8,
       "file_type": "code",
       "id": "seed_products_productseed",
       "label": "ProductSeed",
@@ -8841,7 +8861,7 @@
       "source_location": "L9"
     },
     {
-      "community": 11,
+      "community": 8,
       "file_type": "code",
       "id": "seed_products_productseeds",
       "label": "productSeeds",
@@ -8958,7 +8978,7 @@
       "source_location": "L16"
     },
     {
-      "community": 11,
+      "community": 8,
       "file_type": "code",
       "id": "packages_db_tests_ledger_test_ts",
       "label": "ledger.test.ts",
@@ -8967,7 +8987,7 @@
       "source_location": "L1"
     },
     {
-      "community": 11,
+      "community": 8,
       "file_type": "code",
       "id": "tests_ledger_test_unique",
       "label": "unique()",
@@ -8976,7 +8996,7 @@
       "source_location": "L25"
     },
     {
-      "community": 11,
+      "community": 8,
       "file_type": "code",
       "id": "tests_ledger_test_insertjournal",
       "label": "insertJournal()",
@@ -8985,7 +9005,7 @@
       "source_location": "L27"
     },
     {
-      "community": 11,
+      "community": 8,
       "file_type": "code",
       "id": "tests_ledger_test_headers",
       "label": "headers",
@@ -8994,7 +9014,7 @@
       "source_location": "L48"
     },
     {
-      "community": 11,
+      "community": 8,
       "file_type": "code",
       "id": "tests_ledger_test_leaves",
       "label": "leaves",
@@ -9003,7 +9023,7 @@
       "source_location": "L49"
     },
     {
-      "community": 11,
+      "community": 8,
       "file_type": "code",
       "id": "tests_ledger_test_ensureperiod",
       "label": "ensurePeriod()",
@@ -9012,13 +9032,13 @@
       "source_location": "L76"
     },
     {
-      "community": 11,
+      "community": 8,
       "file_type": "code",
       "id": "tests_ledger_test_trialbalance",
       "label": "trialBalance",
       "norm_label": "trialbalance",
       "source_file": "packages/db/tests/ledger.test.ts",
-      "source_location": "L170"
+      "source_location": "L176"
     },
     {
       "community": 0,
@@ -9126,7 +9146,7 @@
       "label": "Always read graph nodes before editing",
       "norm_label": "always read graph nodes before editing",
       "source_file": "CLAUDE.md",
-      "source_location": "L15"
+      "source_location": "L16"
     },
     {
       "community": 27,
@@ -9135,7 +9155,7 @@
       "label": "What you MUST NOT do",
       "norm_label": "what you must not do",
       "source_file": "CLAUDE.md",
-      "source_location": "L19"
+      "source_location": "L21"
     },
     {
       "community": 27,
@@ -9144,7 +9164,7 @@
       "label": "Keeping the graph fresh",
       "norm_label": "keeping the graph fresh",
       "source_file": "CLAUDE.md",
-      "source_location": "L24"
+      "source_location": "L27"
     },
     {
       "community": 46,
@@ -9288,7 +9308,7 @@
       "label": "`POST /v1/checkout` — scope `payment:create`",
       "norm_label": "`post /v1/checkout` — scope `payment:create`",
       "source_file": "docs/API.md",
-      "source_location": "L79"
+      "source_location": "L88"
     },
     {
       "community": 2,
@@ -9297,7 +9317,7 @@
       "label": "code:json ({)",
       "norm_label": "code:json ({)",
       "source_file": "docs/API.md",
-      "source_location": "L81"
+      "source_location": "L90"
     },
     {
       "community": 2,
@@ -9306,7 +9326,7 @@
       "label": "code:json ({)",
       "norm_label": "code:json ({)",
       "source_file": "docs/API.md",
-      "source_location": "L92"
+      "source_location": "L101"
     },
     {
       "community": 2,
@@ -9315,7 +9335,7 @@
       "label": "`GET /v1/transactions/:id` — scope `payment:read`",
       "norm_label": "`get /v1/transactions/:id` — scope `payment:read`",
       "source_file": "docs/API.md",
-      "source_location": "L105"
+      "source_location": "L114"
     },
     {
       "community": 2,
@@ -9324,7 +9344,7 @@
       "label": "`POST /v1/refunds` — scope `refund:request`",
       "norm_label": "`post /v1/refunds` — scope `refund:request`",
       "source_file": "docs/API.md",
-      "source_location": "L111"
+      "source_location": "L120"
     },
     {
       "community": 2,
@@ -9333,7 +9353,7 @@
       "label": "4. Outbound webhooks",
       "norm_label": "4. outbound webhooks",
       "source_file": "docs/API.md",
-      "source_location": "L118"
+      "source_location": "L127"
     },
     {
       "community": 2,
@@ -9342,7 +9362,7 @@
       "label": "code:block5 (POST <application.webhook_url>)",
       "norm_label": "code:block5 (post <application.webhook_url>)",
       "source_file": "docs/API.md",
-      "source_location": "L120"
+      "source_location": "L129"
     },
     {
       "community": 2,
@@ -9351,7 +9371,7 @@
       "label": "code:json ({)",
       "norm_label": "code:json ({)",
       "source_file": "docs/API.md",
-      "source_location": "L126"
+      "source_location": "L135"
     },
     {
       "community": 2,
@@ -9360,7 +9380,7 @@
       "label": "5. Provider integrations",
       "norm_label": "5. provider integrations",
       "source_file": "docs/API.md",
-      "source_location": "L150"
+      "source_location": "L159"
     },
     {
       "community": 2,
@@ -9369,7 +9389,7 @@
       "label": "code:ts (interface PaymentProvider {)",
       "norm_label": "code:ts (interface paymentprovider {)",
       "source_file": "docs/API.md",
-      "source_location": "L154"
+      "source_location": "L163"
     },
     {
       "community": 2,
@@ -9378,7 +9398,7 @@
       "label": "5.1 `manual_qr`",
       "norm_label": "5.1 `manual_qr`",
       "source_file": "docs/API.md",
-      "source_location": "L186"
+      "source_location": "L196"
     },
     {
       "community": 2,
@@ -9387,7 +9407,7 @@
       "label": "5.2 Khalti (KPG v2)",
       "norm_label": "5.2 khalti (kpg v2)",
       "source_file": "docs/API.md",
-      "source_location": "L203"
+      "source_location": "L213"
     },
     {
       "community": 2,
@@ -9396,7 +9416,7 @@
       "label": "code:json ({)",
       "norm_label": "code:json ({)",
       "source_file": "docs/API.md",
-      "source_location": "L216"
+      "source_location": "L226"
     },
     {
       "community": 2,
@@ -9405,16 +9425,16 @@
       "label": "5.3 eSewa",
       "norm_label": "5.3 esewa",
       "source_file": "docs/API.md",
-      "source_location": "L252"
+      "source_location": "L262"
     },
     {
       "community": 2,
       "file_type": "document",
       "id": "docs_api_codeblock_9",
-      "label": "code:ts (const isMobileUA    = /Android|iPhone|iPad|iPod|Mobile/i.tes)",
-      "norm_label": "code:ts (const ismobileua    = /android|iphone|ipad|ipod|mobile/i.tes)",
+      "label": "code:ts (const isMobileUA = /Android|iPhone|iPad|iPod|Mobile/i.test(u)",
+      "norm_label": "code:ts (const ismobileua = /android|iphone|ipad|ipod|mobile/i.test(u)",
       "source_file": "docs/API.md",
-      "source_location": "L256"
+      "source_location": "L266"
     },
     {
       "community": 2,
@@ -9423,7 +9443,7 @@
       "label": "code:block10 (product_code=INTENT,amount=100,transaction_uuid=txn-20251220)",
       "norm_label": "code:block10 (product_code=intent,amount=100,transaction_uuid=txn-20251220)",
       "source_file": "docs/API.md",
-      "source_location": "L269"
+      "source_location": "L279"
     },
     {
       "community": 2,
@@ -9432,7 +9452,7 @@
       "label": "5.4 Fonepay",
       "norm_label": "5.4 fonepay",
       "source_file": "docs/API.md",
-      "source_location": "L306"
+      "source_location": "L316"
     },
     {
       "community": 2,
@@ -9441,7 +9461,7 @@
       "label": "6. Confirmation paths",
       "norm_label": "6. confirmation paths",
       "source_file": "docs/API.md",
-      "source_location": "L323"
+      "source_location": "L333"
     },
     {
       "community": 2,
@@ -9450,7 +9470,7 @@
       "label": "code:block11 (1. Read raw body)",
       "norm_label": "code:block11 (1. read raw body)",
       "source_file": "docs/API.md",
-      "source_location": "L327"
+      "source_location": "L337"
     },
     {
       "community": 2,
@@ -9459,7 +9479,7 @@
       "label": "code:sql (SELECT * FROM transactions)",
       "norm_label": "code:sql (select * from transactions)",
       "source_file": "docs/API.md",
-      "source_location": "L339"
+      "source_location": "L349"
     },
     {
       "community": 2,
@@ -9468,7 +9488,7 @@
       "label": "code:block13 (SELECT … FOR UPDATE the transaction)",
       "norm_label": "code:block13 (select ... for update the transaction)",
       "source_file": "docs/API.md",
-      "source_location": "L353"
+      "source_location": "L363"
     },
     {
       "community": 2,
@@ -9477,7 +9497,7 @@
       "label": "7. Rate limits",
       "norm_label": "7. rate limits",
       "source_file": "docs/API.md",
-      "source_location": "L367"
+      "source_location": "L377"
     },
     {
       "community": 2,
@@ -9486,7 +9506,7 @@
       "label": "8. Amount-based provider routing",
       "norm_label": "8. amount-based provider routing",
       "source_file": "docs/API.md",
-      "source_location": "L381"
+      "source_location": "L391"
     },
     {
       "community": 2,
@@ -9495,7 +9515,7 @@
       "label": "code:ts (const allowed = await db.query.paymentProviders.findMany({)",
       "norm_label": "code:ts (const allowed = await db.query.paymentproviders.findmany({)",
       "source_file": "docs/API.md",
-      "source_location": "L385"
+      "source_location": "L395"
     },
     {
       "community": 13,
@@ -9648,7 +9668,7 @@
       "label": "7. Trust boundaries",
       "norm_label": "7. trust boundaries",
       "source_file": "docs/ARCHITECTURE.md",
-      "source_location": "L208"
+      "source_location": "L207"
     },
     {
       "community": 13,
@@ -9657,10 +9677,10 @@
       "label": "8. Why this shape",
       "norm_label": "8. why this shape",
       "source_file": "docs/ARCHITECTURE.md",
-      "source_location": "L226"
+      "source_location": "L225"
     },
     {
-      "community": 21,
+      "community": 20,
       "file_type": "document",
       "id": "docs_changelog_md",
       "label": "CHANGELOG.md",
@@ -9669,7 +9689,7 @@
       "source_location": "L1"
     },
     {
-      "community": 21,
+      "community": 20,
       "file_type": "document",
       "id": "docs_changelog_changelog",
       "label": "Changelog",
@@ -9678,7 +9698,7 @@
       "source_location": "L1"
     },
     {
-      "community": 21,
+      "community": 20,
       "file_type": "document",
       "id": "docs_changelog_unreleased",
       "label": "[Unreleased]",
@@ -9687,7 +9707,7 @@
       "source_location": "L13"
     },
     {
-      "community": 21,
+      "community": 20,
       "file_type": "document",
       "id": "docs_changelog_added",
       "label": "Added",
@@ -9696,76 +9716,76 @@
       "source_location": "L15"
     },
     {
-      "community": 21,
+      "community": 20,
       "file_type": "document",
       "id": "docs_changelog_migration",
       "label": "Migration",
       "norm_label": "migration",
       "source_file": "docs/CHANGELOG.md",
-      "source_location": "L20"
+      "source_location": "L21"
     },
     {
-      "community": 21,
+      "community": 20,
       "file_type": "document",
       "id": "docs_changelog_phase_1_2026_08_14",
       "label": "[Phase 1] — 2026-08-14",
       "norm_label": "[phase 1] — 2026-08-14",
       "source_file": "docs/CHANGELOG.md",
-      "source_location": "L27"
+      "source_location": "L29"
     },
     {
-      "community": 21,
+      "community": 20,
       "file_type": "document",
-      "id": "docs_changelog_added_31",
+      "id": "docs_changelog_added_33",
       "label": "Added",
       "norm_label": "added",
       "source_file": "docs/CHANGELOG.md",
-      "source_location": "L31"
+      "source_location": "L33"
     },
     {
-      "community": 21,
+      "community": 20,
       "file_type": "document",
       "id": "docs_changelog_security",
       "label": "Security",
       "norm_label": "security",
       "source_file": "docs/CHANGELOG.md",
-      "source_location": "L49"
+      "source_location": "L52"
     },
     {
-      "community": 21,
+      "community": 20,
       "file_type": "document",
-      "id": "docs_changelog_migration_69",
+      "id": "docs_changelog_migration_73",
       "label": "Migration",
       "norm_label": "migration",
       "source_file": "docs/CHANGELOG.md",
-      "source_location": "L69"
+      "source_location": "L73"
     },
     {
-      "community": 21,
+      "community": 20,
       "file_type": "document",
       "id": "docs_changelog_notes",
       "label": "Notes",
       "norm_label": "notes",
       "source_file": "docs/CHANGELOG.md",
-      "source_location": "L78"
+      "source_location": "L83"
     },
     {
-      "community": 21,
+      "community": 20,
       "file_type": "document",
       "id": "docs_changelog_entry_template",
       "label": "Entry template",
       "norm_label": "entry template",
       "source_file": "docs/CHANGELOG.md",
-      "source_location": "L88"
+      "source_location": "L94"
     },
     {
-      "community": 21,
+      "community": 20,
       "file_type": "document",
       "id": "docs_changelog_codeblock_1",
       "label": "code:markdown (## [Phase N] — YYYY-MM-DD)",
       "norm_label": "code:markdown (## [phase n] — yyyy-mm-dd)",
       "source_file": "docs/CHANGELOG.md",
-      "source_location": "L90"
+      "source_location": "L96"
     },
     {
       "community": 12,
@@ -10053,7 +10073,7 @@
       "label": "code:block14 (Dr  1120  AR — Projects & Agency              100,000)",
       "norm_label": "code:block14 (dr  1120  ar — projects & agency              100,000)",
       "source_file": "docs/CHART_OF_ACCOUNTS.md",
-      "source_location": "L265"
+      "source_location": "L266"
     },
     {
       "community": 6,
@@ -10062,7 +10082,7 @@
       "label": "code:block15 (Dr  1020  Bank — Current Account               98,500)",
       "norm_label": "code:block15 (dr  1020  bank — current account               98,500)",
       "source_file": "docs/CHART_OF_ACCOUNTS.md",
-      "source_location": "L271"
+      "source_location": "L273"
     },
     {
       "community": 6,
@@ -10071,7 +10091,7 @@
       "label": "9.8 Salary paid — gross NPR 50,000, TDS NPR 3,000",
       "norm_label": "9.8 salary paid — gross npr 50,000, tds npr 3,000",
       "source_file": "docs/CHART_OF_ACCOUNTS.md",
-      "source_location": "L279"
+      "source_location": "L281"
     },
     {
       "community": 6,
@@ -10080,7 +10100,7 @@
       "label": "code:block16 (Dr  6010  Salaries & Wages                     50,000)",
       "norm_label": "code:block16 (dr  6010  salaries & wages                     50,000)",
       "source_file": "docs/CHART_OF_ACCOUNTS.md",
-      "source_location": "L281"
+      "source_location": "L283"
     },
     {
       "community": 6,
@@ -10089,7 +10109,7 @@
       "label": "9.9 Infrastructure expense — Vercel USD 20 at NPR 138",
       "norm_label": "9.9 infrastructure expense — vercel usd 20 at npr 138",
       "source_file": "docs/CHART_OF_ACCOUNTS.md",
-      "source_location": "L289"
+      "source_location": "L291"
     },
     {
       "community": 6,
@@ -10098,7 +10118,7 @@
       "label": "code:block17 (Dr  5020  Hosting & Infrastructure              2,760)",
       "norm_label": "code:block17 (dr  5020  hosting & infrastructure              2,760)",
       "source_file": "docs/CHART_OF_ACCOUNTS.md",
-      "source_location": "L291"
+      "source_location": "L293"
     },
     {
       "community": 6,
@@ -10107,7 +10127,7 @@
       "label": "9.10 Correction",
       "norm_label": "9.10 correction",
       "source_file": "docs/CHART_OF_ACCOUNTS.md",
-      "source_location": "L299"
+      "source_location": "L301"
     },
     {
       "community": 12,
@@ -10116,7 +10136,7 @@
       "label": "10. Reconciliation targets",
       "norm_label": "10. reconciliation targets",
       "source_file": "docs/CHART_OF_ACCOUNTS.md",
-      "source_location": "L306"
+      "source_location": "L308"
     },
     {
       "community": 12,
@@ -10125,7 +10145,7 @@
       "label": "11. Open items for the accountant",
       "norm_label": "11. open items for the accountant",
       "source_file": "docs/CHART_OF_ACCOUNTS.md",
-      "source_location": "L321"
+      "source_location": "L323"
     },
     {
       "community": 3,
@@ -10185,8 +10205,8 @@
       "community": 3,
       "file_type": "document",
       "id": "docs_coding_standards_codeblock_3",
-      "label": "code:ts (const amountMinor: bigint = 500000n        // NPR 5,000.00)",
-      "norm_label": "code:ts (const amountminor: bigint = 500000n        // npr 5,000.00)",
+      "label": "code:ts (const amountMinor: bigint = 500000n; // NPR 5,000.00)",
+      "norm_label": "code:ts (const amountminor: bigint = 500000n; // npr 5,000.00)",
       "source_file": "docs/CODING_STANDARDS.md",
       "source_location": "L40"
     },
@@ -10269,7 +10289,7 @@
       "label": "6. Errors",
       "norm_label": "6. errors",
       "source_file": "docs/CODING_STANDARDS.md",
-      "source_location": "L159"
+      "source_location": "L160"
     },
     {
       "community": 3,
@@ -10278,7 +10298,7 @@
       "label": "code:ts (export class PaymentError extends Error {)",
       "norm_label": "code:ts (export class paymenterror extends error {)",
       "source_file": "docs/CODING_STANDARDS.md",
-      "source_location": "L161"
+      "source_location": "L162"
     },
     {
       "community": 3,
@@ -10287,16 +10307,16 @@
       "label": "7. Logging",
       "norm_label": "7. logging",
       "source_file": "docs/CODING_STANDARDS.md",
-      "source_location": "L185"
+      "source_location": "L186"
     },
     {
       "community": 3,
       "file_type": "document",
       "id": "docs_coding_standards_codeblock_10",
-      "label": "code:ts (logger.info({)",
-      "norm_label": "code:ts (logger.info({)",
+      "label": "code:ts (logger.info()",
+      "norm_label": "code:ts (logger.info()",
       "source_file": "docs/CODING_STANDARDS.md",
-      "source_location": "L189"
+      "source_location": "L190"
     },
     {
       "community": 3,
@@ -10305,7 +10325,7 @@
       "label": "8. Async",
       "norm_label": "8. async",
       "source_file": "docs/CODING_STANDARDS.md",
-      "source_location": "L207"
+      "source_location": "L211"
     },
     {
       "community": 3,
@@ -10314,7 +10334,7 @@
       "label": "code:ts (const [invoice, customer] = await Promise.all([)",
       "norm_label": "code:ts (const [invoice, customer] = await promise.all([)",
       "source_file": "docs/CODING_STANDARDS.md",
-      "source_location": "L214"
+      "source_location": "L218"
     },
     {
       "community": 3,
@@ -10323,7 +10343,7 @@
       "label": "code:ts (const controller = new AbortController())",
       "norm_label": "code:ts (const controller = new abortcontroller())",
       "source_file": "docs/CODING_STANDARDS.md",
-      "source_location": "L224"
+      "source_location": "L228"
     },
     {
       "community": 3,
@@ -10332,7 +10352,7 @@
       "label": "9. React",
       "norm_label": "9. react",
       "source_file": "docs/CODING_STANDARDS.md",
-      "source_location": "L236"
+      "source_location": "L240"
     },
     {
       "community": 3,
@@ -10341,7 +10361,7 @@
       "label": "10. Comments",
       "norm_label": "10. comments",
       "source_file": "docs/CODING_STANDARDS.md",
-      "source_location": "L253"
+      "source_location": "L257"
     },
     {
       "community": 3,
@@ -10350,7 +10370,7 @@
       "label": "code:ts (// Khalti returns the fee in the lookup response. Never comp)",
       "norm_label": "code:ts (// khalti returns the fee in the lookup response. never comp)",
       "source_file": "docs/CODING_STANDARDS.md",
-      "source_location": "L257"
+      "source_location": "L261"
     },
     {
       "community": 3,
@@ -10359,7 +10379,7 @@
       "label": "code:ts (// TODO(founder): confirm whether setup fees defer across th)",
       "norm_label": "code:ts (// todo(founder): confirm whether setup fees defer across th)",
       "source_file": "docs/CODING_STANDARDS.md",
-      "source_location": "L268"
+      "source_location": "L272"
     },
     {
       "community": 3,
@@ -10368,7 +10388,7 @@
       "label": "11. Commits",
       "norm_label": "11. commits",
       "source_file": "docs/CODING_STANDARDS.md",
-      "source_location": "L275"
+      "source_location": "L279"
     },
     {
       "community": 3,
@@ -10377,7 +10397,7 @@
       "label": "code:block15 (feat(payments): add Khalti lookup polling)",
       "norm_label": "code:block15 (feat(payments): add khalti lookup polling)",
       "source_file": "docs/CODING_STANDARDS.md",
-      "source_location": "L279"
+      "source_location": "L283"
     },
     {
       "community": 3,
@@ -10386,7 +10406,7 @@
       "label": "12. Formatting",
       "norm_label": "12. formatting",
       "source_file": "docs/CODING_STANDARDS.md",
-      "source_location": "L293"
+      "source_location": "L297"
     },
     {
       "community": 3,
@@ -10395,7 +10415,7 @@
       "label": "code:block16 (printWidth: 100)",
       "norm_label": "code:block16 (printwidth: 100)",
       "source_file": "docs/CODING_STANDARDS.md",
-      "source_location": "L297"
+      "source_location": "L301"
     },
     {
       "community": 1,
@@ -10680,8 +10700,8 @@
       "community": 1,
       "file_type": "document",
       "id": "docs_database_codeblock_11",
-      "label": "code:ts (export const db = process.env.NODE_ENV === 'production')",
-      "norm_label": "code:ts (export const db = process.env.node_env === 'production')",
+      "label": "code:ts (export const db =)",
+      "norm_label": "code:ts (export const db =)",
       "source_file": "docs/DATABASE.md",
       "source_location": "L233"
     },
@@ -10692,7 +10712,7 @@
       "label": "9. Extending the schema",
       "norm_label": "9. extending the schema",
       "source_file": "docs/DATABASE.md",
-      "source_location": "L249"
+      "source_location": "L250"
     },
     {
       "community": 4,
@@ -10734,8 +10754,8 @@
       "community": 4,
       "file_type": "document",
       "id": "docs_design_codeblock_1",
-      "label": "code:css (--ink:     #14191C;   /* fountain-pen near-black, cool cast )",
-      "norm_label": "code:css (--ink:     #14191c;   /* fountain-pen near-black, cool cast )",
+      "label": "code:css (--ink: #14191c; /* fountain-pen near-black, cool cast — text)",
+      "norm_label": "code:css (--ink: #14191c; /* fountain-pen near-black, cool cast — text)",
       "source_file": "docs/DESIGN.md",
       "source_location": "L38"
     },
@@ -10743,8 +10763,8 @@
       "community": 4,
       "file_type": "document",
       "id": "docs_design_codeblock_2",
-      "label": "code:css (--ink-70:  #14191CB3;   /* secondary text */)",
-      "norm_label": "code:css (--ink-70:  #14191cb3;   /* secondary text */)",
+      "label": "code:css (--ink-70: #14191cb3; /* secondary text */)",
+      "norm_label": "code:css (--ink-70: #14191cb3; /* secondary text */)",
       "source_file": "docs/DESIGN.md",
       "source_location": "L50"
     },
@@ -10779,8 +10799,8 @@
       "community": 4,
       "file_type": "document",
       "id": "docs_design_codeblock_4",
-      "label": "code:css (--text-xs:   0.75rem  / 1.4    /* captions, table meta */)",
-      "norm_label": "code:css (--text-xs:   0.75rem  / 1.4    /* captions, table meta */)",
+      "label": "code:css (--text-xs: 0.75rem / 1.4 /* captions, table meta */ --text-s)",
+      "norm_label": "code:css (--text-xs: 0.75rem / 1.4 /* captions, table meta */ --text-s)",
       "source_file": "docs/DESIGN.md",
       "source_location": "L94"
     },
@@ -10791,7 +10811,7 @@
       "label": "4. The signature: greenbar tables",
       "norm_label": "4. the signature: greenbar tables",
       "source_file": "docs/DESIGN.md",
-      "source_location": "L112"
+      "source_location": "L110"
     },
     {
       "community": 4,
@@ -10800,7 +10820,7 @@
       "label": "code:block5 (┌───────────────────────────────────────────────────────────)",
       "norm_label": "code:block5 (┌───────────────────────────────────────────────────────────)",
       "source_file": "docs/DESIGN.md",
-      "source_location": "L116"
+      "source_location": "L114"
     },
     {
       "community": 4,
@@ -10809,7 +10829,7 @@
       "label": "5. Money and date formatting",
       "norm_label": "5. money and date formatting",
       "source_file": "docs/DESIGN.md",
-      "source_location": "L146"
+      "source_location": "L144"
     },
     {
       "community": 4,
@@ -10818,7 +10838,7 @@
       "label": "NPR — South Asian digit grouping",
       "norm_label": "npr — south asian digit grouping",
       "source_file": "docs/DESIGN.md",
-      "source_location": "L148"
+      "source_location": "L146"
     },
     {
       "community": 4,
@@ -10827,7 +10847,7 @@
       "label": "code:block6 (✓  NPR 12,34,567.00        ✗  NPR 1,234,567.00)",
       "norm_label": "code:block6 (✓  npr 12,34,567.00        ✗  npr 1,234,567.00)",
       "source_file": "docs/DESIGN.md",
-      "source_location": "L153"
+      "source_location": "L151"
     },
     {
       "community": 4,
@@ -10836,7 +10856,7 @@
       "label": "code:ts (export function formatNPR(minor: bigint, opts?: { symbol?: b)",
       "norm_label": "code:ts (export function formatnpr(minor: bigint, opts?: { symbol?: b)",
       "source_file": "docs/DESIGN.md",
-      "source_location": "L161"
+      "source_location": "L159"
     },
     {
       "community": 4,
@@ -10845,7 +10865,7 @@
       "label": "Dates",
       "norm_label": "dates",
       "source_file": "docs/DESIGN.md",
-      "source_location": "L187"
+      "source_location": "L185"
     },
     {
       "community": 4,
@@ -10854,7 +10874,7 @@
       "label": "code:block8 (12 Bhadra 2082)",
       "norm_label": "code:block8 (12 bhadra 2082)",
       "source_file": "docs/DESIGN.md",
-      "source_location": "L191"
+      "source_location": "L189"
     },
     {
       "community": 4,
@@ -10863,7 +10883,7 @@
       "label": "6. Layout",
       "norm_label": "6. layout",
       "source_file": "docs/DESIGN.md",
-      "source_location": "L204"
+      "source_location": "L202"
     },
     {
       "community": 4,
@@ -10872,16 +10892,16 @@
       "label": "code:css (--space: 4px base;  4 8 12 16 24 32 48 64 96)",
       "norm_label": "code:css (--space: 4px base;  4 8 12 16 24 32 48 64 96)",
       "source_file": "docs/DESIGN.md",
-      "source_location": "L206"
+      "source_location": "L204"
     },
     {
       "community": 4,
       "file_type": "document",
       "id": "docs_design_codeblock_10",
-      "label": "code:css (--shadow-sm: 0 1px 2px #14191C0D;)",
+      "label": "code:css (--shadow-sm: 0 1px 2px #14191c0d;)",
       "norm_label": "code:css (--shadow-sm: 0 1px 2px #14191c0d;)",
       "source_file": "docs/DESIGN.md",
-      "source_location": "L213"
+      "source_location": "L211"
     },
     {
       "community": 4,
@@ -10890,7 +10910,7 @@
       "label": "7. Surface-specific direction",
       "norm_label": "7. surface-specific direction",
       "source_file": "docs/DESIGN.md",
-      "source_location": "L229"
+      "source_location": "L227"
     },
     {
       "community": 4,
@@ -10899,7 +10919,7 @@
       "label": "Public site",
       "norm_label": "public site",
       "source_file": "docs/DESIGN.md",
-      "source_location": "L231"
+      "source_location": "L229"
     },
     {
       "community": 4,
@@ -10908,7 +10928,7 @@
       "label": "Admin",
       "norm_label": "admin",
       "source_file": "docs/DESIGN.md",
-      "source_location": "L240"
+      "source_location": "L238"
     },
     {
       "community": 4,
@@ -10917,7 +10937,7 @@
       "label": "Checkout — different rules apply",
       "norm_label": "checkout — different rules apply",
       "source_file": "docs/DESIGN.md",
-      "source_location": "L248"
+      "source_location": "L246"
     },
     {
       "community": 4,
@@ -10926,7 +10946,7 @@
       "label": "Client portal",
       "norm_label": "client portal",
       "source_file": "docs/DESIGN.md",
-      "source_location": "L262"
+      "source_location": "L260"
     },
     {
       "community": 4,
@@ -10935,7 +10955,7 @@
       "label": "8. Components",
       "norm_label": "8. components",
       "source_file": "docs/DESIGN.md",
-      "source_location": "L270"
+      "source_location": "L268"
     },
     {
       "community": 4,
@@ -10944,7 +10964,7 @@
       "label": "9. Writing",
       "norm_label": "9. writing",
       "source_file": "docs/DESIGN.md",
-      "source_location": "L296"
+      "source_location": "L294"
     },
     {
       "community": 4,
@@ -10953,7 +10973,7 @@
       "label": "10. Quality floor",
       "norm_label": "10. quality floor",
       "source_file": "docs/DESIGN.md",
-      "source_location": "L314"
+      "source_location": "L312"
     },
     {
       "community": 4,
@@ -10962,7 +10982,7 @@
       "label": "11. Before adding anything visual",
       "norm_label": "11. before adding anything visual",
       "source_file": "docs/DESIGN.md",
-      "source_location": "L332"
+      "source_location": "L330"
     },
     {
       "community": 14,
@@ -11775,7 +11795,7 @@
       "source_location": "L48"
     },
     {
-      "community": 20,
+      "community": 21,
       "file_type": "document",
       "id": "docs_rules_md",
       "label": "RULES.md",
@@ -11784,7 +11804,7 @@
       "source_location": "L1"
     },
     {
-      "community": 20,
+      "community": 21,
       "file_type": "document",
       "id": "docs_rules_rules",
       "label": "Rules",
@@ -11793,7 +11813,7 @@
       "source_location": "L1"
     },
     {
-      "community": 20,
+      "community": 21,
       "file_type": "document",
       "id": "docs_rules_1_when_to_stop_and_ask",
       "label": "1. When to stop and ask",
@@ -11802,7 +11822,7 @@
       "source_location": "L7"
     },
     {
-      "community": 20,
+      "community": 21,
       "file_type": "document",
       "id": "docs_rules_2_money_absolute_rules",
       "label": "2. Money — absolute rules",
@@ -11811,7 +11831,7 @@
       "source_location": "L27"
     },
     {
-      "community": 20,
+      "community": 21,
       "file_type": "document",
       "id": "docs_rules_3_never_weaken_a_constraint",
       "label": "3. Never weaken a constraint",
@@ -11820,7 +11840,7 @@
       "source_location": "L52"
     },
     {
-      "community": 20,
+      "community": 21,
       "file_type": "document",
       "id": "docs_rules_4_libraries",
       "label": "4. Libraries",
@@ -11829,7 +11849,7 @@
       "source_location": "L75"
     },
     {
-      "community": 20,
+      "community": 21,
       "file_type": "document",
       "id": "docs_rules_use",
       "label": "Use",
@@ -11838,7 +11858,7 @@
       "source_location": "L77"
     },
     {
-      "community": 20,
+      "community": 21,
       "file_type": "document",
       "id": "docs_rules_do_not_use",
       "label": "Do not use",
@@ -11847,7 +11867,7 @@
       "source_location": "L98"
     },
     {
-      "community": 20,
+      "community": 21,
       "file_type": "document",
       "id": "docs_rules_5_error_handling",
       "label": "5. Error handling",
@@ -11856,7 +11876,7 @@
       "source_location": "L116"
     },
     {
-      "community": 20,
+      "community": 21,
       "file_type": "document",
       "id": "docs_rules_codeblock_1",
       "label": "code:ts (// Wrong)",
@@ -11865,7 +11885,7 @@
       "source_location": "L121"
     },
     {
-      "community": 20,
+      "community": 21,
       "file_type": "document",
       "id": "docs_rules_codeblock_2",
       "label": "code:ts (class PaymentError extends Error {)",
@@ -11874,31 +11894,31 @@
       "source_location": "L140"
     },
     {
-      "community": 20,
+      "community": 21,
       "file_type": "document",
       "id": "docs_rules_6_security",
       "label": "6. Security",
       "norm_label": "6. security",
       "source_file": "docs/RULES.md",
-      "source_location": "L159"
+      "source_location": "L166"
     },
     {
-      "community": 20,
+      "community": 21,
       "file_type": "document",
       "id": "docs_rules_7_wrong_even_if_it_works",
       "label": "7. Wrong even if it works",
       "norm_label": "7. wrong even if it works",
       "source_file": "docs/RULES.md",
-      "source_location": "L176"
+      "source_location": "L183"
     },
     {
-      "community": 20,
+      "community": 21,
       "file_type": "document",
       "id": "docs_rules_8_working_method",
       "label": "8. Working method",
       "norm_label": "8. working method",
       "source_file": "docs/RULES.md",
-      "source_location": "L197"
+      "source_location": "L204"
     },
     {
       "community": 7,
@@ -11952,7 +11972,7 @@
       "label": "3. Idempotency",
       "norm_label": "3. idempotency",
       "source_file": "docs/TESTING.md",
-      "source_location": "L55"
+      "source_location": "L65"
     },
     {
       "community": 7,
@@ -11961,7 +11981,7 @@
       "label": "code:ts (test('five identical callbacks produce one journal entry', a)",
       "norm_label": "code:ts (test('five identical callbacks produce one journal entry', a)",
       "source_file": "docs/TESTING.md",
-      "source_location": "L59"
+      "source_location": "L69"
     },
     {
       "community": 7,
@@ -11970,7 +11990,7 @@
       "label": "4. Forgery and trust",
       "norm_label": "4. forgery and trust",
       "source_file": "docs/TESTING.md",
-      "source_location": "L90"
+      "source_location": "L104"
     },
     {
       "community": 7,
@@ -11979,7 +11999,7 @@
       "label": "code:ts (test('a forged return URL marks nothing paid', async () => {)",
       "norm_label": "code:ts (test('a forged return url marks nothing paid', async () => {)",
       "source_file": "docs/TESTING.md",
-      "source_location": "L92"
+      "source_location": "L106"
     },
     {
       "community": 7,
@@ -11988,7 +12008,7 @@
       "label": "5. Amount integrity",
       "norm_label": "5. amount integrity",
       "source_file": "docs/TESTING.md",
-      "source_location": "L118"
+      "source_location": "L136"
     },
     {
       "community": 7,
@@ -11997,7 +12017,7 @@
       "label": "code:ts (test('a provider amount mismatch sets reconciliation_require)",
       "norm_label": "code:ts (test('a provider amount mismatch sets reconciliation_require)",
       "source_file": "docs/TESTING.md",
-      "source_location": "L120"
+      "source_location": "L138"
     },
     {
       "community": 7,
@@ -12006,7 +12026,7 @@
       "label": "6. Authorization",
       "norm_label": "6. authorization",
       "source_file": "docs/TESTING.md",
-      "source_location": "L140"
+      "source_location": "L160"
     },
     {
       "community": 7,
@@ -12015,7 +12035,7 @@
       "label": "code:ts (test('application A cannot read application B transactions',)",
       "norm_label": "code:ts (test('application a cannot read application b transactions',)",
       "source_file": "docs/TESTING.md",
-      "source_location": "L142"
+      "source_location": "L162"
     },
     {
       "community": 7,
@@ -12024,7 +12044,7 @@
       "label": "7. Money formatting",
       "norm_label": "7. money formatting",
       "source_file": "docs/TESTING.md",
-      "source_location": "L157"
+      "source_location": "L187"
     },
     {
       "community": 7,
@@ -12033,7 +12053,7 @@
       "label": "code:ts (test.each([)",
       "norm_label": "code:ts (test.each([)",
       "source_file": "docs/TESTING.md",
-      "source_location": "L161"
+      "source_location": "L191"
     },
     {
       "community": 7,
@@ -12042,7 +12062,7 @@
       "label": "8. Accounting",
       "norm_label": "8. accounting",
       "source_file": "docs/TESTING.md",
-      "source_location": "L188"
+      "source_location": "L218"
     },
     {
       "community": 7,
@@ -12051,7 +12071,7 @@
       "label": "code:ts (test('an annual subscription invoice defers revenue, not rec)",
       "norm_label": "code:ts (test('an annual subscription invoice defers revenue, not rec)",
       "source_file": "docs/TESTING.md",
-      "source_location": "L190"
+      "source_location": "L220"
     },
     {
       "community": 7,
@@ -12060,7 +12080,7 @@
       "label": "9. End to end (Playwright)",
       "norm_label": "9. end to end (playwright)",
       "source_file": "docs/TESTING.md",
-      "source_location": "L212"
+      "source_location": "L252"
     },
     {
       "community": 7,
@@ -12069,7 +12089,7 @@
       "label": "code:block8 (Manual QR    create session → checkout → upload proof → admi)",
       "norm_label": "code:block8 (manual qr    create session → checkout → upload proof → admi)",
       "source_file": "docs/TESTING.md",
-      "source_location": "L214"
+      "source_location": "L254"
     },
     {
       "community": 7,
@@ -12078,7 +12098,7 @@
       "label": "10. Before accepting any phase",
       "norm_label": "10. before accepting any phase",
       "source_file": "docs/TESTING.md",
-      "source_location": "L235"
+      "source_location": "L275"
     },
     {
       "community": 7,
@@ -12087,7 +12107,25 @@
       "label": "11. What not to test",
       "norm_label": "11. what not to test",
       "source_file": "docs/TESTING.md",
-      "source_location": "L249"
+      "source_location": "L289"
+    },
+    {
+      "community": 20,
+      "file_type": "document",
+      "id": "docs_changelog_added_31",
+      "label": "Added",
+      "norm_label": "added",
+      "source_file": "docs/CHANGELOG.md",
+      "source_location": "L31"
+    },
+    {
+      "community": 20,
+      "file_type": "document",
+      "id": "docs_changelog_migration_69",
+      "label": "Migration",
+      "norm_label": "migration",
+      "source_file": "docs/CHANGELOG.md",
+      "source_location": "L69"
     }
   ]
 }

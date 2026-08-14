@@ -32,15 +32,17 @@ export default async function AdminDashboard() {
             : 'border-red-300 bg-red-50'
         }`}
       >
-        <h2 className="text-sm font-medium text-neutral-700">Ledger integrity</h2>
+        <h2 className="text-sm font-medium text-neutral-700">
+          Ledger integrity
+        </h2>
         <p className="mt-1 text-sm text-neutral-600">
           {healthy ? (
             <>Every journal balances.</>
           ) : (
             <strong className="text-red-700">
               {unbalanced} unbalanced journal
-              {unbalanced === 1 ? '' : 's'}. Investigate before posting
-              anything further.
+              {unbalanced === 1 ? '' : 's'}. Investigate before posting anything
+              further.
             </strong>
           )}
         </p>

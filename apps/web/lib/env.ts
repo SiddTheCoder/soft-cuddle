@@ -15,7 +15,9 @@ const hex32 = z
   .regex(/^[0-9a-fA-F]{64}$/, 'must be 32 bytes of hex (64 characters)');
 
 const serverSchema = z.object({
-  NODE_ENV: z.enum(['development', 'test', 'production']).default('development'),
+  NODE_ENV: z
+    .enum(['development', 'test', 'production'])
+    .default('development'),
   APP_ENV: z.enum(['local', 'preview', 'production']).default('local'),
 
   DATABASE_URL: z.string().url(),

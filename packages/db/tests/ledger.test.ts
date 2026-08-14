@@ -81,7 +81,13 @@ async function ensurePeriod(
 ): Promise<number> {
   const [inserted] = await db
     .insert(fiscalPeriods)
-    .values({ fiscalYear: TEST_FISCAL_YEAR, periodNo, startsAt, endsAt, status })
+    .values({
+      fiscalYear: TEST_FISCAL_YEAR,
+      periodNo,
+      startsAt,
+      endsAt,
+      status,
+    })
     .onConflictDoNothing()
     .returning();
 

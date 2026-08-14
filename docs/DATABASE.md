@@ -3,7 +3,7 @@
 Full DDL: [`schema.sql`](./schema.sql). Posting rules:
 [`CHART_OF_ACCOUNTS.md`](./CHART_OF_ACCOUNTS.md).
 
-This document explains *why* the schema is shaped the way it is. Read it before
+This document explains _why_ the schema is shaped the way it is. Read it before
 changing anything.
 
 ---
@@ -207,11 +207,11 @@ Store UTC; convert to BS only for display.
 
 ## 6. Views
 
-| View | Purpose |
-|---|---|
-| `v_trial_balance` | Per-account debit, credit, and signed balance by fiscal year |
-| `v_product_pl` | P&L lines grouped by product, period, and account |
-| `v_unbalanced_journals` | **Must always return zero rows** |
+| View                    | Purpose                                                      |
+| ----------------------- | ------------------------------------------------------------ |
+| `v_trial_balance`       | Per-account debit, credit, and signed balance by fiscal year |
+| `v_product_pl`          | P&L lines grouped by product, period, and account            |
+| `v_unbalanced_journals` | **Must always return zero rows**                             |
 
 Wire `v_unbalanced_journals` to an alert and assert it empty at the end of every
 test suite. If it ever returns a row, something has gone badly wrong.
@@ -231,9 +231,10 @@ test suite. If it ever returns a row, something has gone badly wrong.
 ## 8. Local vs. production driver
 
 ```ts
-export const db = process.env.NODE_ENV === 'production'
-  ? drizzle(neon(process.env.DATABASE_URL!))        // HTTP
-  : drizzle(new Pool({ connectionString: process.env.DATABASE_URL! }))
+export const db =
+  process.env.NODE_ENV === 'production'
+    ? drizzle(neon(process.env.DATABASE_URL!)) // HTTP
+    : drizzle(new Pool({ connectionString: process.env.DATABASE_URL! }));
 ```
 
 Local is Docker Postgres 16 — match Neon's major version.

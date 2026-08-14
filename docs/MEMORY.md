@@ -35,18 +35,18 @@ production.** Replace it before the first real deployment.
 
 ## Where the code is
 
-| What | Where |
-|---|---|
-| Ledger primitive | `packages/accounting/post-journal.ts` |
-| Gapless numbering | `packages/accounting/numbering.ts` |
-| Schema (12 modules) | `packages/db/schema/` |
-| CMS content models | `packages/db/schema/cms.ts` |
-| The four guarantees | `packages/db/migrations/0001_ledger_guarantees.sql` |
-| Ledger tests | `packages/db/tests/ledger.test.ts` |
-| Auth (argon2id + TOTP) | `apps/web/lib/auth.ts` |
-| Encryption at rest | `apps/web/lib/crypto.core.ts` |
-| Subdomain routing | `apps/web/middleware.ts` |
-| Admin shell | `apps/web/app/(admin)/admin/` |
+| What                   | Where                                               |
+| ---------------------- | --------------------------------------------------- |
+| Ledger primitive       | `packages/accounting/post-journal.ts`               |
+| Gapless numbering      | `packages/accounting/numbering.ts`                  |
+| Schema (12 modules)    | `packages/db/schema/`                               |
+| CMS content models     | `packages/db/schema/cms.ts`                         |
+| The four guarantees    | `packages/db/migrations/0001_ledger_guarantees.sql` |
+| Ledger tests           | `packages/db/tests/ledger.test.ts`                  |
+| Auth (argon2id + TOTP) | `apps/web/lib/auth.ts`                              |
+| Encryption at rest     | `apps/web/lib/crypto.core.ts`                       |
+| Subdomain routing      | `apps/web/middleware.ts`                            |
+| Admin shell            | `apps/web/app/(admin)/admin/`                       |
 
 ```bash
 pnpm install && pnpm dev      # localhost:3000, admin.localhost:3000
@@ -67,17 +67,17 @@ production.** Replace it before the first real deployment.
 
 ## Phase progress
 
-| Phase | Status | Notes |
-|---|---|---|
-| 1 — Foundation | ✅ Accepted | All seven criteria pass. 1–6 verified end to end against Neon 18.4; 7 verified by running every CI step locally — see session 3. |
-| 2 — Public site + CMS | 🟡 In progress | CMS schema + migration `0003` done. Next: admin editors, then design tokens and public pages. |
-| 3 — Payment core + manual QR | ⬜ Not started | |
-| 4 — Khalti | ⬜ Not started | |
-| 5 — eSewa | ⬜ Not started | |
-| 6 — Invoicing + subscriptions | ⬜ Not started | |
-| 7 — Accounting depth | ⬜ Not started | |
-| 8 — Client portal | ⬜ Not started | |
-| 9 — Fonepay | ⬜ Blocked | Awaiting bank credentials |
+| Phase                         | Status         | Notes                                                                                                                            |
+| ----------------------------- | -------------- | -------------------------------------------------------------------------------------------------------------------------------- |
+| 1 — Foundation                | ✅ Accepted    | All seven criteria pass. 1–6 verified end to end against Neon 18.4; 7 verified by running every CI step locally — see session 3. |
+| 2 — Public site + CMS         | 🟡 In progress | CMS schema + migration `0003` done. Next: admin editors, then design tokens and public pages.                                    |
+| 3 — Payment core + manual QR  | ⬜ Not started |                                                                                                                                  |
+| 4 — Khalti                    | ⬜ Not started |                                                                                                                                  |
+| 5 — eSewa                     | ⬜ Not started |                                                                                                                                  |
+| 6 — Invoicing + subscriptions | ⬜ Not started |                                                                                                                                  |
+| 7 — Accounting depth          | ⬜ Not started |                                                                                                                                  |
+| 8 — Client portal             | ⬜ Not started |                                                                                                                                  |
+| 9 — Fonepay                   | ⬜ Blocked     | Awaiting bank credentials                                                                                                        |
 
 Legend: ⬜ not started · 🟡 in progress · ✅ accepted · 🔴 blocked
 
@@ -87,28 +87,28 @@ Legend: ⬜ not started · 🟡 in progress · ✅ accepted · 🔴 blocked
 
 Nothing proceeds past the listed phase until these are answered.
 
-| # | Question | Blocks | Status |
-|---|---|---|---|
-| 1 | Bank name for the account 1020 label | Phase 1 seed | ⬜ Open |
-| 2 | Go-live date — to seed fiscal periods | Phase 1 seed | ✅ Answered 2026-08-12 — seed the fiscal year already in progress, 2083/84 (17 Jul 2026 – 16 Jul 2027) |
-| 3 | Opening balances (no accountant engaged yet) | Phase 7 | ⬜ Open |
-| 4 | Are setup fees (4050) earned immediately or deferred? | Phase 6 | ⬜ Open |
-| 5 | Keep or relax `refund_needs_second_person` with one founder? | Phase 4 | ⬜ Open |
-| 6 | Import historical manual transactions, or start fresh with opening balances? *(recommendation: fresh)* | Phase 7 | ⬜ Open |
-| 7 | Design direction in `DESIGN.md` — approve or change? | Phase 2 | ⬜ Open |
-| 8 | Team member names, roles, bios, photos for the public site | Phase 2 | ⬜ Open |
-| 13 | Verified BS→AD boundaries for the go-live fiscal year's twelve months. Needed alongside #2; the seeder refuses to guess. | Phase 1 seed | ✅ Answered 2026-08-12 — generated by `scripts/gen-bs-calendar.ts` from published BS tables, baked into the seed |
-| 14 | Should a journal with zero lines be rejected by the database? | Phase 1 | ✅ Answered 2026-08-12 — yes. Migration `0002` adds the deferred constraint trigger |
-| 15 | Per-transaction wallet limits for each provider, to populate `max_amount_minor`. Left NULL — no document states the numbers, so routing currently hides nothing. | Phase 3 | ⬜ Open |
+| #   | Question                                                                                                                                                         | Blocks       | Status                                                                                                           |
+| --- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | ---------------------------------------------------------------------------------------------------------------- |
+| 1   | Bank name for the account 1020 label                                                                                                                             | Phase 1 seed | ⬜ Open                                                                                                          |
+| 2   | Go-live date — to seed fiscal periods                                                                                                                            | Phase 1 seed | ✅ Answered 2026-08-12 — seed the fiscal year already in progress, 2083/84 (17 Jul 2026 – 16 Jul 2027)           |
+| 3   | Opening balances (no accountant engaged yet)                                                                                                                     | Phase 7      | ⬜ Open                                                                                                          |
+| 4   | Are setup fees (4050) earned immediately or deferred?                                                                                                            | Phase 6      | ⬜ Open                                                                                                          |
+| 5   | Keep or relax `refund_needs_second_person` with one founder?                                                                                                     | Phase 4      | ⬜ Open                                                                                                          |
+| 6   | Import historical manual transactions, or start fresh with opening balances? _(recommendation: fresh)_                                                           | Phase 7      | ⬜ Open                                                                                                          |
+| 7   | Design direction in `DESIGN.md` — approve or change?                                                                                                             | Phase 2      | ⬜ Open                                                                                                          |
+| 8   | Team member names, roles, bios, photos for the public site                                                                                                       | Phase 2      | ⬜ Open                                                                                                          |
+| 13  | Verified BS→AD boundaries for the go-live fiscal year's twelve months. Needed alongside #2; the seeder refuses to guess.                                         | Phase 1 seed | ✅ Answered 2026-08-12 — generated by `scripts/gen-bs-calendar.ts` from published BS tables, baked into the seed |
+| 14  | Should a journal with zero lines be rejected by the database?                                                                                                    | Phase 1      | ✅ Answered 2026-08-12 — yes. Migration `0002` adds the deferred constraint trigger                              |
+| 15  | Per-transaction wallet limits for each provider, to populate `max_amount_minor`. Left NULL — no document states the numbers, so routing currently hides nothing. | Phase 3      | ⬜ Open                                                                                                          |
 
 ## Blocked on external parties
 
-| # | Item | Blocks | Status |
-|---|---|---|---|
-| 9 | eSewa production merchant credentials | Phase 5 go-live | ⏳ Applied |
-| 10 | Khalti production merchant credentials | Phase 4 go-live | ⏳ Applied |
-| 11 | Fonepay credentials + bank integration doc | Phase 9 | ⏳ Not started |
-| 12 | Exact Khalti `Authorization` prefix — `key ` vs `Key ` | Phase 4 | ⬜ Verify on first integration |
+| #   | Item                                                   | Blocks          | Status                         |
+| --- | ------------------------------------------------------ | --------------- | ------------------------------ |
+| 9   | eSewa production merchant credentials                  | Phase 5 go-live | ⏳ Applied                     |
+| 10  | Khalti production merchant credentials                 | Phase 4 go-live | ⏳ Applied                     |
+| 11  | Fonepay credentials + bank integration doc             | Phase 9         | ⏳ Not started                 |
+| 12  | Exact Khalti `Authorization` prefix — `key ` vs `Key ` | Phase 4         | ⬜ Verify on first integration |
 
 ---
 
@@ -117,20 +117,20 @@ Nothing proceeds past the listed phase until these are answered.
 Record every decision here with its reason. Future sessions must not relitigate
 these — if one looks wrong, ask before changing it.
 
-| Date | Decision | Why |
-|---|---|---|
-| 2026-08-12 | PostgreSQL, not MongoDB | Balance constraint, immutability, and gapless numbering must be enforced by the database. MongoDB cannot express a cross-document balance rule. |
-| 2026-08-12 | Vercel-only, no VPS | eSewa and Khalti authenticate by signature/secret key, not source IP. The only hard blocker didn't apply. |
-| 2026-08-12 | Drizzle, not Prisma | Explicit SQL control needed for ledger transactions and `FOR UPDATE`. |
-| 2026-08-12 | Cloudflare R2, not Vercel Blob | Zero egress, generous permanent free tier, S3-compatible, no platform lock-in. |
-| 2026-08-12 | One monorepo, one Next.js app | Two founders. Shared types are the biggest bug-prevention win available. |
-| 2026-08-12 | No auto-debit subscriptions | Nepali wallets have no reliable server-initiated charge. Customer initiates each payment. |
-| 2026-08-12 | `manual_qr` as a first-class provider | Replaces today's flow and stays as a permanent fallback when a gateway is down. |
-| 2026-08-12 | No platform fee between products | One legal entity — an inter-product fee nets to zero. Product P&L via ledger dimension instead. |
-| 2026-08-14 | CMS: one typed table per content kind, not a generic `content_entries` with a JSON body | A founder editing the refund policy should meet a form with the right fields on it; a public page should read a column, not validate a blob. Phase 2 acceptance turns on editing *every* page and legal document, which is exactly where a generic table gets expensive. |
-| 2026-08-14 | Marketing product pages are a separate table referencing `products` | `products` is a ledger dimension — `ledger_entries.product_id` drives product-level P&L. Renaming a product for a campaign must not be able to move posted revenue. |
-| 2026-08-14 | Legal documents are versioned rows, superseded not overwritten | What a customer agreed to on a given date has to stay knowable. Other content kinds carry one row. |
-| 2026-08-12 | Fiscal periods seeded, not computed | BS month boundaries don't align with Gregorian and month lengths vary. |
+| Date       | Decision                                                                                | Why                                                                                                                                                                                                                                                                      |
+| ---------- | --------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| 2026-08-12 | PostgreSQL, not MongoDB                                                                 | Balance constraint, immutability, and gapless numbering must be enforced by the database. MongoDB cannot express a cross-document balance rule.                                                                                                                          |
+| 2026-08-12 | Vercel-only, no VPS                                                                     | eSewa and Khalti authenticate by signature/secret key, not source IP. The only hard blocker didn't apply.                                                                                                                                                                |
+| 2026-08-12 | Drizzle, not Prisma                                                                     | Explicit SQL control needed for ledger transactions and `FOR UPDATE`.                                                                                                                                                                                                    |
+| 2026-08-12 | Cloudflare R2, not Vercel Blob                                                          | Zero egress, generous permanent free tier, S3-compatible, no platform lock-in.                                                                                                                                                                                           |
+| 2026-08-12 | One monorepo, one Next.js app                                                           | Two founders. Shared types are the biggest bug-prevention win available.                                                                                                                                                                                                 |
+| 2026-08-12 | No auto-debit subscriptions                                                             | Nepali wallets have no reliable server-initiated charge. Customer initiates each payment.                                                                                                                                                                                |
+| 2026-08-12 | `manual_qr` as a first-class provider                                                   | Replaces today's flow and stays as a permanent fallback when a gateway is down.                                                                                                                                                                                          |
+| 2026-08-12 | No platform fee between products                                                        | One legal entity — an inter-product fee nets to zero. Product P&L via ledger dimension instead.                                                                                                                                                                          |
+| 2026-08-14 | CMS: one typed table per content kind, not a generic `content_entries` with a JSON body | A founder editing the refund policy should meet a form with the right fields on it; a public page should read a column, not validate a blob. Phase 2 acceptance turns on editing _every_ page and legal document, which is exactly where a generic table gets expensive. |
+| 2026-08-14 | Marketing product pages are a separate table referencing `products`                     | `products` is a ledger dimension — `ledger_entries.product_id` drives product-level P&L. Renaming a product for a campaign must not be able to move posted revenue.                                                                                                      |
+| 2026-08-14 | Legal documents are versioned rows, superseded not overwritten                          | What a customer agreed to on a given date has to stay knowable. Other content kinds carry one row.                                                                                                                                                                       |
+| 2026-08-12 | Fiscal periods seeded, not computed                                                     | BS month boundaries don't align with Gregorian and month lengths vary.                                                                                                                                                                                                   |
 
 ---
 
@@ -156,7 +156,7 @@ mistake.
 - **There is no Prettier config, and `pnpm format` would rewrite the whole
   repo.** `package.json` exposes `format` as `prettier --write "**/*"`, but no
   `.prettierrc` exists anywhere, so Prettier falls back to its defaults —
-  double quotes. Every file in the codebase is single-quoted, so *every* file
+  double quotes. Every file in the codebase is single-quoted, so _every_ file
   fails `prettier --check` today. Running `pnpm format` would produce a
   thousand-line diff touching everything. CI runs `eslint`, not Prettier, so
   nothing catches this. Either add a `.prettierrc` with `singleQuote: true` and
@@ -166,14 +166,14 @@ mistake.
   currently holds one year, 2083/84, ending 17 Jul 2027. A journal dated past
   the last boundary has no period to resolve into and `postJournal()` refuses
   it. Add the next year with `pnpm --filter @softmato/db gen:bs-calendar
-  2084/85` **before Ashadh 2084 ends**, and eyeball the output against a patro.
+2084/85` **before Ashadh 2084 ends**, and eyeball the output against a patro.
   Never call the converter at seed time: a library upgrade must not be able to
   move a boundary under posted history.
 - **Neon no longer offers Postgres 16.** New projects start at 18. Nothing in
   the schema depends on 16.
 - **Drizzle Kit cannot serialize a `bigint` literal default.** `.default(0n)`
   crashes the generator; use `.default(sql\`0\`)`. Money columns stay
-  `mode: 'bigint'` regardless — that part is not negotiable.
+`mode: 'bigint'` regardless — that part is not negotiable.
 - **Drizzle Kit cannot resolve `.js` import specifiers** in schema files. Schema
   modules use extensionless relative imports.
 - **A hand-written migration needs its own snapshot with a correct chain.**
@@ -274,7 +274,7 @@ corrected so `drizzle-kit check` passes.
 
 **In progress:** nothing half-done.
 
-**Learned:** a whole-journal invariant has to be a *deferred* constraint
+**Learned:** a whole-journal invariant has to be a _deferred_ constraint
 trigger — see "Things learned the hard way".
 
 **Blocked on:** nothing for Phase 1. Phase 2 needs questions 7 and 8.

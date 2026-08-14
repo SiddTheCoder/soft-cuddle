@@ -148,7 +148,10 @@ function assertBalanced(input: PostJournalInput): void {
       throw new AccountingError(
         'INVALID_AMOUNT',
         'Ledger amounts are always positive; direction carries the sign',
-        { accountCode: line.accountCode, amountMinor: line.amountMinor.toString() },
+        {
+          accountCode: line.accountCode,
+          amountMinor: line.amountMinor.toString(),
+        },
       );
     }
 

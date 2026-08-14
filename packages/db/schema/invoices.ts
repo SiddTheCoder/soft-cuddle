@@ -59,9 +59,13 @@ export const invoices = pgTable(
     discountMinor: bigint('discount_minor', { mode: 'bigint' })
       .notNull()
       .default(sql`0`),
-    taxMinor: bigint('tax_minor', { mode: 'bigint' }).notNull().default(sql`0`),
+    taxMinor: bigint('tax_minor', { mode: 'bigint' })
+      .notNull()
+      .default(sql`0`),
     totalMinor: bigint('total_minor', { mode: 'bigint' }).notNull(),
-    paidMinor: bigint('paid_minor', { mode: 'bigint' }).notNull().default(sql`0`),
+    paidMinor: bigint('paid_minor', { mode: 'bigint' })
+      .notNull()
+      .default(sql`0`),
     tdsWithheldMinor: bigint('tds_withheld_minor', { mode: 'bigint' })
       .notNull()
       .default(sql`0`),

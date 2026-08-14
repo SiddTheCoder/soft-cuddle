@@ -183,20 +183,19 @@ ledger entries impossible.
 
 Nothing important happens inline in a request.
 
-| Job | Frequency | Why |
-|---|---|---|
-| `poll-pending-transactions` | 1 min | Khalti's only confirmation path |
-| `expire-stale-sessions` | 5 min | Sessions past `expires_at` |
-| `retry-webhooks` | 1 min | Failed SaaS deliveries |
-| `recognize-revenue` | monthly | Release deferred revenue |
-| `generate-renewal-invoices` | daily | Subscriptions nearing period end |
-| `send-dunning-reminders` | daily | 7d / 3d / 1d, then overdue |
-| `suspend-past-grace` | daily | Grace expired |
-| `reconcile-providers` | daily | Ledger vs. provider totals |
-| `heartbeat` | 5 min | Dead-man's switch |
+| Job                         | Frequency | Why                              |
+| --------------------------- | --------- | -------------------------------- |
+| `poll-pending-transactions` | 1 min     | Khalti's only confirmation path  |
+| `expire-stale-sessions`     | 5 min     | Sessions past `expires_at`       |
+| `retry-webhooks`            | 1 min     | Failed SaaS deliveries           |
+| `recognize-revenue`         | monthly   | Release deferred revenue         |
+| `generate-renewal-invoices` | daily     | Subscriptions nearing period end |
+| `send-dunning-reminders`    | daily     | 7d / 3d / 1d, then overdue       |
+| `suspend-past-grace`        | daily     | Grace expired                    |
+| `reconcile-providers`       | daily     | Ledger vs. provider totals       |
+| `heartbeat`                 | 5 min     | Dead-man's switch                |
 
-All live at `/api/jobs/*`, require a `CRON_SECRET` bearer, and return 404 (not
-401) on a bad secret so they aren't discoverable.
+All live at `/api/jobs/*`, require a `CRON_SECRET` bearer, and return 404 (not 401) on a bad secret so they aren't discoverable.
 
 **Every job is self-healing.** It queries by state — "all transactions pending
 and due for a poll" — never "what changed since the last run." A missed run is
@@ -207,16 +206,16 @@ payment critical path.
 
 ## 7. Trust boundaries
 
-| Boundary | Authentication |
-|---|---|
-| Browser → public site | none |
-| Browser → checkout | session ID in URL (unguessable, expiring) |
-| Browser → admin | session cookie + password + TOTP |
-| Browser → portal | session cookie, tenant-scoped at the data layer |
-| SaaS backend → `/api/v1` | `client_id` + secret, scope-checked |
-| Provider → `/api/callbacks` | HMAC signature verification |
-| Cron/QStash → `/api/jobs` | `CRON_SECRET` bearer |
-| App → provider | secret key or HMAC signature |
+| Boundary                    | Authentication                                  |
+| --------------------------- | ----------------------------------------------- |
+| Browser → public site       | none                                            |
+| Browser → checkout          | session ID in URL (unguessable, expiring)       |
+| Browser → admin             | session cookie + password + TOTP                |
+| Browser → portal            | session cookie, tenant-scoped at the data layer |
+| SaaS backend → `/api/v1`    | `client_id` + secret, scope-checked             |
+| Provider → `/api/callbacks` | HMAC signature verification                     |
+| Cron/QStash → `/api/jobs`   | `CRON_SECRET` bearer                            |
+| App → provider              | secret key or HMAC signature                    |
 
 Nothing crosses a boundary without verification. A redirect back from a
 provider carries **no** authority.

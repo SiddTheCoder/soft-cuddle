@@ -14,9 +14,7 @@ import { redirect } from 'next/navigation';
 import { auth } from '@/lib/auth';
 import { AdminNav } from '@/components/admin/admin-nav';
 
-export default async function AdminLayout({
-  children,
-}: LayoutProps<'/admin'>) {
+export default async function AdminLayout({ children }: LayoutProps<'/admin'>) {
   const session = await auth();
 
   if (!session?.user || session.user.mfa !== true) {
@@ -29,9 +27,7 @@ export default async function AdminLayout({
       <div className="flex flex-1 flex-col">
         <header className="flex items-center justify-between border-b border-neutral-200 px-6 py-3">
           <span className="text-sm text-neutral-500">Softmato admin</span>
-          <span className="text-sm text-neutral-700">
-            {session.user.email}
-          </span>
+          <span className="text-sm text-neutral-700">{session.user.email}</span>
         </header>
         <main className="flex-1 px-6 py-6">{children}</main>
       </div>

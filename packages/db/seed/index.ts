@@ -33,10 +33,7 @@ async function main(): Promise<void> {
   await db.insert(products).values(productSeeds).onConflictDoNothing();
   console.log(`products: ${productSeeds.length} ensured`);
 
-  await db
-    .insert(paymentProviders)
-    .values(providerSeeds)
-    .onConflictDoNothing();
+  await db.insert(paymentProviders).values(providerSeeds).onConflictDoNothing();
   console.log(`payment providers: ${providerSeeds.length} ensured`);
 
   // Throws with an explanation while the BS calendar is unconfirmed — that is

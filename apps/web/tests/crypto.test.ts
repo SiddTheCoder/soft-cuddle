@@ -68,7 +68,9 @@ describe('TOTP', () => {
 
   test('a current code verifies', () => {
     const enrolment = createTotpEnrolment('founder@example.com');
-    const code = new URL(enrolment.otpauthUri.replace('otpauth://', 'https://'));
+    const code = new URL(
+      enrolment.otpauthUri.replace('otpauth://', 'https://'),
+    );
     const secret = code.searchParams.get('secret')!;
 
     // Derive the expected code the same way an authenticator app would.

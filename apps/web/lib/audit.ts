@@ -62,10 +62,7 @@ function redact(
  * the change commit or roll back together. An audit row for a change that never
  * happened is worse than no row at all.
  */
-export async function recordAudit(
-  entry: AuditEntry,
-  tx?: DbTx,
-): Promise<void> {
+export async function recordAudit(entry: AuditEntry, tx?: DbTx): Promise<void> {
   const executor = tx ?? db;
 
   await executor.insert(auditLogs).values({

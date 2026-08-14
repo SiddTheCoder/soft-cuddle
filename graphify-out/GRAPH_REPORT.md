@@ -1,11 +1,11 @@
 # Graph Report - company  (2026-08-14)
 
 ## Corpus Check
-- 86 files · ~42,749 words
+- 86 files · ~42,912 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 591 nodes · 662 edges · 55 communities (48 shown, 7 thin omitted)
+- 593 nodes · 664 edges · 55 communities (48 shown, 7 thin omitted)
 - Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS · INFERRED: 2 edges (avg confidence: 0.8)
 - Token cost: 0 input · 0 output
 
@@ -98,7 +98,7 @@ Nodes (31): 1. Conventions, 2. Authentication, 3. Endpoints, 4. Outbound webhook
 
 ### Community 3 - "Community 3"
 Cohesion: 0.07
-Nodes (29): 10. Comments, 11. Commits, 12. Formatting, 1. TypeScript, 2. Money in code, 3. Validation, 4. Database access, 5. API routes (+21 more)
+Nodes (28): 10. Comments, 11. Commits, 12. Formatting, 1. TypeScript, 2. Money in code, 3. Validation, 4. Database access, 5. API routes (+20 more)
 
 ### Community 4 - "Community 4"
 Cohesion: 0.07
@@ -117,8 +117,8 @@ Cohesion: 0.1
 Nodes (20): 10. Before accepting any phase, 11. What not to test, 1. Stack, 2. Ledger — must pass before any provider goes live, 3. Idempotency, 4. Forgery and trust, 5. Amount integrity, 6. Authorization (+12 more)
 
 ### Community 8 - "Community 8"
-Cohesion: 0.14
-Nodes (16): products, Application, APPLICATION_SCOPES, applications, ApplicationScope, Customer, customers, Invoice (+8 more)
+Cohesion: 0.13
+Nodes (16): products, entryDirection, journalEntries, JournalEntry, journalSource, ledgerEntries, LedgerEntry, NewJournalEntry (+8 more)
 
 ### Community 9 - "Community 9"
 Cohesion: 0.1
@@ -130,7 +130,7 @@ Nodes (14): AccountingError, allocateDocumentNo(), allocateSequence(), COLUMN, f
 
 ### Community 11 - "Community 11"
 Cohesion: 0.13
-Nodes (15): entryDirection, journalEntries, JournalEntry, journalSource, ledgerEntries, LedgerEntry, NewJournalEntry, NewLedgerEntry (+7 more)
+Nodes (15): Application, APPLICATION_SCOPES, applications, ApplicationScope, Customer, customers, Invoice, InvoiceLine (+7 more)
 
 ### Community 12 - "Community 12"
 Cohesion: 0.11
@@ -165,12 +165,12 @@ Cohesion: 0.21
 Nodes (9): accounts, PaymentProvider, paymentProviders, AccountSeed, accountSeeds, buildFiscalPeriods(), main(), ProviderSeed (+1 more)
 
 ### Community 20 - "Community 20"
-Cohesion: 0.14
-Nodes (13): 1. When to stop and ask, 2. Money — absolute rules, 3. Never weaken a constraint, 4. Libraries, 5. Error handling, 6. Security, 7. Wrong even if it works, 8. Working method (+5 more)
+Cohesion: 0.19
+Nodes (13): Added, Added, Added, Changelog, code:markdown (## [Phase N] — YYYY-MM-DD), Entry template, Migration, Migration (+5 more)
 
 ### Community 21 - "Community 21"
-Cohesion: 0.23
-Nodes (11): Added, Added, Changelog, code:markdown (## [Phase N] — YYYY-MM-DD), Entry template, Migration, Migration, Notes (+3 more)
+Cohesion: 0.14
+Nodes (13): 1. When to stop and ask, 2. Money — absolute rules, 3. Never weaken a constraint, 4. Libraries, 5. Error handling, 6. Security, 7. Wrong even if it works, 8. Working method (+5 more)
 
 ### Community 22 - "Community 22"
 Cohesion: 0.17
@@ -225,7 +225,7 @@ Cohesion: 0.5
 Nodes (3): envPath, [, key, rawValue], match
 
 ## Knowledge Gaps
-- **316 isolated node(s):** `eslintConfig`, `Surface`, `SUBDOMAIN_SURFACE`, `SURFACE_PREFIX`, `config` (+311 more)
+- **317 isolated node(s):** `eslintConfig`, `Surface`, `SUBDOMAIN_SURFACE`, `SURFACE_PREFIX`, `config` (+312 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **7 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
@@ -239,7 +239,7 @@ _Questions this graph is uniquely positioned to answer:_
 - **Why does `Softmato Technology Pvt Ltd — Chart of Accounts & Posting Rules` connect `Community 12` to `Community 6`?**
   _High betweenness centrality (0.003) - this node is a cross-community bridge._
 - **What connects `eslintConfig`, `Surface`, `SUBDOMAIN_SURFACE` to the rest of the system?**
-  _316 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _317 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Community 0` be split into smaller, more focused modules?**
   _Cohesion score 0.06 - nodes in this community are weakly interconnected._
 - **Should `Community 1` be split into smaller, more focused modules?**

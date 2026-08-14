@@ -26,15 +26,15 @@ Error shape:
 }
 ```
 
-| Code | HTTP |
-|---|---|
-| `UNAUTHENTICATED` | 401 |
-| `INSUFFICIENT_SCOPE` | 403 |
-| `RESOURCE_NOT_FOUND` | 404 |
-| `IDEMPOTENCY_CONFLICT` | 409 |
-| `VALIDATION_FAILED` | 422 |
-| `RATE_LIMITED` | 429 |
-| `PROVIDER_UNAVAILABLE` | 502 |
+| Code                   | HTTP |
+| ---------------------- | ---- |
+| `UNAUTHENTICATED`      | 401  |
+| `INSUFFICIENT_SCOPE`   | 403  |
+| `RESOURCE_NOT_FOUND`   | 404  |
+| `IDEMPOTENCY_CONFLICT` | 409  |
+| `VALIDATION_FAILED`    | 422  |
+| `RATE_LIMITED`         | 429  |
+| `PROVIDER_UNAVAILABLE` | 502  |
 
 Never leak provider internals in `message`. Log the detail, return the code.
 
@@ -62,10 +62,19 @@ Rotation issues a new secret with a 24-hour overlap. Revocation is immediate.
 ```json
 {
   "external_ref": "HH-2026-00123",
-  "customer": { "external_ref": "cust_88", "name": "Ram Sharma",
-                "email": "ram@example.com", "phone": "98XXXXXXXX" },
-  "lines": [{ "description": "HostelHub Standard — 12 months",
-              "quantity": 1, "unit_price_minor": 1200000 }],
+  "customer": {
+    "external_ref": "cust_88",
+    "name": "Ram Sharma",
+    "email": "ram@example.com",
+    "phone": "98XXXXXXXX"
+  },
+  "lines": [
+    {
+      "description": "HostelHub Standard — 12 months",
+      "quantity": 1,
+      "unit_price_minor": 1200000
+    }
+  ],
   "service_starts_at": "2026-08-15T00:00:00Z",
   "service_ends_at": "2027-08-15T00:00:00Z",
   "due_at": "2026-08-22T00:00:00Z"
@@ -153,29 +162,30 @@ Adapter interface:
 
 ```ts
 interface PaymentProvider {
-  id: 'esewa' | 'khalti' | 'fonepay' | 'manual_qr'
+  id: 'esewa' | 'khalti' | 'fonepay' | 'manual_qr';
 
   initiate(session: PaymentSession): Promise<{
-    providerRef: string
-    redirectUrl?: string
-    deeplink?: string
-    qrPayload?: string
-    correlationId?: string
-  }>
+    providerRef: string;
+    redirectUrl?: string;
+    deeplink?: string;
+    qrPayload?: string;
+    correlationId?: string;
+  }>;
 
-  handleCallback?(raw: unknown, headers: Headers): Promise<VerifiedResult>
-  poll(txn: Transaction): Promise<VerifiedResult>      // mandatory
-  cancel?(txn: Transaction): Promise<void>
-  refund?(txn: Transaction, amountMinor: bigint): Promise<RefundResult>
+  handleCallback?(raw: unknown, headers: Headers): Promise<VerifiedResult>;
+  poll(txn: Transaction): Promise<VerifiedResult>; // mandatory
+  cancel?(txn: Transaction): Promise<void>;
+  refund?(txn: Transaction, amountMinor: bigint): Promise<RefundResult>;
 }
 
 type VerifiedResult = {
-  status: 'pending' | 'succeeded' | 'failed' | 'cancelled' | 'expired' | 'refunded'
-  grossAmountMinor: bigint
-  providerFeeMinor: bigint
-  providerTxnId?: string
-  raw: unknown
-}
+  status:
+    'pending' | 'succeeded' | 'failed' | 'cancelled' | 'expired' | 'refunded';
+  grossAmountMinor: bigint;
+  providerFeeMinor: bigint;
+  providerTxnId?: string;
+  raw: unknown;
+};
 ```
 
 `poll()` is mandatory for every provider. It is the universal safety net and,
@@ -230,13 +240,13 @@ Returns `pidx` and `payment_url`. Store `pidx` as `provider_ref`; redirect to
 **Verify** — `POST /epayment/lookup/` with `{ "pidx": "..." }`. Response
 includes `status`, `total_amount`, `transaction_id`, `fee`, `refunded`.
 
-| Khalti | Ours |
-|---|---|
-| `Initiated` | `created` |
-| `Pending` | `pending` |
-| `Completed` | `succeeded` |
-| `Refunded` | `refunded` |
-| `Expired` | `expired` |
+| Khalti          | Ours        |
+| --------------- | ----------- |
+| `Initiated`     | `created`   |
+| `Pending`       | `pending`   |
+| `Completed`     | `succeeded` |
+| `Refunded`      | `refunded`  |
+| `Expired`       | `expired`   |
 | `User canceled` | `cancelled` |
 
 **Only `Completed` is success.** Take `fee` directly into `provider_fee_minor`.
@@ -254,10 +264,10 @@ Refunds are supported via API.
 Two flows — detect and route:
 
 ```ts
-const isMobileUA    = /Android|iPhone|iPad|iPod|Mobile/i.test(userAgent)
-const isTouchDevice = navigator.maxTouchPoints > 0
-const isSmallScreen = window.innerWidth <= 768
-const useIntent     = isMobileUA && isTouchDevice && isSmallScreen
+const isMobileUA = /Android|iPhone|iPad|iPod|Mobile/i.test(userAgent);
+const isTouchDevice = navigator.maxTouchPoints > 0;
+const isSmallScreen = window.innerWidth <= 768;
+const useIntent = isMobileUA && isTouchDevice && isSmallScreen;
 ```
 
 Mobile → **Intent** (deeplink into the eSewa app). Desktop → **ePay** (signed
@@ -275,11 +285,11 @@ Development access key, published by eSewa:
 
 **Intent endpoints** (sandbox base `https://rc-checkout.esewa.com.np`):
 
-| Purpose | Endpoint |
-|---|---|
-| Book | `POST /api/client/intent/payment/book` |
-| Status | `POST /api/client/intent/payment/status` |
-| Cancel | `POST /api/client/intent/payment/cancel` |
+| Purpose | Endpoint                                 |
+| ------- | ---------------------------------------- |
+| Book    | `POST /api/client/intent/payment/book`   |
+| Status  | `POST /api/client/intent/payment/status` |
+| Cancel  | `POST /api/client/intent/payment/cancel` |
 
 Book returns `booking_id`, `deeplink`, `correlation_id`. Store `booking_id` as
 `provider_ref`, `correlation_id` as `provider_correlation_id`.
@@ -290,14 +300,14 @@ Book returns `booking_id`, `deeplink`, `correlation_id`. Store `booking_id` as
 
 If no callback arrives within 5 minutes, poll the status endpoint.
 
-| eSewa | Ours |
-|---|---|
-| `BOOKED` | `created` |
-| `PENDING` | `pending` |
-| `SUCCESS` | `succeeded` |
-| `FAILED` | `failed` |
+| eSewa      | Ours        |
+| ---------- | ----------- |
+| `BOOKED`   | `created`   |
+| `PENDING`  | `pending`   |
+| `SUCCESS`  | `succeeded` |
+| `FAILED`   | `failed`    |
 | `CANCELED` | `cancelled` |
-| `REVERTED` | `refunded` |
+| `REVERTED` | `refunded`  |
 
 Mobile SDKs are deprecated — do not use them.
 
@@ -366,13 +376,13 @@ insert audit_logs row
 
 ## 7. Rate limits
 
-| Endpoint | Limit |
-|---|---|
-| `POST /v1/checkout` | 60/min per application |
-| `GET /v1/*` | 300/min per application |
-| Provider callbacks | 600/min per IP |
-| Admin login | 5 per 15 min per IP, then lockout |
-| Contact form | 3/hour per IP |
+| Endpoint            | Limit                             |
+| ------------------- | --------------------------------- |
+| `POST /v1/checkout` | 60/min per application            |
+| `GET /v1/*`         | 300/min per application           |
+| Provider callbacks  | 600/min per IP                    |
+| Admin login         | 5 per 15 min per IP, then lockout |
+| Contact form        | 3/hour per IP                     |
 
 Upstash Redis. Return 429 with `Retry-After`.
 
@@ -389,7 +399,7 @@ const allowed = await db.query.paymentProviders.findMany({
     lte(minAmountMinor, amount),
     or(isNull(maxAmountMinor), gte(maxAmountMinor, amount)),
   ),
-})
+});
 ```
 
 Wallets have per-transaction limits. A customer must never select a method that

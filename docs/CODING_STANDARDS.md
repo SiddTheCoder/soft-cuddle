@@ -22,11 +22,11 @@ local declaration rather than casting.
 
 ```ts
 // Wrong
-const txn = await getTransaction(id)!
+const txn = await getTransaction(id)!;
 
 // Right
-const txn = await getTransaction(id)
-if (!txn) throw new PaymentError('RESOURCE_NOT_FOUND', `No transaction ${id}`)
+const txn = await getTransaction(id);
+if (!txn) throw new PaymentError('RESOURCE_NOT_FOUND', `No transaction ${id}`);
 ```
 
 Type inference where it's obvious, explicit return types on exported functions.
@@ -38,20 +38,20 @@ Type inference where it's obvious, explicit return types on exported functions.
 **Every monetary value is `bigint`.**
 
 ```ts
-const amountMinor: bigint = 500000n        // NPR 5,000.00
+const amountMinor: bigint = 500000n; // NPR 5,000.00
 ```
 
 Rules:
 
 ```ts
 // ✓ arithmetic stays in bigint
-const netMinor = grossMinor - feeMinor
+const netMinor = grossMinor - feeMinor;
 
 // ✗ never convert to number for maths
-const net = Number(grossMinor) - Number(feeMinor)
+const net = Number(grossMinor) - Number(feeMinor);
 
 // ✗ never parse a float into paisa
-const minor = BigInt(Math.round(parseFloat(input) * 100))
+const minor = BigInt(Math.round(parseFloat(input) * 100));
 ```
 
 Parse user-entered amounts as a decimal string, split on the point, never touch
@@ -59,12 +59,12 @@ Parse user-entered amounts as a decimal string, split on the point, never touch
 
 ```ts
 export function parseNPRToMinor(input: string): bigint {
-  const cleaned = input.replace(/[,\s]/g, '')
+  const cleaned = input.replace(/[,\s]/g, '');
   if (!/^\d+(\.\d{1,2})?$/.test(cleaned)) {
-    throw new ValidationError('Enter an amount like 5000 or 5000.50')
+    throw new ValidationError('Enter an amount like 5000 or 5000.50');
   }
-  const [rupees, paisa = ''] = cleaned.split('.')
-  return BigInt(rupees) * 100n + BigInt(paisa.padEnd(2, '0'))
+  const [rupees, paisa = ''] = cleaned.split('.');
+  return BigInt(rupees) * 100n + BigInt(paisa.padEnd(2, '0'));
 }
 ```
 
@@ -86,7 +86,7 @@ const CreateCheckoutSchema = z.object({
   invoice_id: z.string().min(1),
   return_url: z.string().url().optional(),
   metadata: z.record(z.unknown()).default({}),
-})
+});
 // note: no amount field — the server reads it from the invoice
 ```
 
@@ -132,21 +132,22 @@ Thin. Parse, authenticate, delegate, serialize.
 
 ```ts
 export async function POST(req: Request) {
-  const requestId = crypto.randomUUID()
+  const requestId = crypto.randomUUID();
   try {
-    const app  = await authenticateApplication(req)
-    requireScope(app, 'payment:create')
+    const app = await authenticateApplication(req);
+    requireScope(app, 'payment:create');
 
-    const body = CreateCheckoutSchema.parse(await req.json())
-    const key  = req.headers.get('Idempotency-Key')
-    if (!key) throw new PaymentError('VALIDATION_FAILED', 'Idempotency-Key required')
+    const body = CreateCheckoutSchema.parse(await req.json());
+    const key = req.headers.get('Idempotency-Key');
+    if (!key)
+      throw new PaymentError('VALIDATION_FAILED', 'Idempotency-Key required');
 
     const result = await withIdempotency(app.id, key, body, () =>
       createCheckoutSession(app, body),
-    )
-    return Response.json(result)
+    );
+    return Response.json(result);
   } catch (err) {
-    return handleApiError(err, requestId)
+    return handleApiError(err, requestId);
   }
 }
 ```
@@ -165,8 +166,8 @@ export class PaymentError extends Error {
     message: string,
     readonly context?: Record<string, unknown>,
   ) {
-    super(message)
-    this.name = 'PaymentError'
+    super(message);
+    this.name = 'PaymentError';
   }
 }
 ```
@@ -187,12 +188,15 @@ generic message. A provider error may contain merchant identifiers.
 Structured. No `console.log` in committed code.
 
 ```ts
-logger.info({
-  transactionId: txn.txnNo,
-  provider: 'khalti',
-  status: result.status,
-  amountMinor: result.grossAmountMinor.toString(),
-}, 'payment verified')
+logger.info(
+  {
+    transactionId: txn.txnNo,
+    provider: 'khalti',
+    status: result.status,
+    amountMinor: result.grossAmountMinor.toString(),
+  },
+  'payment verified',
+);
 ```
 
 Log every provider request and response, secrets redacted. On Vercel there is
@@ -215,7 +219,7 @@ Parallelise independent work:
 const [invoice, customer] = await Promise.all([
   getInvoice(id),
   getCustomer(customerId),
-])
+]);
 ```
 
 Set a timeout on every external call. A hanging provider request must not hold
@@ -252,12 +256,12 @@ without a replacement.
 
 ## 10. Comments
 
-Explain *why*, not *what*. Assume the reader can read TypeScript.
+Explain _why_, not _what_. Assume the reader can read TypeScript.
 
 ```ts
 // Khalti returns the fee in the lookup response. Never compute it as a
 // percentage — the rate is set by the merchant agreement and can change.
-const feeMinor = BigInt(lookup.fee)
+const feeMinor = BigInt(lookup.fee);
 ```
 
 Every file in `accounting/rules/` starts with a reference to its section in

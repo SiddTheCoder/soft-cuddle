@@ -14,14 +14,14 @@
 
 ## 1. Account numbering
 
-| Range | Class | Normal balance |
-|---|---|---|
-| 1000–1999 | Assets | Debit |
-| 2000–2999 | Liabilities | Credit |
-| 3000–3999 | Equity | Credit |
-| 4000–4999 | Revenue | Credit |
-| 5000–5999 | Direct costs | Debit |
-| 6000–6999 | Operating expenses | Debit |
+| Range     | Class              | Normal balance |
+| --------- | ------------------ | -------------- |
+| 1000–1999 | Assets             | Debit          |
+| 2000–2999 | Liabilities        | Credit         |
+| 3000–3999 | Equity             | Credit         |
+| 4000–4999 | Revenue            | Credit         |
+| 5000–5999 | Direct costs       | Debit          |
+| 6000–6999 | Operating expenses | Debit          |
 
 Leaf accounts only are postable. Header accounts (marked ▸) exist for grouping
 in reports and must reject direct postings.
@@ -262,12 +262,14 @@ decides based on how much of the subscription has been recognised.
 ### 9.7 Agency invoice — NPR 100,000, client withholds 1.5% TDS
 
 Invoice:
+
 ```
 Dr  1120  AR — Projects & Agency              100,000
     Cr  4020  Software Development Revenue             100,000
 ```
 
 Payment of NPR 98,500:
+
 ```
 Dr  1020  Bank — Current Account               98,500
 Dr  1210  Advance Tax — TDS Deducted            1,500
@@ -307,12 +309,12 @@ post the correct entry. Both remain visible in the audit trail.
 
 Each provider balance account must tie to an external source:
 
-| Account | Reconciles against |
-|---|---|
-| 1031 eSewa Merchant Wallet | eSewa merchant dashboard balance |
+| Account                     | Reconciles against                |
+| --------------------------- | --------------------------------- |
+| 1031 eSewa Merchant Wallet  | eSewa merchant dashboard balance  |
 | 1032 Khalti Merchant Wallet | Khalti merchant dashboard balance |
-| 1033 Fonepay Settlement | Bank settlement advice |
-| 1020 Bank — Current | Bank statement |
+| 1033 Fonepay Settlement     | Bank settlement advice            |
+| 1020 Bank — Current         | Bank statement                    |
 
 A mismatch sets the period to `RECONCILIATION_REQUIRED` and blocks close.
 

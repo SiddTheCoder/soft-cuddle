@@ -39,9 +39,7 @@ export const adminUsers = pgTable(
       .notNull()
       .defaultNow(),
   },
-  (t) => [
-    check('totp_required', sql`NOT ${t.isActive} OR ${t.totpEnabled}`),
-  ],
+  (t) => [check('totp_required', sql`NOT ${t.isActive} OR ${t.totpEnabled}`)],
 );
 
 export const auditLogs = pgTable(

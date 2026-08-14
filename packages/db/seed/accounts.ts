@@ -67,15 +67,39 @@ export const accountSeeds: AccountSeed[] = [
   leaf('1039', 'Provider Funds in Transit', 'asset', 'debit', '1030'),
 
   header('1100', 'RECEIVABLES', 'asset', 'debit'),
-  leaf('1110', 'Accounts Receivable — SaaS Subscriptions', 'asset', 'debit', '1100'),
-  leaf('1120', 'Accounts Receivable — Projects & Agency', 'asset', 'debit', '1100'),
-  leaf('1130', 'Accounts Receivable — Maintenance & Support', 'asset', 'debit', '1100'),
+  leaf(
+    '1110',
+    'Accounts Receivable — SaaS Subscriptions',
+    'asset',
+    'debit',
+    '1100',
+  ),
+  leaf(
+    '1120',
+    'Accounts Receivable — Projects & Agency',
+    'asset',
+    'debit',
+    '1100',
+  ),
+  leaf(
+    '1130',
+    'Accounts Receivable — Maintenance & Support',
+    'asset',
+    'debit',
+    '1100',
+  ),
   leaf('1190', 'Allowance for Doubtful Accounts', 'asset', 'credit', '1100', {
     isContra: true,
   }),
 
   header('1200', 'OTHER CURRENT ASSETS', 'asset', 'debit'),
-  leaf('1210', 'Advance Tax — TDS Deducted by Customers', 'asset', 'debit', '1200'),
+  leaf(
+    '1210',
+    'Advance Tax — TDS Deducted by Customers',
+    'asset',
+    'debit',
+    '1200',
+  ),
   leaf('1220', 'Prepaid Expenses', 'asset', 'debit', '1200'),
   leaf('1230', 'Security Deposits', 'asset', 'debit', '1200'),
   leaf('1240', 'Staff Advances', 'asset', 'debit', '1200'),
@@ -96,14 +120,32 @@ export const accountSeeds: AccountSeed[] = [
 
   header('2040', 'STATUTORY PAYABLES', 'liability', 'credit'),
   leaf('2041', 'TDS Payable — Salary', 'liability', 'credit', '2040'),
-  leaf('2042', 'TDS Payable — Contractor / Professional', 'liability', 'credit', '2040'),
+  leaf(
+    '2042',
+    'TDS Payable — Contractor / Professional',
+    'liability',
+    'credit',
+    '2040',
+  ),
   leaf('2043', 'TDS Payable — Rent', 'liability', 'credit', '2040'),
   leaf('2044', 'SSF / Provident Fund Payable', 'liability', 'credit', '2040'),
   leaf('2050', 'Income Tax Payable', 'liability', 'credit', '2040'),
 
   header('2100', 'CUSTOMER OBLIGATIONS', 'liability', 'credit'),
-  leaf('2110', 'Deferred Revenue — Subscriptions', 'liability', 'credit', '2100'),
-  leaf('2120', 'Customer Advances / Unapplied Receipts', 'liability', 'credit', '2100'),
+  leaf(
+    '2110',
+    'Deferred Revenue — Subscriptions',
+    'liability',
+    'credit',
+    '2100',
+  ),
+  leaf(
+    '2120',
+    'Customer Advances / Unapplied Receipts',
+    'liability',
+    'credit',
+    '2100',
+  ),
   leaf('2130', 'Refunds Payable', 'liability', 'credit', '2100'),
   leaf('2140', 'Chargeback / Dispute Reserve', 'liability', 'credit', '2100'),
 
@@ -122,7 +164,13 @@ export const accountSeeds: AccountSeed[] = [
   // Revenue is not split per product — `product_id` on the ledger line is.
   leaf('4010', 'SaaS Subscription Revenue', 'revenue', 'credit', undefined),
   leaf('4020', 'Software Development Revenue', 'revenue', 'credit', undefined),
-  leaf('4030', 'Website & Design Services Revenue', 'revenue', 'credit', undefined),
+  leaf(
+    '4030',
+    'Website & Design Services Revenue',
+    'revenue',
+    'credit',
+    undefined,
+  ),
   leaf('4040', 'Maintenance & Support Revenue', 'revenue', 'credit', undefined),
   leaf('4050', 'Setup / Onboarding Fees', 'revenue', 'credit', undefined),
   leaf('4090', 'Other Income', 'revenue', 'credit', undefined),
@@ -136,9 +184,27 @@ export const accountSeeds: AccountSeed[] = [
   // ── 6. Direct costs ───────────────────────────────────────────────────────
   leaf('5010', 'Payment Provider Fees', 'direct_cost', 'debit', undefined),
   leaf('5020', 'Hosting & Infrastructure', 'direct_cost', 'debit', undefined),
-  leaf('5030', 'Third-party Software & API Costs', 'direct_cost', 'debit', undefined),
-  leaf('5040', 'Subcontractor & Freelancer Costs', 'direct_cost', 'debit', undefined),
-  leaf('5050', 'Domains, SSL & Registrations', 'direct_cost', 'debit', undefined),
+  leaf(
+    '5030',
+    'Third-party Software & API Costs',
+    'direct_cost',
+    'debit',
+    undefined,
+  ),
+  leaf(
+    '5040',
+    'Subcontractor & Freelancer Costs',
+    'direct_cost',
+    'debit',
+    undefined,
+  ),
+  leaf(
+    '5050',
+    'Domains, SSL & Registrations',
+    'direct_cost',
+    'debit',
+    undefined,
+  ),
   leaf('5060', 'Bank Charges — Merchant', 'direct_cost', 'debit', undefined),
 
   // ── 7. Operating expenses ─────────────────────────────────────────────────

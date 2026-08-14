@@ -26,7 +26,7 @@ Everything else stays quiet. One signature, executed precisely.
 
 **What this deliberately is not:** not the cream-and-serif-and-terracotta look,
 not black-with-an-acid-accent, not newspaper broadsheet. Hairline rules appear
-here as *column* rules on ruled paper, always paired with the green band — the
+here as _column_ rules on ruled paper, always paired with the green band — the
 reference is a bill book, not a front page.
 
 ---
@@ -36,21 +36,21 @@ reference is a bill book, not a front page.
 Six values. Nothing else without asking.
 
 ```css
---ink:     #14191C;   /* fountain-pen near-black, cool cast — text, headings */
---paper:   #FAFAF8;   /* base surface */
---bar:     #E6EDE7;   /* greenbar band — the signature */
---rule:    #C5CEC6;   /* hairline column rules, borders */
---tomato:  #C9321F;   /* brand, primary action */
---credit:  #1B6B4A;   /* money in, positive, success */
---flag:    #A81E12;   /* corrections, reversals, negative amounts, danger */
+--ink: #14191c; /* fountain-pen near-black, cool cast — text, headings */
+--paper: #fafaf8; /* base surface */
+--bar: #e6ede7; /* greenbar band — the signature */
+--rule: #c5cec6; /* hairline column rules, borders */
+--tomato: #c9321f; /* brand, primary action */
+--credit: #1b6b4a; /* money in, positive, success */
+--flag: #a81e12; /* corrections, reversals, negative amounts, danger */
 ```
 
 Derived neutrals only, no new hues:
 
 ```css
---ink-70:  #14191CB3;   /* secondary text */
---ink-45:  #14191C73;   /* tertiary, captions */
---surface: #FFFFFF;     /* cards lifted off paper */
+--ink-70: #14191cb3; /* secondary text */
+--ink-45: #14191c73; /* tertiary, captions */
+--surface: #ffffff; /* cards lifted off paper */
 ```
 
 **Colour carries meaning in this product.** `--credit` and `--flag` are not
@@ -66,12 +66,12 @@ Dark mode: admin only, deferred to Phase 7. Public and checkout are light only.
 
 Three roles, three faces.
 
-| Role | Face | Source | Use |
-|---|---|---|---|
-| Display | **Bespoke Slab** | Fontshare | Headings, page titles. Restraint. |
-| Body | **Switzer** | Fontshare | All running text, UI labels, buttons |
-| Data | **IBM Plex Mono** | Google | Every number, ID, code, amount |
-| Devanagari | **Noto Sans Devanagari** | Google | Fallback for Nepali text |
+| Role       | Face                     | Source    | Use                                  |
+| ---------- | ------------------------ | --------- | ------------------------------------ |
+| Display    | **Bespoke Slab**         | Fontshare | Headings, page titles. Restraint.    |
+| Body       | **Switzer**              | Fontshare | All running text, UI labels, buttons |
+| Data       | **IBM Plex Mono**        | Google    | Every number, ID, code, amount       |
+| Devanagari | **Noto Sans Devanagari** | Google    | Fallback for Nepali text             |
 
 Bespoke Slab reads as stamped and official — the register of a printed receipt
 or a rubber-stamped document. It is used sparingly: page titles and section
@@ -92,13 +92,11 @@ been NPR 5,000.
 ### Scale
 
 ```css
---text-xs:   0.75rem  / 1.4    /* captions, table meta */
---text-sm:   0.875rem / 1.5    /* secondary, dense tables */
---text-base: 1rem     / 1.6    /* body */
---text-lg:   1.125rem / 1.5    /* lead paragraph */
---text-xl:   1.5rem   / 1.3    /* section head */
---text-2xl:  2rem     / 1.2    /* page title */
---text-3xl:  3rem     / 1.1    /* hero, public only */
+--text-xs: 0.75rem / 1.4 /* captions, table meta */ --text-sm: 0.875rem / 1.5
+  /* secondary, dense tables */ --text-base: 1rem / 1.6 /* body */
+  --text-lg: 1.125rem / 1.5 /* lead paragraph */ --text-xl: 1.5rem / 1.3
+  /* section head */ --text-2xl: 2rem / 1.2 /* page title */ --text-3xl: 3rem /
+  1.1 /* hero, public only */;
 ```
 
 Weights: 400 body, 500 UI labels, 600 display. Never 700+ — the slab is heavy
@@ -136,7 +134,7 @@ Rules:
 - Negative amounts get `--flag` and a true minus sign `−` (U+2212), not a
   hyphen.
 - Row height 40px desktop, 48px touch.
-- No zebra *and* border — the band replaces the border.
+- No zebra _and_ border — the band replaces the border.
 
 Used in: admin transaction lists, ledger and journal views, trial balance,
 invoice line items, the checkout receipt summary, the public pricing block.
@@ -160,21 +158,21 @@ Grouping runs 3 digits, then 2, then 2: `1,23,45,678`.
 
 ```ts
 export function formatNPR(minor: bigint, opts?: { symbol?: boolean }): string {
-  const negative = minor < 0n
-  const abs = negative ? -minor : minor
-  const rupees = abs / 100n
-  const paisa  = abs % 100n
+  const negative = minor < 0n;
+  const abs = negative ? -minor : minor;
+  const rupees = abs / 100n;
+  const paisa = abs % 100n;
 
-  const s = rupees.toString()
+  const s = rupees.toString();
   // last three digits, then pairs
-  const head = s.slice(0, -3)
-  const tail = s.slice(-3)
+  const head = s.slice(0, -3);
+  const tail = s.slice(-3);
   const grouped = head
     ? head.replace(/\B(?=(\d{2})+(?!\d))/g, ',') + ',' + tail
-    : tail
+    : tail;
 
-  const body = `${grouped}.${paisa.toString().padStart(2, '0')}`
-  return `${negative ? '−' : ''}${opts?.symbol === false ? '' : 'NPR '}${body}`
+  const body = `${grouped}.${paisa.toString().padStart(2, '0')}`;
+  return `${negative ? '−' : ''}${opts?.symbol === false ? '' : 'NPR '}${body}`;
 }
 ```
 
@@ -211,8 +209,8 @@ Mangsir, Poush, Magh, Falgun, Chaitra.
 Radii stay small. This is a document, not a consumer app.
 
 ```css
---shadow-sm: 0 1px 2px #14191C0D;
---shadow:    0 2px 8px #14191C14;
+--shadow-sm: 0 1px 2px #14191c0d;
+--shadow: 0 2px 8px #14191c14;
 ```
 
 Shadows only to lift a card off paper. No glows, no coloured shadows, no
@@ -256,7 +254,7 @@ untrustworthy at exactly the wrong moment.
 - Payment method buttons, full width, stacked, minimum 48px tall
 - Amount is the largest thing on the page — `--text-2xl`, mono, tabular
 - Nothing marketing. No upsell. No "you're going to love it."
-- Expiry stated plainly: *This payment link expires at 11:00.*
+- Expiry stated plainly: _This payment link expires at 11:00._
 - Works on a slow 3G connection: no heavy fonts blocking render, no large images
 
 ### Client portal
@@ -281,12 +279,12 @@ naming the problem and the fix.
 
 **Status.** Small caps, `--text-xs`, 3px radius, tinted background:
 
-| Status | Colour |
-|---|---|
+| Status                        | Colour     |
+| ----------------------------- | ---------- |
 | succeeded, active, reconciled | `--credit` |
-| pending, created, polling | `--ink-70` |
-| failed, cancelled, expired | `--ink-45` |
-| refunded, reversed, mismatch | `--flag` |
+| pending, created, polling     | `--ink-70` |
+| failed, cancelled, expired    | `--ink-45` |
+| refunded, reversed, mismatch  | `--flag`   |
 
 **Empty states.** A sentence describing what will appear here, and the action
 that creates the first one. Never an illustration, never "Nothing here yet!"
@@ -300,10 +298,10 @@ Words are design material. Same care as spacing.
 - **Name things as the founder does**, not as the system does. "Payment methods,"
   not "provider configuration." "Who can use this key," not "scope array."
 - **Active voice, exact actions.** "Approve payment," not "Submit." The button
-  that says *Approve payment* produces a toast that says *Payment approved.*
+  that says _Approve payment_ produces a toast that says _Payment approved._
 - **Errors state what happened and what to do.** No apology, no vagueness.
-  - ✓ *This payment link expired. Ask HostelHub for a new one.*
-  - ✗ *Sorry, something went wrong!*
+  - ✓ _This payment link expired. Ask HostelHub for a new one._
+  - ✗ _Sorry, something went wrong!_
 - **Sentence case everywhere** except the small-caps table headers and eyebrows.
 - **Be specific over clever.** "Reconcile against eSewa" beats "Sync your money."
 - One job per element. A label labels. An example demonstrates. Nothing does

@@ -12,5 +12,9 @@ export const productSeeds: ProductSeed[] = [
   { id: 'hostelhub', name: 'HostelHub', kind: 'saas' },
   { id: 'questioncall', name: 'QuestionCall', kind: 'saas' },
   { id: 'agency', name: 'Project & Design Work', kind: 'agency' },
-  { id: 'corporate', name: 'Shared / Unattributable Overhead', kind: 'corporate' },
+  {
+    id: 'corporate',
+    name: 'Shared / Unattributable Overhead',
+    kind: 'corporate',
+  },
 ];

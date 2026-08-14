@@ -2,21 +2,21 @@
 
 **Start here.** Read in this order before writing any code.
 
-| # | File | What it answers |
-|---|---|---|
-| 1 | [`PRD.md`](./PRD.md) | What we're building, for whom, and why |
-| 2 | [`ARCHITECTURE.md`](./ARCHITECTURE.md) | How the system is shaped and how data flows |
-| 3 | [`RULES.md`](./RULES.md) | Hard boundaries. **Read this twice.** |
-| 4 | [`PHASES.md`](./PHASES.md) | Build order and acceptance criteria |
-| 5 | [`DATABASE.md`](./DATABASE.md) | Schema design and the guarantees it enforces |
-| 6 | [`API.md`](./API.md) | Payment API + provider integration specs |
-| 7 | [`DESIGN.md`](./DESIGN.md) | Visual system, tokens, NPR/BS formatting |
-| 8 | [`FOLDER_STRUCTURE.md`](./FOLDER_STRUCTURE.md) | Where code goes |
-| 9 | [`CODING_STANDARDS.md`](./CODING_STANDARDS.md) | Conventions, especially money handling |
-| 10 | [`ENVIRONMENT.md`](./ENVIRONMENT.md) | Local setup, env vars, deployment |
-| 11 | [`TESTING.md`](./TESTING.md) | What must pass before anything goes live |
-| 12 | [`MEMORY.md`](./MEMORY.md) | Running state. **Update after every session.** |
-| 13 | [`CHANGELOG.md`](./CHANGELOG.md) | Shipped changes |
+| #   | File                                           | What it answers                                |
+| --- | ---------------------------------------------- | ---------------------------------------------- |
+| 1   | [`PRD.md`](./PRD.md)                           | What we're building, for whom, and why         |
+| 2   | [`ARCHITECTURE.md`](./ARCHITECTURE.md)         | How the system is shaped and how data flows    |
+| 3   | [`RULES.md`](./RULES.md)                       | Hard boundaries. **Read this twice.**          |
+| 4   | [`PHASES.md`](./PHASES.md)                     | Build order and acceptance criteria            |
+| 5   | [`DATABASE.md`](./DATABASE.md)                 | Schema design and the guarantees it enforces   |
+| 6   | [`API.md`](./API.md)                           | Payment API + provider integration specs       |
+| 7   | [`DESIGN.md`](./DESIGN.md)                     | Visual system, tokens, NPR/BS formatting       |
+| 8   | [`FOLDER_STRUCTURE.md`](./FOLDER_STRUCTURE.md) | Where code goes                                |
+| 9   | [`CODING_STANDARDS.md`](./CODING_STANDARDS.md) | Conventions, especially money handling         |
+| 10  | [`ENVIRONMENT.md`](./ENVIRONMENT.md)           | Local setup, env vars, deployment              |
+| 11  | [`TESTING.md`](./TESTING.md)                   | What must pass before anything goes live       |
+| 12  | [`MEMORY.md`](./MEMORY.md)                     | Running state. **Update after every session.** |
+| 13  | [`CHANGELOG.md`](./CHANGELOG.md)               | Shipped changes                                |
 
 Reference material:
 

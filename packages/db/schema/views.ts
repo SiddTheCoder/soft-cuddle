@@ -5,13 +5,7 @@
  * Drizzle Kit never regenerates or drops it. `.existing()` gives typed reads
  * without letting the generator own the definition.
  */
-import {
-  bigint,
-  char,
-  pgView,
-  smallint,
-  text,
-} from 'drizzle-orm/pg-core';
+import { bigint, char, pgView, smallint, text } from 'drizzle-orm/pg-core';
 
 import { accountClass } from './accounts';
 

@@ -59,6 +59,9 @@ jobs:
       - name: Lint
         run: pnpm run lint
 
+      - name: Format check
+        run: pnpm exec prettier --check .
+
       - name: Apply migrations
         run: pnpm db:migrate
 

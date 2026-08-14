@@ -5,8 +5,4 @@
  */
 import 'server-only';
 
-export {
-  decryptSecret,
-  encryptSecret,
-  timingSafeEquals,
-} from './crypto.core';
+export { decryptSecret, encryptSecret, timingSafeEquals } from './crypto.core';

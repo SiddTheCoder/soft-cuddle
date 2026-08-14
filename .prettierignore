@@ -1,0 +1,11 @@
+# Generated. Reformatting these produces churn and no benefit.
+pnpm-lock.yaml
+graphify-out/
+**/.next/
+**/dist/
+**/coverage/
+
+# Drizzle artefacts. The snapshots are compared by drizzle-kit check and the
+# SQL is hand-written in places (0001, 0002) with comments that carry the
+# reasoning — neither should be rewritten by a formatter.
+packages/db/migrations/

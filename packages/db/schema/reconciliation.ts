@@ -4,13 +4,7 @@
  * A mismatch is never auto-resolved. It is flagged and a human resolves it
  * (docs/RULES.md §2.8).
  */
-import {
-  bigint,
-  pgEnum,
-  pgTable,
-  text,
-  timestamp,
-} from 'drizzle-orm/pg-core';
+import { bigint, pgEnum, pgTable, text, timestamp } from 'drizzle-orm/pg-core';
 
 import { paymentProviders } from './providers';
 import { transactions } from './payments';

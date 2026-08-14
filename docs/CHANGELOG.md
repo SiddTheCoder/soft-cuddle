@@ -13,11 +13,13 @@ this file tracks what was delivered.
 ## [Unreleased]
 
 ### Added
+
 - Content models behind the public site: pages, blog posts, team members,
   services, product pages, legal documents, and contact form submissions.
   Nothing is editable from the admin panel yet — this is the storage layer.
 
 ### Migration
+
 - `0003` — CMS tables, generated. Purely additive; the `0001`/`0002` triggers
   and views are untouched. Marketing product pages reference the existing
   `products` ledger dimension rather than duplicating it.
@@ -29,6 +31,7 @@ this file tracks what was delivered.
 Foundation accepted: all seven acceptance criteria in `PHASES.md` pass.
 
 ### Added
+
 - Documentation set: PRD, architecture, rules, phases, database, API, design,
   folder structure, coding standards, environment, testing
 - `schema.sql` — full PostgreSQL DDL with balance, immutability, period-lock,
@@ -47,6 +50,7 @@ Foundation accepted: all seven acceptance criteria in `PHASES.md` pass.
   against a real Postgres on every push
 
 ### Security
+
 - The four guarantees are live and verified against a real database: an
   unbalanced journal is rejected at COMMIT, posted ledger rows cannot be
   changed or removed, a closed period accepts nothing but a closing entry, and
@@ -67,6 +71,7 @@ Foundation accepted: all seven acceptance criteria in `PHASES.md` pass.
 - CI fails the build if a secret name appears in the client bundle.
 
 ### Migration
+
 - `0000` — all tables, enums, checks, and indexes from `schema.sql`
 - `0001` — hand-written: balance/immutability/period/postable triggers and the
   three reporting views. Drizzle Kit does not generate these; a regeneration
@@ -76,6 +81,7 @@ Foundation accepted: all seven acceptance criteria in `PHASES.md` pass.
   the header before its lines within one transaction.
 
 ### Notes
+
 - Chart of accounts is a working draft pending review by a licensed accountant.
 - Design direction in `DESIGN.md` is a proposal pending founder approval.
 - Fiscal periods for BS 2083/84 (17 Jul 2026 – 16 Jul 2027) are seeded, with
@@ -91,18 +97,23 @@ Foundation accepted: all seven acceptance criteria in `PHASES.md` pass.
 ## [Phase N] — YYYY-MM-DD
 
 ### Added
+
 - New capability, from the user's point of view
 
 ### Changed
+
 - Behaviour that differs from before
 
 ### Fixed
+
 - Bug, with its user-visible symptom
 
 ### Security
+
 - Anything affecting authentication, authorization, secrets, or money integrity
 
 ### Migration
+
 - Schema changes and anything needed to deploy them
 ```
 

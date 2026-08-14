@@ -21,8 +21,7 @@ import type NepaliDateClass from 'nepali-date-converter';
 // resolves to the namespace object, not the class.
 const cjsRequire = createRequire(import.meta.url);
 const loaded = cjsRequire('nepali-date-converter') as
-  | typeof NepaliDateClass
-  | { default: typeof NepaliDateClass };
+  typeof NepaliDateClass | { default: typeof NepaliDateClass };
 const NepaliDate: typeof NepaliDateClass =
   'default' in loaded ? loaded.default : loaded;
 

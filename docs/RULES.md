@@ -76,37 +76,37 @@ founder decides whether to relax it. Until they say so, leave it.
 
 ### Use
 
-| Purpose | Library |
-|---|---|
-| ORM / queries | `drizzle-orm` |
-| DB driver | `@neondatabase/serverless` (prod), `pg` (local) |
-| Validation | `zod` — every API boundary |
-| Auth | `next-auth` (Auth.js) |
-| Password hashing | `@node-rs/argon2` |
-| TOTP | `otpauth` |
-| Redis | `@upstash/redis`, `@upstash/ratelimit` |
-| Queue | `@upstash/qstash` |
-| Object storage | `@aws-sdk/client-s3` against R2 |
-| Email | `resend` + `@react-email/components` |
-| UI | `shadcn/ui`, `tailwindcss`, `lucide-react` |
-| Tables | `@tanstack/react-table` |
-| Charts | `recharts` |
-| Dates | `date-fns` + a BS conversion library |
-| Testing | `vitest`, `@playwright/test` |
-| PDF | `@react-pdf/renderer` |
+| Purpose          | Library                                         |
+| ---------------- | ----------------------------------------------- |
+| ORM / queries    | `drizzle-orm`                                   |
+| DB driver        | `@neondatabase/serverless` (prod), `pg` (local) |
+| Validation       | `zod` — every API boundary                      |
+| Auth             | `next-auth` (Auth.js)                           |
+| Password hashing | `@node-rs/argon2`                               |
+| TOTP             | `otpauth`                                       |
+| Redis            | `@upstash/redis`, `@upstash/ratelimit`          |
+| Queue            | `@upstash/qstash`                               |
+| Object storage   | `@aws-sdk/client-s3` against R2                 |
+| Email            | `resend` + `@react-email/components`            |
+| UI               | `shadcn/ui`, `tailwindcss`, `lucide-react`      |
+| Tables           | `@tanstack/react-table`                         |
+| Charts           | `recharts`                                      |
+| Dates            | `date-fns` + a BS conversion library            |
+| Testing          | `vitest`, `@playwright/test`                    |
+| PDF              | `@react-pdf/renderer`                           |
 
 ### Do not use
 
-| Avoid | Why |
-|---|---|
-| **Prisma** | Hides the SQL we need explicit control over |
-| **`bcrypt`** | argon2id is the current standard |
-| **`moment`** | Unmaintained, huge |
-| **`decimal.js` for currency** | We use integer paisa; a decimal library invites float thinking |
-| **`crypto-js`** | Use Node's `crypto` |
-| **Any ORM auto-migration in production** | Migrations are reviewed files |
-| **`localStorage` for anything sensitive** | Session cookies only |
-| **A second database** | One Postgres. Use `JSONB` for document-shaped data |
+| Avoid                                     | Why                                                            |
+| ----------------------------------------- | -------------------------------------------------------------- |
+| **Prisma**                                | Hides the SQL we need explicit control over                    |
+| **`bcrypt`**                              | argon2id is the current standard                               |
+| **`moment`**                              | Unmaintained, huge                                             |
+| **`decimal.js` for currency**             | We use integer paisa; a decimal library invites float thinking |
+| **`crypto-js`**                           | Use Node's `crypto`                                            |
+| **Any ORM auto-migration in production**  | Migrations are reviewed files                                  |
+| **`localStorage` for anything sensitive** | Session cookies only                                           |
+| **A second database**                     | One Postgres. Use `JSONB` for document-shaped data             |
 
 Adding a dependency not on this list requires asking first. Every dependency is
 a maintenance liability for a two-person team.
@@ -140,11 +140,18 @@ Never default to success.
 ```ts
 class PaymentError extends Error {
   constructor(
-    readonly code: 'INVALID_SIGNATURE' | 'AMOUNT_MISMATCH' | 'SESSION_EXPIRED'
-      | 'PROVIDER_UNAVAILABLE' | 'DUPLICATE_EVENT' | 'INSUFFICIENT_SCOPE',
+    readonly code:
+      | 'INVALID_SIGNATURE'
+      | 'AMOUNT_MISMATCH'
+      | 'SESSION_EXPIRED'
+      | 'PROVIDER_UNAVAILABLE'
+      | 'DUPLICATE_EVENT'
+      | 'INSUFFICIENT_SCOPE',
     message: string,
     readonly context?: Record<string, unknown>,
-  ) { super(message) }
+  ) {
+    super(message);
+  }
 }
 ```
 

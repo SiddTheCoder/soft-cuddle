@@ -38,16 +38,16 @@ curl -H 'Host: admin.localhost' http://127.0.0.1:3000/
 # docker-compose.yml
 services:
   postgres:
-    image: postgres:16-alpine        # match Neon's major version
+    image: postgres:16-alpine # match Neon's major version
     environment:
       POSTGRES_PASSWORD: softmato
       POSTGRES_DB: softmato_dev
-    ports: ["5432:5432"]
-    volumes: ["pgdata:/var/lib/postgresql/data"]
+    ports: ['5432:5432']
+    volumes: ['pgdata:/var/lib/postgresql/data']
   redis:
-    image: redis:7-alpine            # optional — Upstash free tier also works
-    ports: ["6379:6379"]
-volumes: { pgdata: }
+    image: redis:7-alpine # optional — Upstash free tier also works
+    ports: ['6379:6379']
+volumes: { pgdata }
 ```
 
 Everything in development runs on free tiers. Local Postgres costs nothing and
@@ -133,10 +133,10 @@ Never commit `.env*`. Keep `.env.example` current with every new variable.
 
 Two R2 buckets. **Never one.**
 
-| Bucket | Contents | Access |
-|---|---|---|
+| Bucket             | Contents                                       | Access         |
+| ------------------ | ---------------------------------------------- | -------------- |
 | `softmato-private` | payment proofs, invoice PDFs, client documents | presigned only |
-| `softmato-public` | CMS images, team photos, blog assets | public URL |
+| `softmato-public`  | CMS images, team photos, blog assets           | public URL     |
 
 Payment proofs contain customer bank details and transaction references.
 Invoice PDFs contain customer data. Neither is ever publicly reachable.
@@ -167,14 +167,14 @@ Access via `@aws-sdk/client-s3` with `region: 'auto'` and the R2 endpoint.
 
 ## 4. Environments
 
-| | Local | Preview | Production |
-|---|---|---|---|
-| Host | localhost | Vercel preview | Vercel Pro |
-| DB | Docker Postgres | Neon branch | Neon |
-| Redis | Docker or Upstash free | Upstash | Upstash |
-| Providers | sandbox | sandbox | **live** |
-| R2 | dev buckets | dev buckets | prod buckets |
-| Cron | manual curl | disabled | enabled |
+|           | Local                  | Preview        | Production   |
+| --------- | ---------------------- | -------------- | ------------ |
+| Host      | localhost              | Vercel preview | Vercel Pro   |
+| DB        | Docker Postgres        | Neon branch    | Neon         |
+| Redis     | Docker or Upstash free | Upstash        | Upstash      |
+| Providers | sandbox                | sandbox        | **live**     |
+| R2        | dev buckets            | dev buckets    | prod buckets |
+| Cron      | manual curl            | disabled       | enabled      |
 
 **Preview deployments must never use live provider credentials.** Every preview
 runs `PAYMENT_MODE=sandbox`. Verify this before enabling preview deployments at
@@ -231,13 +231,13 @@ The only cost is the domain.
 
 **Production: ~$25–35/month.**
 
-| | |
-|---|---|
-| Vercel Pro | $20 |
-| Neon | $5–15, usage-based, scales to zero |
-| Upstash Redis + QStash | free at this volume |
-| Cloudflare R2 | free — 10 GB, 1M/10M ops monthly, zero egress |
-| Resend, Sentry, cron-job.org | free tiers |
+|                              |                                               |
+| ---------------------------- | --------------------------------------------- |
+| Vercel Pro                   | $20                                           |
+| Neon                         | $5–15, usage-based, scales to zero            |
+| Upstash Redis + QStash       | free at this volume                           |
+| Cloudflare R2                | free — 10 GB, 1M/10M ops monthly, zero egress |
+| Resend, Sentry, cron-job.org | free tiers                                    |
 
 Watch Neon compute as you grow — it bills per CU-hour, so an always-busy
 database climbs. That's a launch-plus-one-year problem, not a today problem.
