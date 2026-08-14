@@ -1,7 +1,14 @@
 /** Shared shapes for the CMS registry. No logic, no imports from kinds. */
 import type { z } from 'zod';
 
-export type FieldKind = 'text' | 'textarea' | 'markdown' | 'number' | 'tags';
+export type FieldKind =
+  | 'text'
+  | 'textarea'
+  | 'markdown'
+  | 'number'
+  | 'tags'
+  /** URL plus an upload when R2 is configured. */
+  | 'image';
 
 export interface FieldSpec {
   name: string;

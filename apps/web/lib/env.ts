@@ -41,6 +41,19 @@ const serverSchema = z.object({
   EMAIL_FROM: z.string().optional(),
   /** Where contact enquiries are sent. */
   COMPANY_EMAIL: z.string().email().optional(),
+
+  /*
+   * Cloudflare R2. Optional as a group: with none of it set, the CMS image
+   * fields stay plain URL inputs and uploading is simply unavailable. All or
+   * nothing is checked below — a half-configured bucket fails at upload time,
+   * which is exactly the late failure this file exists to prevent.
+   */
+  R2_ACCOUNT_ID: z.string().optional(),
+  R2_ACCESS_KEY_ID: z.string().optional(),
+  R2_SECRET_ACCESS_KEY: z.string().optional(),
+  R2_PUBLIC_BUCKET: z.string().optional(),
+  /** Public base URL the bucket is served from, e.g. https://cdn.softmato.com */
+  R2_PUBLIC_BASE_URL: z.string().url().optional(),
 });
 
 const publicSchema = z.object({
@@ -80,3 +93,30 @@ if (env.APP_ENV === 'preview' && env.PAYMENT_MODE === 'live') {
       'Every preview runs against provider sandboxes.',
   );
 }
+
+/**
+ * R2 is all-or-nothing.
+ *
+ * A partially configured bucket would pass boot and then fail on the first
+ * upload — the late failure this module exists to prevent.
+ */
+const R2_KEYS = [
+  'R2_ACCOUNT_ID',
+  'R2_ACCESS_KEY_ID',
+  'R2_SECRET_ACCESS_KEY',
+  'R2_PUBLIC_BUCKET',
+  'R2_PUBLIC_BASE_URL',
+] as const;
+
+const r2Set = R2_KEYS.filter((key) => env[key]);
+
+if (r2Set.length > 0 && r2Set.length < R2_KEYS.length) {
+  const missing = R2_KEYS.filter((key) => !env[key]);
+  throw new Error(
+    `R2 is partially configured. Missing: ${missing.join(', ')}. ` +
+      'Set all of them or none — a half-configured bucket fails at upload.',
+  );
+}
+
+/** True when uploads are available. */
+export const r2Configured = r2Set.length === R2_KEYS.length;

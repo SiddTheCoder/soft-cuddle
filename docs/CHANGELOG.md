@@ -31,6 +31,9 @@ this file tracks what was delivered.
   address, with a honeypot that silently absorbs bots.
 - Search engines get a sitemap covering every published page, and a
   `robots.txt` that blocks indexing entirely outside production.
+- Image fields in the CMS accept an upload to the public R2 bucket as well as a
+  pasted URL. Where R2 is not configured they remain plain URL fields, so the
+  editors work without it.
 
 ### Fixed
 
@@ -53,6 +56,11 @@ this file tracks what was delivered.
   `dangerouslySetInnerHTML` in the path.
 - The contact form never stores a raw IP address; it stores a salted SHA-256
   hash, used only for rate limiting.
+- Uploaded images are identified by magic bytes, never by filename or the
+  client-declared content type, and capped at 5 MB. A PDF or an HTML file
+  renamed to `.png` is rejected, and the stored object key cannot escape the
+  `cms/` prefix. R2 must be fully configured or not at all — a partial
+  configuration fails at boot rather than at the first upload.
 
 ### Migration
 

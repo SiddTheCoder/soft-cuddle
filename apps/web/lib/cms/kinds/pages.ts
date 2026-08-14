@@ -22,7 +22,7 @@ export const pagesKind: ContentKind = {
     { name: 'slug', label: 'Slug', kind: 'text', required: true },
     { name: 'title', label: 'Title', kind: 'text', required: true },
     { name: 'body', label: 'Body', kind: 'markdown' },
-    { name: 'ogImageUrl', label: 'Social image URL', kind: 'text' },
+    { name: 'ogImageUrl', label: 'Social image', kind: 'image' },
     ...SEO_FIELDS,
   ],
   schema: z.object({

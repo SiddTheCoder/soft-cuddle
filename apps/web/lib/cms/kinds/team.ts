@@ -19,7 +19,7 @@ export const teamKind: ContentKind = {
     { name: 'name', label: 'Name', kind: 'text', required: true },
     { name: 'role', label: 'Role', kind: 'text', required: true },
     { name: 'bio', label: 'Bio', kind: 'textarea' },
-    { name: 'photoUrl', label: 'Photo URL', kind: 'text' },
+    { name: 'photoUrl', label: 'Photo', kind: 'image' },
     { name: 'email', label: 'Email', kind: 'text' },
     { name: 'linkedinUrl', label: 'LinkedIn URL', kind: 'text' },
     { name: 'githubUrl', label: 'GitHub URL', kind: 'text' },

@@ -1017,6 +1017,39 @@
       "weight": 1.0
     },
     {
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "relation": "imports_from",
+      "source": "apps_web_app_admin_admin_cms_actions_upload_ts",
+      "source_file": "apps/web/app/(admin)/admin/cms/actions/upload.ts",
+      "source_location": "L13",
+      "target": "apps_web_app_admin_admin_cms_actions_shared_ts",
+      "weight": 1.0
+    },
+    {
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "relation": "imports",
+      "source": "apps_web_app_admin_admin_cms_actions_upload_ts",
+      "source_file": "apps/web/app/(admin)/admin/cms/actions/upload.ts",
+      "source_location": "L13",
+      "target": "actions_shared_requireadmin",
+      "weight": 1.0
+    },
+    {
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "relation": "calls",
+      "source": "actions_upload_uploadcmsimage",
+      "source_file": "apps/web/app/(admin)/admin/cms/actions/upload.ts",
+      "source_location": "L34",
+      "target": "actions_shared_requireadmin",
+      "weight": 1.0
+    },
+    {
       "confidence": "INFERRED",
       "confidence_score": 0.8,
       "context": "call",
@@ -1025,6 +1058,191 @@
       "source_file": "apps/web/app/(admin)/admin/cms/actions/shared.ts",
       "source_location": "L39",
       "target": "cms_registry_iscontentkind",
+      "weight": 1.0
+    },
+    {
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "relation": "imports_from",
+      "source": "apps_web_app_admin_admin_cms_actions_upload_ts",
+      "source_file": "apps/web/app/(admin)/admin/cms/actions/upload.ts",
+      "source_location": "L5",
+      "target": "apps_web_lib_audit_ts",
+      "weight": 1.0
+    },
+    {
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "relation": "imports",
+      "source": "apps_web_app_admin_admin_cms_actions_upload_ts",
+      "source_file": "apps/web/app/(admin)/admin/cms/actions/upload.ts",
+      "source_location": "L5",
+      "target": "lib_audit_recordaudit",
+      "weight": 1.0
+    },
+    {
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "relation": "imports_from",
+      "source": "apps_web_app_admin_admin_cms_actions_upload_ts",
+      "source_file": "apps/web/app/(admin)/admin/cms/actions/upload.ts",
+      "source_location": "L6",
+      "target": "apps_web_lib_storage_image_validation_ts",
+      "weight": 1.0
+    },
+    {
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "relation": "imports",
+      "source": "apps_web_app_admin_admin_cms_actions_upload_ts",
+      "source_file": "apps/web/app/(admin)/admin/cms/actions/upload.ts",
+      "source_location": "L6",
+      "target": "storage_image_validation_cmsobjectkey",
+      "weight": 1.0
+    },
+    {
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "relation": "imports",
+      "source": "apps_web_app_admin_admin_cms_actions_upload_ts",
+      "source_file": "apps/web/app/(admin)/admin/cms/actions/upload.ts",
+      "source_location": "L6",
+      "target": "storage_image_validation_validateimage",
+      "weight": 1.0
+    },
+    {
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "relation": "imports",
+      "source": "apps_web_app_admin_admin_cms_actions_upload_ts",
+      "source_file": "apps/web/app/(admin)/admin/cms/actions/upload.ts",
+      "source_location": "L6",
+      "target": "storage_image_validation_validationmessage",
+      "weight": 1.0
+    },
+    {
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "relation": "imports_from",
+      "source": "apps_web_app_admin_admin_cms_actions_upload_ts",
+      "source_file": "apps/web/app/(admin)/admin/cms/actions/upload.ts",
+      "source_location": "L11",
+      "target": "apps_web_lib_storage_r2_ts",
+      "weight": 1.0
+    },
+    {
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "relation": "imports",
+      "source": "apps_web_app_admin_admin_cms_actions_upload_ts",
+      "source_file": "apps/web/app/(admin)/admin/cms/actions/upload.ts",
+      "source_location": "L11",
+      "target": "storage_r2_putcmsobject",
+      "weight": 1.0
+    },
+    {
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "relation": "contains",
+      "source": "apps_web_app_admin_admin_cms_actions_upload_ts",
+      "source_file": "apps/web/app/(admin)/admin/cms/actions/upload.ts",
+      "source_location": "L15",
+      "target": "actions_upload_uploadresult",
+      "weight": 1.0
+    },
+    {
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "relation": "contains",
+      "source": "apps_web_app_admin_admin_cms_actions_upload_ts",
+      "source_file": "apps/web/app/(admin)/admin/cms/actions/upload.ts",
+      "source_location": "L30",
+      "target": "actions_upload_uploadcmsimage",
+      "weight": 1.0
+    },
+    {
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "relation": "imports_from",
+      "source": "apps_web_components_admin_fields_image_field_tsx",
+      "source_file": "apps/web/components/admin/fields/image-field.tsx",
+      "source_location": "L5",
+      "target": "apps_web_app_admin_admin_cms_actions_upload_ts",
+      "weight": 1.0
+    },
+    {
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "relation": "imports",
+      "source": "apps_web_components_admin_fields_image_field_tsx",
+      "source_file": "apps/web/components/admin/fields/image-field.tsx",
+      "source_location": "L5",
+      "target": "actions_upload_uploadcmsimage",
+      "weight": 1.0
+    },
+    {
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "relation": "calls",
+      "source": "actions_upload_uploadcmsimage",
+      "source_file": "apps/web/app/(admin)/admin/cms/actions/upload.ts",
+      "source_location": "L49",
+      "target": "storage_image_validation_validateimage",
+      "weight": 1.0
+    },
+    {
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "relation": "calls",
+      "source": "actions_upload_uploadcmsimage",
+      "source_file": "apps/web/app/(admin)/admin/cms/actions/upload.ts",
+      "source_location": "L52",
+      "target": "storage_image_validation_validationmessage",
+      "weight": 1.0
+    },
+    {
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "relation": "calls",
+      "source": "actions_upload_uploadcmsimage",
+      "source_file": "apps/web/app/(admin)/admin/cms/actions/upload.ts",
+      "source_location": "L55",
+      "target": "storage_image_validation_cmsobjectkey",
+      "weight": 1.0
+    },
+    {
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "relation": "calls",
+      "source": "actions_upload_uploadcmsimage",
+      "source_file": "apps/web/app/(admin)/admin/cms/actions/upload.ts",
+      "source_location": "L62",
+      "target": "storage_r2_putcmsobject",
+      "weight": 1.0
+    },
+    {
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "relation": "calls",
+      "source": "actions_upload_uploadcmsimage",
+      "source_file": "apps/web/app/(admin)/admin/cms/actions/upload.ts",
+      "source_location": "L68",
+      "target": "lib_audit_recordaudit",
       "weight": 1.0
     },
     {
@@ -1123,6 +1341,17 @@
       "source_file": "apps/web/app/(admin)/admin/cms/[kind]/[id]/page.tsx",
       "source_location": "L4",
       "target": "apps_web_lib_cms_index_ts",
+      "weight": 1.0
+    },
+    {
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "relation": "imports_from",
+      "source": "apps_web_app_admin_admin_cms_kind_id_page_tsx",
+      "source_file": "apps/web/app/(admin)/admin/cms/[kind]/[id]/page.tsx",
+      "source_location": "L5",
+      "target": "apps_web_lib_env_ts",
       "weight": 1.0
     },
     {
@@ -3576,6 +3805,17 @@
       "confidence_score": 1.0,
       "context": "import",
       "relation": "imports_from",
+      "source": "apps_web_components_admin_fields_image_field_tsx",
+      "source_file": "apps/web/components/admin/fields/image-field.tsx",
+      "source_location": "L7",
+      "target": "apps_web_components_admin_fields_field_shell_tsx",
+      "weight": 1.0
+    },
+    {
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "relation": "imports_from",
       "source": "apps_web_components_admin_fields_markdown_field_tsx",
       "source_file": "apps/web/components/admin/fields/markdown-field.tsx",
       "source_location": "L1",
@@ -3620,6 +3860,17 @@
       "confidence_score": 1.0,
       "context": "import",
       "relation": "imports",
+      "source": "apps_web_components_admin_fields_image_field_tsx",
+      "source_file": "apps/web/components/admin/fields/image-field.tsx",
+      "source_location": "L7",
+      "target": "fields_field_shell_fieldshell",
+      "weight": 1.0
+    },
+    {
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "relation": "imports",
       "source": "apps_web_components_admin_fields_markdown_field_tsx",
       "source_file": "apps/web/components/admin/fields/markdown-field.tsx",
       "source_location": "L1",
@@ -3664,6 +3915,17 @@
       "confidence_score": 1.0,
       "context": "import",
       "relation": "imports",
+      "source": "apps_web_components_admin_fields_image_field_tsx",
+      "source_file": "apps/web/components/admin/fields/image-field.tsx",
+      "source_location": "L7",
+      "target": "fields_field_shell_describedby",
+      "weight": 1.0
+    },
+    {
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "relation": "imports",
       "source": "apps_web_components_admin_fields_markdown_field_tsx",
       "source_file": "apps/web/components/admin/fields/markdown-field.tsx",
       "source_location": "L1",
@@ -3700,6 +3962,17 @@
       "source": "apps_web_components_admin_fields_textarea_field_tsx",
       "source_file": "apps/web/components/admin/fields/textarea-field.tsx",
       "source_location": "L1",
+      "target": "fields_field_shell_describedby",
+      "weight": 1.0
+    },
+    {
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "relation": "calls",
+      "source": "fields_image_field_imagefield",
+      "source_file": "apps/web/components/admin/fields/image-field.tsx",
+      "source_location": "L60",
       "target": "fields_field_shell_describedby",
       "weight": 1.0
     },
@@ -3745,6 +4018,60 @@
       "source_file": "apps/web/components/admin/fields/textarea-field.tsx",
       "source_location": "L21",
       "target": "fields_field_shell_describedby",
+      "weight": 1.0
+    },
+    {
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "relation": "imports_from",
+      "source": "apps_web_components_admin_fields_image_field_tsx",
+      "source_file": "apps/web/components/admin/fields/image-field.tsx",
+      "source_location": "L8",
+      "target": "apps_web_components_admin_fields_types_ts",
+      "weight": 1.0
+    },
+    {
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "relation": "imports",
+      "source": "apps_web_components_admin_fields_image_field_tsx",
+      "source_file": "apps/web/components/admin/fields/image-field.tsx",
+      "source_location": "L8",
+      "target": "fields_types_fieldprops",
+      "weight": 1.0
+    },
+    {
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "relation": "contains",
+      "source": "apps_web_components_admin_fields_image_field_tsx",
+      "source_file": "apps/web/components/admin/fields/image-field.tsx",
+      "source_location": "L21",
+      "target": "fields_image_field_imagefield",
+      "weight": 1.0
+    },
+    {
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "relation": "imports_from",
+      "source": "apps_web_components_admin_fields_index_tsx",
+      "source_file": "apps/web/components/admin/fields/index.tsx",
+      "source_location": "L4",
+      "target": "apps_web_components_admin_fields_image_field_tsx",
+      "weight": 1.0
+    },
+    {
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "relation": "imports",
+      "source": "apps_web_components_admin_fields_index_tsx",
+      "source_file": "apps/web/components/admin/fields/index.tsx",
+      "source_location": "L4",
+      "target": "fields_image_field_imagefield",
       "weight": 1.0
     },
     {
@@ -4615,6 +4942,36 @@
     {
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
+      "relation": "contains",
+      "source": "apps_web_lib_env_ts",
+      "source_file": "apps/web/lib/env.ts",
+      "source_location": "L103",
+      "target": "lib_env_r2_keys",
+      "weight": 1.0
+    },
+    {
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "relation": "contains",
+      "source": "apps_web_lib_env_ts",
+      "source_file": "apps/web/lib/env.ts",
+      "source_location": "L111",
+      "target": "lib_env_r2set",
+      "weight": 1.0
+    },
+    {
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "relation": "contains",
+      "source": "apps_web_lib_env_ts",
+      "source_file": "apps/web/lib/env.ts",
+      "source_location": "L114",
+      "target": "lib_env_missing",
+      "weight": 1.0
+    },
+    {
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
       "context": "import",
       "relation": "imports_from",
       "source": "apps_web_lib_cms_metadata_ts",
@@ -4649,6 +5006,17 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "context": "import",
+      "relation": "imports_from",
+      "source": "apps_web_lib_storage_r2_ts",
+      "source_file": "apps/web/lib/storage/r2.ts",
+      "source_location": "L4",
+      "target": "apps_web_lib_env_ts",
+      "weight": 1.0
+    },
+    {
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
       "relation": "imports",
       "source": "apps_web_lib_cms_metadata_ts",
       "source_file": "apps/web/lib/cms/metadata.ts",
@@ -4675,6 +5043,17 @@
       "source": "apps_web_lib_contact_rate_limit_ts",
       "source_file": "apps/web/lib/contact/rate-limit.ts",
       "source_location": "L6",
+      "target": "lib_env_env",
+      "weight": 1.0
+    },
+    {
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "relation": "imports",
+      "source": "apps_web_lib_storage_r2_ts",
+      "source_file": "apps/web/lib/storage/r2.ts",
+      "source_location": "L4",
       "target": "lib_env_env",
       "weight": 1.0
     },
@@ -6213,6 +6592,192 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "relation": "contains",
+      "source": "apps_web_lib_storage_image_validation_ts",
+      "source_file": "apps/web/lib/storage/image-validation.ts",
+      "source_location": "L17",
+      "target": "storage_image_validation_imagemime",
+      "weight": 1.0
+    },
+    {
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "relation": "contains",
+      "source": "apps_web_lib_storage_image_validation_ts",
+      "source_file": "apps/web/lib/storage/image-validation.ts",
+      "source_location": "L19",
+      "target": "storage_image_validation_signature",
+      "weight": 1.0
+    },
+    {
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "relation": "contains",
+      "source": "apps_web_lib_storage_image_validation_ts",
+      "source_file": "apps/web/lib/storage/image-validation.ts",
+      "source_location": "L28",
+      "target": "storage_image_validation_signatures",
+      "weight": 1.0
+    },
+    {
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "relation": "contains",
+      "source": "apps_web_lib_storage_image_validation_ts",
+      "source_file": "apps/web/lib/storage/image-validation.ts",
+      "source_location": "L73",
+      "target": "storage_image_validation_detectedimage",
+      "weight": 1.0
+    },
+    {
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "relation": "contains",
+      "source": "apps_web_lib_storage_image_validation_ts",
+      "source_file": "apps/web/lib/storage/image-validation.ts",
+      "source_location": "L79",
+      "target": "storage_image_validation_detectimage",
+      "weight": 1.0
+    },
+    {
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "relation": "contains",
+      "source": "apps_web_lib_storage_image_validation_ts",
+      "source_file": "apps/web/lib/storage/image-validation.ts",
+      "source_location": "L97",
+      "target": "storage_image_validation_validationfailure",
+      "weight": 1.0
+    },
+    {
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "relation": "contains",
+      "source": "apps_web_lib_storage_image_validation_ts",
+      "source_file": "apps/web/lib/storage/image-validation.ts",
+      "source_location": "L102",
+      "target": "storage_image_validation_validationresult",
+      "weight": 1.0
+    },
+    {
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "relation": "contains",
+      "source": "apps_web_lib_storage_image_validation_ts",
+      "source_file": "apps/web/lib/storage/image-validation.ts",
+      "source_location": "L105",
+      "target": "storage_image_validation_validateimage",
+      "weight": 1.0
+    },
+    {
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "relation": "contains",
+      "source": "apps_web_lib_storage_image_validation_ts",
+      "source_file": "apps/web/lib/storage/image-validation.ts",
+      "source_location": "L116",
+      "target": "storage_image_validation_validationmessage",
+      "weight": 1.0
+    },
+    {
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "relation": "contains",
+      "source": "apps_web_lib_storage_image_validation_ts",
+      "source_file": "apps/web/lib/storage/image-validation.ts",
+      "source_location": "L133",
+      "target": "storage_image_validation_cmsobjectkey",
+      "weight": 1.0
+    },
+    {
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "relation": "imports_from",
+      "source": "apps_web_tests_image_validation_test_ts",
+      "source_file": "apps/web/tests/image-validation.test.ts",
+      "source_location": "L11",
+      "target": "apps_web_lib_storage_image_validation_ts",
+      "weight": 1.0
+    },
+    {
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "relation": "calls",
+      "source": "storage_image_validation_validateimage",
+      "source_file": "apps/web/lib/storage/image-validation.ts",
+      "source_location": "L110",
+      "target": "storage_image_validation_detectimage",
+      "weight": 1.0
+    },
+    {
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "relation": "imports",
+      "source": "apps_web_tests_image_validation_test_ts",
+      "source_file": "apps/web/tests/image-validation.test.ts",
+      "source_location": "L11",
+      "target": "storage_image_validation_detectimage",
+      "weight": 1.0
+    },
+    {
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "relation": "imports",
+      "source": "apps_web_tests_image_validation_test_ts",
+      "source_file": "apps/web/tests/image-validation.test.ts",
+      "source_location": "L11",
+      "target": "storage_image_validation_validateimage",
+      "weight": 1.0
+    },
+    {
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "relation": "imports",
+      "source": "apps_web_tests_image_validation_test_ts",
+      "source_file": "apps/web/tests/image-validation.test.ts",
+      "source_location": "L11",
+      "target": "storage_image_validation_cmsobjectkey",
+      "weight": 1.0
+    },
+    {
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "relation": "contains",
+      "source": "apps_web_lib_storage_r2_ts",
+      "source_file": "apps/web/lib/storage/r2.ts",
+      "source_location": "L21",
+      "target": "storage_r2_r2",
+      "weight": 1.0
+    },
+    {
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "relation": "contains",
+      "source": "apps_web_lib_storage_r2_ts",
+      "source_file": "apps/web/lib/storage/r2.ts",
+      "source_location": "L45",
+      "target": "storage_r2_putcmsobject",
+      "weight": 1.0
+    },
+    {
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "relation": "calls",
+      "source": "storage_r2_putcmsobject",
+      "source_file": "apps/web/lib/storage/r2.ts",
+      "source_location": "L54",
+      "target": "storage_r2_r2",
+      "weight": 1.0
+    },
+    {
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "relation": "contains",
       "source": "apps_web_tests_cms_schema_test_ts",
       "source_file": "apps/web/tests/cms-schema.test.ts",
       "source_location": "L138",
@@ -6287,6 +6852,116 @@
       "source_file": "apps/web/tests/crypto.test.ts",
       "source_location": "L75",
       "target": "tests_crypto_test_generated",
+      "weight": 1.0
+    },
+    {
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "relation": "contains",
+      "source": "apps_web_tests_image_validation_test_ts",
+      "source_file": "apps/web/tests/image-validation.test.ts",
+      "source_location": "L18",
+      "target": "tests_image_validation_test_bytes",
+      "weight": 1.0
+    },
+    {
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "relation": "contains",
+      "source": "apps_web_tests_image_validation_test_ts",
+      "source_file": "apps/web/tests/image-validation.test.ts",
+      "source_location": "L20",
+      "target": "tests_image_validation_test_jpeg",
+      "weight": 1.0
+    },
+    {
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "relation": "contains",
+      "source": "apps_web_tests_image_validation_test_ts",
+      "source_file": "apps/web/tests/image-validation.test.ts",
+      "source_location": "L21",
+      "target": "tests_image_validation_test_png",
+      "weight": 1.0
+    },
+    {
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "relation": "contains",
+      "source": "apps_web_tests_image_validation_test_ts",
+      "source_file": "apps/web/tests/image-validation.test.ts",
+      "source_location": "L22",
+      "target": "tests_image_validation_test_gif",
+      "weight": 1.0
+    },
+    {
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "relation": "contains",
+      "source": "apps_web_tests_image_validation_test_ts",
+      "source_file": "apps/web/tests/image-validation.test.ts",
+      "source_location": "L23",
+      "target": "tests_image_validation_test_webp",
+      "weight": 1.0
+    },
+    {
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "relation": "contains",
+      "source": "apps_web_tests_image_validation_test_ts",
+      "source_file": "apps/web/tests/image-validation.test.ts",
+      "source_location": "L49",
+      "target": "tests_image_validation_test_different",
+      "weight": 1.0
+    },
+    {
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "relation": "contains",
+      "source": "apps_web_tests_image_validation_test_ts",
+      "source_file": "apps/web/tests/image-validation.test.ts",
+      "source_location": "L71",
+      "target": "tests_image_validation_test_result",
+      "weight": 1.0
+    },
+    {
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "relation": "contains",
+      "source": "apps_web_tests_image_validation_test_ts",
+      "source_file": "apps/web/tests/image-validation.test.ts",
+      "source_location": "L76",
+      "target": "tests_image_validation_test_large",
+      "weight": 1.0
+    },
+    {
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "relation": "contains",
+      "source": "apps_web_tests_image_validation_test_ts",
+      "source_file": "apps/web/tests/image-validation.test.ts",
+      "source_location": "L84",
+      "target": "tests_image_validation_test_pdf",
+      "weight": 1.0
+    },
+    {
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "relation": "contains",
+      "source": "apps_web_tests_image_validation_test_ts",
+      "source_file": "apps/web/tests/image-validation.test.ts",
+      "source_location": "L93",
+      "target": "tests_image_validation_test_html",
+      "weight": 1.0
+    },
+    {
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "relation": "contains",
+      "source": "apps_web_tests_image_validation_test_ts",
+      "source_file": "apps/web/tests/image-validation.test.ts",
+      "source_location": "L122",
+      "target": "tests_image_validation_test_key",
       "weight": 1.0
     },
     {
@@ -10188,6 +10863,46 @@
       "relation": "contains",
       "source": "docs_changelog_phase_1_2026_08_14",
       "source_file": "docs/CHANGELOG.md",
+      "source_location": "L77",
+      "target": "docs_changelog_added_77",
+      "weight": 1.0
+    },
+    {
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "relation": "contains",
+      "source": "docs_changelog_phase_1_2026_08_14",
+      "source_file": "docs/CHANGELOG.md",
+      "source_location": "L96",
+      "target": "docs_changelog_security_96",
+      "weight": 1.0
+    },
+    {
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "relation": "contains",
+      "source": "docs_changelog_phase_1_2026_08_14",
+      "source_file": "docs/CHANGELOG.md",
+      "source_location": "L117",
+      "target": "docs_changelog_migration_117",
+      "weight": 1.0
+    },
+    {
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "relation": "contains",
+      "source": "docs_changelog_phase_1_2026_08_14",
+      "source_file": "docs/CHANGELOG.md",
+      "source_location": "L70",
+      "target": "docs_changelog_notes",
+      "weight": 1.0
+    },
+    {
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "relation": "contains",
+      "source": "docs_changelog_phase_1_2026_08_14",
+      "source_file": "docs/CHANGELOG.md",
       "source_location": "L69",
       "target": "docs_changelog_added_69",
       "weight": 1.0
@@ -10210,16 +10925,6 @@
       "source_file": "docs/CHANGELOG.md",
       "source_location": "L109",
       "target": "docs_changelog_migration_109",
-      "weight": 1.0
-    },
-    {
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "relation": "contains",
-      "source": "docs_changelog_phase_1_2026_08_14",
-      "source_file": "docs/CHANGELOG.md",
-      "source_location": "L70",
-      "target": "docs_changelog_notes",
       "weight": 1.0
     },
     {
@@ -12906,7 +13611,7 @@
   "multigraph": false,
   "nodes": [
     {
-      "community": 42,
+      "community": 43,
       "file_type": "code",
       "id": "apps_web_eslint_config_mjs",
       "label": "eslint.config.mjs",
@@ -12915,7 +13620,7 @@
       "source_location": "L1"
     },
     {
-      "community": 42,
+      "community": 43,
       "file_type": "code",
       "id": "web_eslint_config_eslintconfig",
       "label": "eslintConfig",
@@ -12924,7 +13629,7 @@
       "source_location": "L5"
     },
     {
-      "community": 43,
+      "community": 44,
       "file_type": "code",
       "id": "apps_web_instrumentation_ts",
       "label": "instrumentation.ts",
@@ -12933,7 +13638,7 @@
       "source_location": "L1"
     },
     {
-      "community": 43,
+      "community": 44,
       "file_type": "code",
       "id": "web_instrumentation_register",
       "label": "register()",
@@ -12942,7 +13647,7 @@
       "source_location": "L11"
     },
     {
-      "community": 29,
+      "community": 30,
       "file_type": "code",
       "id": "apps_web_middleware_ts",
       "label": "middleware.ts",
@@ -12951,7 +13656,7 @@
       "source_location": "L1"
     },
     {
-      "community": 29,
+      "community": 30,
       "file_type": "code",
       "id": "web_middleware_surface",
       "label": "Surface",
@@ -12960,7 +13665,7 @@
       "source_location": "L19"
     },
     {
-      "community": 29,
+      "community": 30,
       "file_type": "code",
       "id": "web_middleware_subdomain_surface",
       "label": "SUBDOMAIN_SURFACE",
@@ -12969,7 +13674,7 @@
       "source_location": "L22"
     },
     {
-      "community": 29,
+      "community": 30,
       "file_type": "code",
       "id": "web_middleware_surface_prefix",
       "label": "SURFACE_PREFIX",
@@ -12978,7 +13683,7 @@
       "source_location": "L30"
     },
     {
-      "community": 29,
+      "community": 30,
       "file_type": "code",
       "id": "web_middleware_surfacefor",
       "label": "surfaceFor()",
@@ -12987,7 +13692,7 @@
       "source_location": "L37"
     },
     {
-      "community": 29,
+      "community": 30,
       "file_type": "code",
       "id": "web_middleware_middleware",
       "label": "middleware()",
@@ -12996,7 +13701,7 @@
       "source_location": "L51"
     },
     {
-      "community": 29,
+      "community": 30,
       "file_type": "code",
       "id": "web_middleware_config",
       "label": "config",
@@ -13005,7 +13710,7 @@
       "source_location": "L77"
     },
     {
-      "community": 50,
+      "community": 51,
       "file_type": "code",
       "id": "apps_web_next_env_d_ts",
       "label": "next-env.d.ts",
@@ -13014,7 +13719,7 @@
       "source_location": "L1"
     },
     {
-      "community": 40,
+      "community": 41,
       "file_type": "code",
       "id": "apps_web_next_config_ts",
       "label": "next.config.ts",
@@ -13023,7 +13728,7 @@
       "source_location": "L1"
     },
     {
-      "community": 40,
+      "community": 41,
       "file_type": "code",
       "id": "web_next_config_loadrootenv",
       "label": "loadRootEnv()",
@@ -13032,7 +13737,7 @@
       "source_location": "L13"
     },
     {
-      "community": 40,
+      "community": 41,
       "file_type": "code",
       "id": "web_next_config_nextconfig",
       "label": "nextConfig",
@@ -13041,7 +13746,7 @@
       "source_location": "L27"
     },
     {
-      "community": 44,
+      "community": 45,
       "file_type": "code",
       "id": "apps_web_postcss_config_mjs",
       "label": "postcss.config.mjs",
@@ -13050,7 +13755,7 @@
       "source_location": "L1"
     },
     {
-      "community": 44,
+      "community": 45,
       "file_type": "code",
       "id": "web_postcss_config_config",
       "label": "config",
@@ -13059,7 +13764,7 @@
       "source_location": "L1"
     },
     {
-      "community": 37,
+      "community": 38,
       "file_type": "code",
       "id": "apps_web_vitest_config_ts",
       "label": "vitest.config.ts",
@@ -13068,7 +13773,7 @@
       "source_location": "L1"
     },
     {
-      "community": 37,
+      "community": 38,
       "file_type": "code",
       "id": "web_vitest_config_envpath",
       "label": "envPath",
@@ -13077,7 +13782,7 @@
       "source_location": "L6"
     },
     {
-      "community": 37,
+      "community": 38,
       "file_type": "code",
       "id": "web_vitest_config_match",
       "label": "match",
@@ -13086,7 +13791,7 @@
       "source_location": "L9"
     },
     {
-      "community": 37,
+      "community": 38,
       "file_type": "code",
       "id": "web_vitest_config_key_rawvalue",
       "label": "[, key, rawValue]",
@@ -13095,7 +13800,7 @@
       "source_location": "L11"
     },
     {
-      "community": 31,
+      "community": 32,
       "file_type": "code",
       "id": "apps_web_app_layout_tsx",
       "label": "layout.tsx",
@@ -13104,7 +13809,7 @@
       "source_location": "L1"
     },
     {
-      "community": 31,
+      "community": 32,
       "file_type": "code",
       "id": "app_layout_inter",
       "label": "inter",
@@ -13113,7 +13818,7 @@
       "source_location": "L12"
     },
     {
-      "community": 31,
+      "community": 32,
       "file_type": "code",
       "id": "app_layout_dmsans",
       "label": "dmSans",
@@ -13122,7 +13827,7 @@
       "source_location": "L13"
     },
     {
-      "community": 31,
+      "community": 32,
       "file_type": "code",
       "id": "app_layout_plexmono",
       "label": "plexMono",
@@ -13131,7 +13836,7 @@
       "source_location": "L14"
     },
     {
-      "community": 31,
+      "community": 32,
       "file_type": "code",
       "id": "app_layout_metadata",
       "label": "metadata",
@@ -13140,7 +13845,7 @@
       "source_location": "L20"
     },
     {
-      "community": 31,
+      "community": 32,
       "file_type": "code",
       "id": "app_layout_rootlayout",
       "label": "RootLayout()",
@@ -13149,7 +13854,7 @@
       "source_location": "L25"
     },
     {
-      "community": 12,
+      "community": 11,
       "file_type": "code",
       "id": "apps_web_app_robots_ts",
       "label": "robots.ts",
@@ -13158,7 +13863,7 @@
       "source_location": "L1"
     },
     {
-      "community": 12,
+      "community": 11,
       "file_type": "code",
       "id": "app_robots_robots",
       "label": "robots()",
@@ -13185,7 +13890,7 @@
       "source_location": "L13"
     },
     {
-      "community": 32,
+      "community": 33,
       "file_type": "code",
       "id": "apps_web_app_admin_admin_layout_tsx",
       "label": "layout.tsx",
@@ -13194,7 +13899,7 @@
       "source_location": "L1"
     },
     {
-      "community": 32,
+      "community": 33,
       "file_type": "code",
       "id": "admin_layout_adminlayout",
       "label": "AdminLayout()",
@@ -13203,7 +13908,7 @@
       "source_location": "L17"
     },
     {
-      "community": 41,
+      "community": 42,
       "file_type": "code",
       "id": "apps_web_app_admin_admin_page_tsx",
       "label": "page.tsx",
@@ -13212,7 +13917,7 @@
       "source_location": "L1"
     },
     {
-      "community": 41,
+      "community": 42,
       "file_type": "code",
       "id": "admin_page_unbalancedjournalcount",
       "label": "unbalancedJournalCount()",
@@ -13221,7 +13926,7 @@
       "source_location": "L13"
     },
     {
-      "community": 41,
+      "community": 42,
       "file_type": "code",
       "id": "admin_page_admindashboard",
       "label": "AdminDashboard()",
@@ -13347,6 +14052,33 @@
       "source_location": "L50"
     },
     {
+      "community": 9,
+      "file_type": "code",
+      "id": "apps_web_app_admin_admin_cms_actions_upload_ts",
+      "label": "upload.ts",
+      "norm_label": "upload.ts",
+      "source_file": "apps/web/app/(admin)/admin/cms/actions/upload.ts",
+      "source_location": "L1"
+    },
+    {
+      "community": 9,
+      "file_type": "code",
+      "id": "actions_upload_uploadresult",
+      "label": "UploadResult",
+      "norm_label": "uploadresult",
+      "source_file": "apps/web/app/(admin)/admin/cms/actions/upload.ts",
+      "source_location": "L15"
+    },
+    {
+      "community": 9,
+      "file_type": "code",
+      "id": "actions_upload_uploadcmsimage",
+      "label": "uploadCmsImage()",
+      "norm_label": "uploadcmsimage()",
+      "source_file": "apps/web/app/(admin)/admin/cms/actions/upload.ts",
+      "source_location": "L30"
+    },
+    {
       "community": 2,
       "file_type": "code",
       "id": "apps_web_app_admin_admin_cms_kind_page_tsx",
@@ -13380,10 +14112,10 @@
       "label": "ContentEditPage()",
       "norm_label": "contenteditpage()",
       "source_file": "apps/web/app/(admin)/admin/cms/[kind]/[id]/page.tsx",
-      "source_location": "L12"
+      "source_location": "L13"
     },
     {
-      "community": 45,
+      "community": 46,
       "file_type": "code",
       "id": "apps_web_app_checkout_checkout_sessionid_page_tsx",
       "label": "page.tsx",
@@ -13392,7 +14124,7 @@
       "source_location": "L1"
     },
     {
-      "community": 45,
+      "community": 46,
       "file_type": "code",
       "id": "sessionid_page_checkoutpage",
       "label": "CheckoutPage()",
@@ -13401,7 +14133,7 @@
       "source_location": "L7"
     },
     {
-      "community": 46,
+      "community": 47,
       "file_type": "code",
       "id": "apps_web_app_portal_portal_page_tsx",
       "label": "page.tsx",
@@ -13410,7 +14142,7 @@
       "source_location": "L1"
     },
     {
-      "community": 46,
+      "community": 47,
       "file_type": "code",
       "id": "portal_page_portalpage",
       "label": "PortalPage()",
@@ -13419,7 +14151,7 @@
       "source_location": "L7"
     },
     {
-      "community": 28,
+      "community": 29,
       "file_type": "code",
       "id": "apps_web_app_public_layout_tsx",
       "label": "layout.tsx",
@@ -13428,7 +14160,7 @@
       "source_location": "L1"
     },
     {
-      "community": 28,
+      "community": 29,
       "file_type": "code",
       "id": "public_layout_publiclayout",
       "label": "PublicLayout()",
@@ -13581,7 +14313,7 @@
       "source_location": "L12"
     },
     {
-      "community": 12,
+      "community": 11,
       "file_type": "code",
       "id": "apps_web_app_public_contact_actions_ts",
       "label": "actions.ts",
@@ -13590,7 +14322,7 @@
       "source_location": "L1"
     },
     {
-      "community": 12,
+      "community": 11,
       "file_type": "code",
       "id": "contact_actions_contactresult",
       "label": "ContactResult",
@@ -13599,7 +14331,7 @@
       "source_location": "L10"
     },
     {
-      "community": 12,
+      "community": 11,
       "file_type": "code",
       "id": "contact_actions_schema",
       "label": "schema",
@@ -13608,7 +14340,7 @@
       "source_location": "L16"
     },
     {
-      "community": 12,
+      "community": 11,
       "file_type": "code",
       "id": "contact_actions_submitcontact",
       "label": "submitContact()",
@@ -13806,7 +14538,7 @@
       "source_location": "L10"
     },
     {
-      "community": 32,
+      "community": 33,
       "file_type": "code",
       "id": "apps_web_components_admin_admin_nav_tsx",
       "label": "admin-nav.tsx",
@@ -13815,7 +14547,7 @@
       "source_location": "L1"
     },
     {
-      "community": 32,
+      "community": 33,
       "file_type": "code",
       "id": "admin_admin_nav_navitem",
       "label": "NavItem",
@@ -13824,7 +14556,7 @@
       "source_location": "L8"
     },
     {
-      "community": 32,
+      "community": 33,
       "file_type": "code",
       "id": "admin_admin_nav_sections",
       "label": "SECTIONS",
@@ -13833,7 +14565,7 @@
       "source_location": "L15"
     },
     {
-      "community": 32,
+      "community": 33,
       "file_type": "code",
       "id": "admin_admin_nav_adminnav",
       "label": "AdminNav()",
@@ -13884,7 +14616,7 @@
       "label": "formatValue()",
       "norm_label": "formatvalue()",
       "source_file": "apps/web/components/admin/content-form.tsx",
-      "source_location": "L59"
+      "source_location": "L63"
     },
     {
       "community": 2,
@@ -13995,7 +14727,7 @@
       "source_location": "L11"
     },
     {
-      "community": 21,
+      "community": 22,
       "file_type": "code",
       "id": "apps_web_components_admin_fields_field_shell_tsx",
       "label": "field-shell.tsx",
@@ -14004,7 +14736,7 @@
       "source_location": "L1"
     },
     {
-      "community": 21,
+      "community": 22,
       "file_type": "code",
       "id": "fields_field_shell_fieldshell",
       "label": "FieldShell()",
@@ -14013,7 +14745,7 @@
       "source_location": "L7"
     },
     {
-      "community": 21,
+      "community": 22,
       "file_type": "code",
       "id": "fields_field_shell_describedby",
       "label": "describedBy()",
@@ -14022,7 +14754,25 @@
       "source_location": "L62"
     },
     {
-      "community": 21,
+      "community": 22,
+      "file_type": "code",
+      "id": "apps_web_components_admin_fields_image_field_tsx",
+      "label": "image-field.tsx",
+      "norm_label": "image-field.tsx",
+      "source_file": "apps/web/components/admin/fields/image-field.tsx",
+      "source_location": "L1"
+    },
+    {
+      "community": 22,
+      "file_type": "code",
+      "id": "fields_image_field_imagefield",
+      "label": "ImageField()",
+      "norm_label": "imagefield()",
+      "source_file": "apps/web/components/admin/fields/image-field.tsx",
+      "source_location": "L21"
+    },
+    {
+      "community": 22,
       "file_type": "code",
       "id": "apps_web_components_admin_fields_index_tsx",
       "label": "index.tsx",
@@ -14031,16 +14781,16 @@
       "source_location": "L1"
     },
     {
-      "community": 21,
+      "community": 2,
       "file_type": "code",
       "id": "fields_index_field",
       "label": "Field()",
       "norm_label": "field()",
       "source_file": "apps/web/components/admin/fields/index.tsx",
-      "source_location": "L9"
+      "source_location": "L10"
     },
     {
-      "community": 21,
+      "community": 22,
       "file_type": "code",
       "id": "apps_web_components_admin_fields_markdown_field_tsx",
       "label": "markdown-field.tsx",
@@ -14049,7 +14799,7 @@
       "source_location": "L1"
     },
     {
-      "community": 21,
+      "community": 22,
       "file_type": "code",
       "id": "fields_markdown_field_markdownfield",
       "label": "MarkdownField()",
@@ -14058,7 +14808,7 @@
       "source_location": "L12"
     },
     {
-      "community": 21,
+      "community": 22,
       "file_type": "code",
       "id": "apps_web_components_admin_fields_tags_field_tsx",
       "label": "tags-field.tsx",
@@ -14067,7 +14817,7 @@
       "source_location": "L1"
     },
     {
-      "community": 21,
+      "community": 22,
       "file_type": "code",
       "id": "fields_tags_field_tagsfield",
       "label": "TagsField()",
@@ -14076,7 +14826,7 @@
       "source_location": "L8"
     },
     {
-      "community": 21,
+      "community": 22,
       "file_type": "code",
       "id": "apps_web_components_admin_fields_text_field_tsx",
       "label": "text-field.tsx",
@@ -14085,7 +14835,7 @@
       "source_location": "L1"
     },
     {
-      "community": 21,
+      "community": 22,
       "file_type": "code",
       "id": "fields_text_field_textfield",
       "label": "TextField()",
@@ -14094,7 +14844,7 @@
       "source_location": "L5"
     },
     {
-      "community": 21,
+      "community": 22,
       "file_type": "code",
       "id": "apps_web_components_admin_fields_textarea_field_tsx",
       "label": "textarea-field.tsx",
@@ -14103,7 +14853,7 @@
       "source_location": "L1"
     },
     {
-      "community": 21,
+      "community": 22,
       "file_type": "code",
       "id": "fields_textarea_field_textareafield",
       "label": "TextareaField()",
@@ -14112,7 +14862,7 @@
       "source_location": "L5"
     },
     {
-      "community": 21,
+      "community": 22,
       "file_type": "code",
       "id": "apps_web_components_admin_fields_types_ts",
       "label": "types.ts",
@@ -14121,7 +14871,7 @@
       "source_location": "L1"
     },
     {
-      "community": 21,
+      "community": 22,
       "file_type": "code",
       "id": "fields_types_fieldprops",
       "label": "FieldProps",
@@ -14238,7 +14988,7 @@
       "source_location": "L2"
     },
     {
-      "community": 28,
+      "community": 29,
       "file_type": "code",
       "id": "apps_web_components_public_site_footer_tsx",
       "label": "site-footer.tsx",
@@ -14247,7 +14997,7 @@
       "source_location": "L1"
     },
     {
-      "community": 28,
+      "community": 29,
       "file_type": "code",
       "id": "public_site_footer_sitefooter",
       "label": "SiteFooter()",
@@ -14256,7 +15006,7 @@
       "source_location": "L10"
     },
     {
-      "community": 28,
+      "community": 29,
       "file_type": "code",
       "id": "apps_web_components_public_site_header_tsx",
       "label": "site-header.tsx",
@@ -14265,7 +15015,7 @@
       "source_location": "L1"
     },
     {
-      "community": 28,
+      "community": 29,
       "file_type": "code",
       "id": "public_site_header_links",
       "label": "LINKS",
@@ -14274,7 +15024,7 @@
       "source_location": "L3"
     },
     {
-      "community": 28,
+      "community": 29,
       "file_type": "code",
       "id": "public_site_header_siteheader",
       "label": "SiteHeader()",
@@ -14418,7 +15168,7 @@
       "source_location": "L144"
     },
     {
-      "community": 18,
+      "community": 20,
       "file_type": "code",
       "id": "apps_web_lib_crypto_core_ts",
       "label": "crypto.core.ts",
@@ -14427,7 +15177,7 @@
       "source_location": "L1"
     },
     {
-      "community": 18,
+      "community": 20,
       "file_type": "code",
       "id": "lib_crypto_core_key",
       "label": "key()",
@@ -14436,7 +15186,7 @@
       "source_location": "L23"
     },
     {
-      "community": 18,
+      "community": 20,
       "file_type": "code",
       "id": "lib_crypto_core_encryptsecret",
       "label": "encryptSecret()",
@@ -14445,7 +15195,7 @@
       "source_location": "L41"
     },
     {
-      "community": 18,
+      "community": 20,
       "file_type": "code",
       "id": "lib_crypto_core_decryptsecret",
       "label": "decryptSecret()",
@@ -14454,7 +15204,7 @@
       "source_location": "L58"
     },
     {
-      "community": 18,
+      "community": 20,
       "file_type": "code",
       "id": "lib_crypto_core_timingsafeequals",
       "label": "timingSafeEquals()",
@@ -14463,7 +15213,7 @@
       "source_location": "L86"
     },
     {
-      "community": 51,
+      "community": 52,
       "file_type": "code",
       "id": "apps_web_lib_crypto_ts",
       "label": "crypto.ts",
@@ -14472,7 +15222,7 @@
       "source_location": "L1"
     },
     {
-      "community": 12,
+      "community": 11,
       "file_type": "code",
       "id": "apps_web_lib_env_ts",
       "label": "env.ts",
@@ -14481,7 +15231,7 @@
       "source_location": "L1"
     },
     {
-      "community": 12,
+      "community": 11,
       "file_type": "code",
       "id": "lib_env_hex32",
       "label": "hex32",
@@ -14490,7 +15240,7 @@
       "source_location": "L13"
     },
     {
-      "community": 12,
+      "community": 11,
       "file_type": "code",
       "id": "lib_env_serverschema",
       "label": "serverSchema",
@@ -14499,34 +15249,61 @@
       "source_location": "L17"
     },
     {
-      "community": 12,
+      "community": 11,
       "file_type": "code",
       "id": "lib_env_publicschema",
       "label": "publicSchema",
       "norm_label": "publicschema",
       "source_file": "apps/web/lib/env.ts",
-      "source_location": "L46"
+      "source_location": "L59"
     },
     {
-      "community": 12,
+      "community": 11,
       "file_type": "code",
       "id": "lib_env_parse",
       "label": "parse()",
       "norm_label": "parse()",
       "source_file": "apps/web/lib/env.ts",
-      "source_location": "L51"
+      "source_location": "L64"
     },
     {
-      "community": 12,
+      "community": 11,
       "file_type": "code",
       "id": "lib_env_env",
       "label": "env",
       "norm_label": "env",
       "source_file": "apps/web/lib/env.ts",
-      "source_location": "L65"
+      "source_location": "L78"
     },
     {
-      "community": 18,
+      "community": 11,
+      "file_type": "code",
+      "id": "lib_env_r2_keys",
+      "label": "R2_KEYS",
+      "norm_label": "r2_keys",
+      "source_file": "apps/web/lib/env.ts",
+      "source_location": "L103"
+    },
+    {
+      "community": 11,
+      "file_type": "code",
+      "id": "lib_env_r2set",
+      "label": "r2Set",
+      "norm_label": "r2set",
+      "source_file": "apps/web/lib/env.ts",
+      "source_location": "L111"
+    },
+    {
+      "community": 11,
+      "file_type": "code",
+      "id": "lib_env_missing",
+      "label": "missing",
+      "norm_label": "missing",
+      "source_file": "apps/web/lib/env.ts",
+      "source_location": "L114"
+    },
+    {
+      "community": 20,
       "file_type": "code",
       "id": "apps_web_lib_totp_core_ts",
       "label": "totp.core.ts",
@@ -14535,7 +15312,7 @@
       "source_location": "L1"
     },
     {
-      "community": 18,
+      "community": 20,
       "file_type": "code",
       "id": "lib_totp_core_totpfor",
       "label": "totpFor()",
@@ -14544,7 +15321,7 @@
       "source_location": "L15"
     },
     {
-      "community": 18,
+      "community": 20,
       "file_type": "code",
       "id": "lib_totp_core_totpenrolment",
       "label": "TotpEnrolment",
@@ -14553,7 +15330,7 @@
       "source_location": "L26"
     },
     {
-      "community": 18,
+      "community": 20,
       "file_type": "code",
       "id": "lib_totp_core_createtotpenrolment",
       "label": "createTotpEnrolment()",
@@ -14562,7 +15339,7 @@
       "source_location": "L33"
     },
     {
-      "community": 18,
+      "community": 20,
       "file_type": "code",
       "id": "lib_totp_core_verifytotp",
       "label": "verifyTotp()",
@@ -14688,7 +15465,7 @@
       "source_location": "L13"
     },
     {
-      "community": 12,
+      "community": 11,
       "file_type": "code",
       "id": "cms_metadata_siteurl",
       "label": "siteUrl()",
@@ -14796,7 +15573,7 @@
       "source_location": "L109"
     },
     {
-      "community": 28,
+      "community": 29,
       "file_type": "code",
       "id": "cms_public_queries_listpublishedlegaldocuments",
       "label": "listPublishedLegalDocuments()",
@@ -14919,7 +15696,7 @@
       "label": "FieldSpec",
       "norm_label": "fieldspec",
       "source_file": "apps/web/lib/cms/types.ts",
-      "source_location": "L6"
+      "source_location": "L13"
     },
     {
       "community": 4,
@@ -14928,7 +15705,7 @@
       "label": "ListColumn",
       "norm_label": "listcolumn",
       "source_file": "apps/web/lib/cms/types.ts",
-      "source_location": "L15"
+      "source_location": "L22"
     },
     {
       "community": 4,
@@ -14937,7 +15714,7 @@
       "label": "ContentKind",
       "norm_label": "contentkind",
       "source_file": "apps/web/lib/cms/types.ts",
-      "source_location": "L20"
+      "source_location": "L27"
     },
     {
       "community": 4,
@@ -14946,7 +15723,7 @@
       "label": "ContentRow",
       "norm_label": "contentrow",
       "source_file": "apps/web/lib/cms/types.ts",
-      "source_location": "L38"
+      "source_location": "L45"
     },
     {
       "community": 4,
@@ -15057,7 +15834,7 @@
       "source_location": "L11"
     },
     {
-      "community": 12,
+      "community": 11,
       "file_type": "code",
       "id": "apps_web_lib_contact_notify_ts",
       "label": "notify.ts",
@@ -15066,7 +15843,7 @@
       "source_location": "L1"
     },
     {
-      "community": 12,
+      "community": 11,
       "file_type": "code",
       "id": "contact_notify_contactnotification",
       "label": "ContactNotification",
@@ -15075,7 +15852,7 @@
       "source_location": "L17"
     },
     {
-      "community": 12,
+      "community": 11,
       "file_type": "code",
       "id": "contact_notify_notifycontact",
       "label": "notifyContact()",
@@ -15084,7 +15861,7 @@
       "source_location": "L26"
     },
     {
-      "community": 12,
+      "community": 11,
       "file_type": "code",
       "id": "apps_web_lib_contact_rate_limit_ts",
       "label": "rate-limit.ts",
@@ -15093,7 +15870,7 @@
       "source_location": "L1"
     },
     {
-      "community": 12,
+      "community": 11,
       "file_type": "code",
       "id": "contact_rate_limit_haship",
       "label": "hashIp()",
@@ -15102,7 +15879,7 @@
       "source_location": "L28"
     },
     {
-      "community": 12,
+      "community": 11,
       "file_type": "code",
       "id": "contact_rate_limit_isratelimited",
       "label": "isRateLimited()",
@@ -15165,6 +15942,132 @@
       "source_location": "L51"
     },
     {
+      "community": 9,
+      "file_type": "code",
+      "id": "apps_web_lib_storage_image_validation_ts",
+      "label": "image-validation.ts",
+      "norm_label": "image-validation.ts",
+      "source_file": "apps/web/lib/storage/image-validation.ts",
+      "source_location": "L1"
+    },
+    {
+      "community": 9,
+      "file_type": "code",
+      "id": "storage_image_validation_imagemime",
+      "label": "ImageMime",
+      "norm_label": "imagemime",
+      "source_file": "apps/web/lib/storage/image-validation.ts",
+      "source_location": "L17"
+    },
+    {
+      "community": 9,
+      "file_type": "code",
+      "id": "storage_image_validation_signature",
+      "label": "Signature",
+      "norm_label": "signature",
+      "source_file": "apps/web/lib/storage/image-validation.ts",
+      "source_location": "L19"
+    },
+    {
+      "community": 9,
+      "file_type": "code",
+      "id": "storage_image_validation_signatures",
+      "label": "SIGNATURES",
+      "norm_label": "signatures",
+      "source_file": "apps/web/lib/storage/image-validation.ts",
+      "source_location": "L28"
+    },
+    {
+      "community": 9,
+      "file_type": "code",
+      "id": "storage_image_validation_detectedimage",
+      "label": "DetectedImage",
+      "norm_label": "detectedimage",
+      "source_file": "apps/web/lib/storage/image-validation.ts",
+      "source_location": "L73"
+    },
+    {
+      "community": 9,
+      "file_type": "code",
+      "id": "storage_image_validation_detectimage",
+      "label": "detectImage()",
+      "norm_label": "detectimage()",
+      "source_file": "apps/web/lib/storage/image-validation.ts",
+      "source_location": "L79"
+    },
+    {
+      "community": 9,
+      "file_type": "code",
+      "id": "storage_image_validation_validationfailure",
+      "label": "ValidationFailure",
+      "norm_label": "validationfailure",
+      "source_file": "apps/web/lib/storage/image-validation.ts",
+      "source_location": "L97"
+    },
+    {
+      "community": 9,
+      "file_type": "code",
+      "id": "storage_image_validation_validationresult",
+      "label": "ValidationResult",
+      "norm_label": "validationresult",
+      "source_file": "apps/web/lib/storage/image-validation.ts",
+      "source_location": "L102"
+    },
+    {
+      "community": 9,
+      "file_type": "code",
+      "id": "storage_image_validation_validateimage",
+      "label": "validateImage()",
+      "norm_label": "validateimage()",
+      "source_file": "apps/web/lib/storage/image-validation.ts",
+      "source_location": "L105"
+    },
+    {
+      "community": 9,
+      "file_type": "code",
+      "id": "storage_image_validation_validationmessage",
+      "label": "validationMessage()",
+      "norm_label": "validationmessage()",
+      "source_file": "apps/web/lib/storage/image-validation.ts",
+      "source_location": "L116"
+    },
+    {
+      "community": 9,
+      "file_type": "code",
+      "id": "storage_image_validation_cmsobjectkey",
+      "label": "cmsObjectKey()",
+      "norm_label": "cmsobjectkey()",
+      "source_file": "apps/web/lib/storage/image-validation.ts",
+      "source_location": "L133"
+    },
+    {
+      "community": 9,
+      "file_type": "code",
+      "id": "apps_web_lib_storage_r2_ts",
+      "label": "r2.ts",
+      "norm_label": "r2.ts",
+      "source_file": "apps/web/lib/storage/r2.ts",
+      "source_location": "L1"
+    },
+    {
+      "community": 9,
+      "file_type": "code",
+      "id": "storage_r2_r2",
+      "label": "r2()",
+      "norm_label": "r2()",
+      "source_file": "apps/web/lib/storage/r2.ts",
+      "source_location": "L21"
+    },
+    {
+      "community": 9,
+      "file_type": "code",
+      "id": "storage_r2_putcmsobject",
+      "label": "putCmsObject()",
+      "norm_label": "putcmsobject()",
+      "source_file": "apps/web/lib/storage/r2.ts",
+      "source_location": "L45"
+    },
+    {
       "community": 4,
       "file_type": "code",
       "id": "apps_web_tests_cms_schema_test_ts",
@@ -15192,7 +16095,7 @@
       "source_location": "L86"
     },
     {
-      "community": 18,
+      "community": 20,
       "file_type": "code",
       "id": "apps_web_tests_crypto_test_ts",
       "label": "crypto.test.ts",
@@ -15201,7 +16104,7 @@
       "source_location": "L1"
     },
     {
-      "community": 18,
+      "community": 20,
       "file_type": "code",
       "id": "tests_crypto_test_encoded",
       "label": "encoded",
@@ -15210,7 +16113,7 @@
       "source_location": "L29"
     },
     {
-      "community": 18,
+      "community": 20,
       "file_type": "code",
       "id": "tests_crypto_test_version_iv_tag_data",
       "label": "[version, iv, tag, data]",
@@ -15219,7 +16122,7 @@
       "source_location": "L30"
     },
     {
-      "community": 18,
+      "community": 20,
       "file_type": "code",
       "id": "tests_crypto_test_enrolment",
       "label": "enrolment",
@@ -15228,7 +16131,7 @@
       "source_location": "L60"
     },
     {
-      "community": 18,
+      "community": 20,
       "file_type": "code",
       "id": "tests_crypto_test_plaintext",
       "label": "plaintext",
@@ -15237,7 +16140,7 @@
       "source_location": "L65"
     },
     {
-      "community": 18,
+      "community": 20,
       "file_type": "code",
       "id": "tests_crypto_test_code",
       "label": "code",
@@ -15246,7 +16149,7 @@
       "source_location": "L71"
     },
     {
-      "community": 18,
+      "community": 20,
       "file_type": "code",
       "id": "tests_crypto_test_generated",
       "label": "generated",
@@ -15255,7 +16158,115 @@
       "source_location": "L77"
     },
     {
-      "community": 38,
+      "community": 9,
+      "file_type": "code",
+      "id": "apps_web_tests_image_validation_test_ts",
+      "label": "image-validation.test.ts",
+      "norm_label": "image-validation.test.ts",
+      "source_file": "apps/web/tests/image-validation.test.ts",
+      "source_location": "L1"
+    },
+    {
+      "community": 9,
+      "file_type": "code",
+      "id": "tests_image_validation_test_bytes",
+      "label": "bytes()",
+      "norm_label": "bytes()",
+      "source_file": "apps/web/tests/image-validation.test.ts",
+      "source_location": "L18"
+    },
+    {
+      "community": 9,
+      "file_type": "code",
+      "id": "tests_image_validation_test_jpeg",
+      "label": "JPEG",
+      "norm_label": "jpeg",
+      "source_file": "apps/web/tests/image-validation.test.ts",
+      "source_location": "L20"
+    },
+    {
+      "community": 9,
+      "file_type": "code",
+      "id": "tests_image_validation_test_png",
+      "label": "PNG",
+      "norm_label": "png",
+      "source_file": "apps/web/tests/image-validation.test.ts",
+      "source_location": "L21"
+    },
+    {
+      "community": 9,
+      "file_type": "code",
+      "id": "tests_image_validation_test_gif",
+      "label": "GIF",
+      "norm_label": "gif",
+      "source_file": "apps/web/tests/image-validation.test.ts",
+      "source_location": "L22"
+    },
+    {
+      "community": 9,
+      "file_type": "code",
+      "id": "tests_image_validation_test_webp",
+      "label": "WEBP",
+      "norm_label": "webp",
+      "source_file": "apps/web/tests/image-validation.test.ts",
+      "source_location": "L23"
+    },
+    {
+      "community": 9,
+      "file_type": "code",
+      "id": "tests_image_validation_test_different",
+      "label": "different",
+      "norm_label": "different",
+      "source_file": "apps/web/tests/image-validation.test.ts",
+      "source_location": "L49"
+    },
+    {
+      "community": 9,
+      "file_type": "code",
+      "id": "tests_image_validation_test_result",
+      "label": "result",
+      "norm_label": "result",
+      "source_file": "apps/web/tests/image-validation.test.ts",
+      "source_location": "L71"
+    },
+    {
+      "community": 9,
+      "file_type": "code",
+      "id": "tests_image_validation_test_large",
+      "label": "large",
+      "norm_label": "large",
+      "source_file": "apps/web/tests/image-validation.test.ts",
+      "source_location": "L76"
+    },
+    {
+      "community": 9,
+      "file_type": "code",
+      "id": "tests_image_validation_test_pdf",
+      "label": "pdf",
+      "norm_label": "pdf",
+      "source_file": "apps/web/tests/image-validation.test.ts",
+      "source_location": "L84"
+    },
+    {
+      "community": 9,
+      "file_type": "code",
+      "id": "tests_image_validation_test_html",
+      "label": "html",
+      "norm_label": "html",
+      "source_file": "apps/web/tests/image-validation.test.ts",
+      "source_location": "L93"
+    },
+    {
+      "community": 9,
+      "file_type": "code",
+      "id": "tests_image_validation_test_key",
+      "label": "key",
+      "norm_label": "key",
+      "source_file": "apps/web/tests/image-validation.test.ts",
+      "source_location": "L122"
+    },
+    {
+      "community": 39,
       "file_type": "code",
       "id": "apps_web_types_next_auth_d_ts",
       "label": "next-auth.d.ts",
@@ -15264,7 +16275,7 @@
       "source_location": "L1"
     },
     {
-      "community": 38,
+      "community": 39,
       "file_type": "code",
       "id": "types_next_auth_d_session",
       "label": "Session",
@@ -15273,7 +16284,7 @@
       "source_location": "L4"
     },
     {
-      "community": 38,
+      "community": 39,
       "file_type": "code",
       "id": "types_next_auth_d_user",
       "label": "User",
@@ -15282,7 +16293,7 @@
       "source_location": "L13"
     },
     {
-      "community": 38,
+      "community": 39,
       "file_type": "code",
       "id": "types_next_auth_d_jwt",
       "label": "JWT",
@@ -15291,7 +16302,7 @@
       "source_location": "L19"
     },
     {
-      "community": 13,
+      "community": 15,
       "file_type": "code",
       "id": "packages_accounting_errors_ts",
       "label": "errors.ts",
@@ -15300,7 +16311,7 @@
       "source_location": "L1"
     },
     {
-      "community": 13,
+      "community": 15,
       "file_type": "code",
       "id": "accounting_errors_accountingerror",
       "label": "AccountingError",
@@ -15309,7 +16320,7 @@
       "source_location": "L2"
     },
     {
-      "community": 13,
+      "community": 15,
       "file_type": "code",
       "id": "accounting_errors_accountingerror_constructor",
       "label": ".constructor()",
@@ -15318,7 +16329,7 @@
       "source_location": "L3"
     },
     {
-      "community": 52,
+      "community": 53,
       "file_type": "code",
       "id": "packages_accounting_index_ts",
       "label": "index.ts",
@@ -15327,7 +16338,7 @@
       "source_location": "L1"
     },
     {
-      "community": 13,
+      "community": 15,
       "file_type": "code",
       "id": "packages_accounting_numbering_ts",
       "label": "numbering.ts",
@@ -15336,7 +16347,7 @@
       "source_location": "L1"
     },
     {
-      "community": 13,
+      "community": 15,
       "file_type": "code",
       "id": "accounting_numbering_sequencekind",
       "label": "SequenceKind",
@@ -15345,7 +16356,7 @@
       "source_location": "L16"
     },
     {
-      "community": 13,
+      "community": 15,
       "file_type": "code",
       "id": "accounting_numbering_width",
       "label": "WIDTH",
@@ -15354,7 +16365,7 @@
       "source_location": "L18"
     },
     {
-      "community": 13,
+      "community": 15,
       "file_type": "code",
       "id": "accounting_numbering_table",
       "label": "TABLE",
@@ -15363,7 +16374,7 @@
       "source_location": "L24"
     },
     {
-      "community": 13,
+      "community": 15,
       "file_type": "code",
       "id": "accounting_numbering_column",
       "label": "COLUMN",
@@ -15372,7 +16383,7 @@
       "source_location": "L30"
     },
     {
-      "community": 13,
+      "community": 15,
       "file_type": "code",
       "id": "accounting_numbering_formatdocumentno",
       "label": "formatDocumentNo()",
@@ -15381,7 +16392,7 @@
       "source_location": "L36"
     },
     {
-      "community": 13,
+      "community": 15,
       "file_type": "code",
       "id": "accounting_numbering_allocatesequence",
       "label": "allocateSequence()",
@@ -15390,7 +16401,7 @@
       "source_location": "L48"
     },
     {
-      "community": 13,
+      "community": 15,
       "file_type": "code",
       "id": "accounting_numbering_allocatedocumentno",
       "label": "allocateDocumentNo()",
@@ -15399,7 +16410,7 @@
       "source_location": "L71"
     },
     {
-      "community": 13,
+      "community": 15,
       "file_type": "code",
       "id": "packages_accounting_post_journal_ts",
       "label": "post-journal.ts",
@@ -15408,7 +16419,7 @@
       "source_location": "L1"
     },
     {
-      "community": 13,
+      "community": 15,
       "file_type": "code",
       "id": "accounting_post_journal_journallineinput",
       "label": "JournalLineInput",
@@ -15417,7 +16428,7 @@
       "source_location": "L25"
     },
     {
-      "community": 13,
+      "community": 15,
       "file_type": "code",
       "id": "accounting_post_journal_postjournalinput",
       "label": "PostJournalInput",
@@ -15426,7 +16437,7 @@
       "source_location": "L37"
     },
     {
-      "community": 13,
+      "community": 15,
       "file_type": "code",
       "id": "accounting_post_journal_postedjournal",
       "label": "PostedJournal",
@@ -15435,7 +16446,7 @@
       "source_location": "L50"
     },
     {
-      "community": 13,
+      "community": 15,
       "file_type": "code",
       "id": "accounting_post_journal_postjournal",
       "label": "postJournal()",
@@ -15444,7 +16455,7 @@
       "source_location": "L62"
     },
     {
-      "community": 13,
+      "community": 15,
       "file_type": "code",
       "id": "accounting_post_journal_assertbalanced",
       "label": "assertBalanced()",
@@ -15453,7 +16464,7 @@
       "source_location": "L143"
     },
     {
-      "community": 13,
+      "community": 15,
       "file_type": "code",
       "id": "packages_accounting_periods_resolve_ts",
       "label": "resolve.ts",
@@ -15462,7 +16473,7 @@
       "source_location": "L1"
     },
     {
-      "community": 13,
+      "community": 15,
       "file_type": "code",
       "id": "periods_resolve_resolvefiscalperiod",
       "label": "resolveFiscalPeriod()",
@@ -15525,7 +16536,7 @@
       "source_location": "L57"
     },
     {
-      "community": 53,
+      "community": 54,
       "file_type": "code",
       "id": "packages_db_drizzle_config_ts",
       "label": "drizzle.config.ts",
@@ -15534,7 +16545,7 @@
       "source_location": "L1"
     },
     {
-      "community": 54,
+      "community": 55,
       "file_type": "code",
       "id": "packages_db_index_ts",
       "label": "index.ts",
@@ -15543,7 +16554,7 @@
       "source_location": "L1"
     },
     {
-      "community": 47,
+      "community": 48,
       "file_type": "code",
       "id": "packages_db_migrate_ts",
       "label": "migrate.ts",
@@ -15552,7 +16563,7 @@
       "source_location": "L1"
     },
     {
-      "community": 47,
+      "community": 48,
       "file_type": "code",
       "id": "db_migrate_pool",
       "label": "pool",
@@ -15561,7 +16572,7 @@
       "source_location": "L14"
     },
     {
-      "community": 39,
+      "community": 40,
       "file_type": "code",
       "id": "packages_db_vitest_config_ts",
       "label": "vitest.config.ts",
@@ -15570,7 +16581,7 @@
       "source_location": "L1"
     },
     {
-      "community": 39,
+      "community": 40,
       "file_type": "code",
       "id": "db_vitest_config_envpath",
       "label": "envPath",
@@ -15579,7 +16590,7 @@
       "source_location": "L7"
     },
     {
-      "community": 39,
+      "community": 40,
       "file_type": "code",
       "id": "db_vitest_config_match",
       "label": "match",
@@ -15588,7 +16599,7 @@
       "source_location": "L10"
     },
     {
-      "community": 39,
+      "community": 40,
       "file_type": "code",
       "id": "db_vitest_config_key_rawvalue",
       "label": "[, key, rawValue]",
@@ -15615,7 +16626,7 @@
       "source_location": "L20"
     },
     {
-      "community": 25,
+      "community": 13,
       "file_type": "code",
       "id": "schema_accounts_products",
       "label": "products",
@@ -15642,7 +16653,7 @@
       "source_location": "L45"
     },
     {
-      "community": 33,
+      "community": 24,
       "file_type": "code",
       "id": "schema_accounts_accounts",
       "label": "accounts",
@@ -15669,7 +16680,7 @@
       "source_location": "L73"
     },
     {
-      "community": 14,
+      "community": 16,
       "file_type": "code",
       "id": "packages_db_schema_applications_ts",
       "label": "applications.ts",
@@ -15678,7 +16689,7 @@
       "source_location": "L1"
     },
     {
-      "community": 14,
+      "community": 16,
       "file_type": "code",
       "id": "schema_applications_application_scopes",
       "label": "APPLICATION_SCOPES",
@@ -15687,7 +16698,7 @@
       "source_location": "L20"
     },
     {
-      "community": 14,
+      "community": 16,
       "file_type": "code",
       "id": "schema_applications_applicationscope",
       "label": "ApplicationScope",
@@ -15696,7 +16707,7 @@
       "source_location": "L29"
     },
     {
-      "community": 14,
+      "community": 16,
       "file_type": "code",
       "id": "schema_applications_applications",
       "label": "applications",
@@ -15705,7 +16716,7 @@
       "source_location": "L31"
     },
     {
-      "community": 14,
+      "community": 16,
       "file_type": "code",
       "id": "schema_applications_application",
       "label": "Application",
@@ -15903,7 +16914,7 @@
       "source_location": "L362"
     },
     {
-      "community": 14,
+      "community": 16,
       "file_type": "code",
       "id": "packages_db_schema_customers_ts",
       "label": "customers.ts",
@@ -15912,7 +16923,7 @@
       "source_location": "L1"
     },
     {
-      "community": 14,
+      "community": 16,
       "file_type": "code",
       "id": "schema_customers_customers",
       "label": "customers",
@@ -15921,7 +16932,7 @@
       "source_location": "L15"
     },
     {
-      "community": 14,
+      "community": 16,
       "file_type": "code",
       "id": "schema_customers_customer",
       "label": "Customer",
@@ -15930,7 +16941,7 @@
       "source_location": "L46"
     },
     {
-      "community": 20,
+      "community": 28,
       "file_type": "code",
       "id": "packages_db_schema_fiscal_ts",
       "label": "fiscal.ts",
@@ -15939,7 +16950,7 @@
       "source_location": "L1"
     },
     {
-      "community": 20,
+      "community": 28,
       "file_type": "code",
       "id": "schema_fiscal_periodstatus",
       "label": "periodStatus",
@@ -15948,7 +16959,7 @@
       "source_location": "L20"
     },
     {
-      "community": 20,
+      "community": 28,
       "file_type": "code",
       "id": "schema_fiscal_fiscalperiods",
       "label": "fiscalPeriods",
@@ -15957,7 +16968,7 @@
       "source_location": "L27"
     },
     {
-      "community": 20,
+      "community": 28,
       "file_type": "code",
       "id": "schema_fiscal_fiscalperiod",
       "label": "FiscalPeriod",
@@ -15975,7 +16986,7 @@
       "source_location": "L1"
     },
     {
-      "community": 14,
+      "community": 16,
       "file_type": "code",
       "id": "packages_db_schema_invoices_ts",
       "label": "invoices.ts",
@@ -15984,7 +16995,7 @@
       "source_location": "L1"
     },
     {
-      "community": 14,
+      "community": 16,
       "file_type": "code",
       "id": "schema_invoices_invoicestatus",
       "label": "invoiceStatus",
@@ -15993,7 +17004,7 @@
       "source_location": "L28"
     },
     {
-      "community": 14,
+      "community": 16,
       "file_type": "code",
       "id": "schema_invoices_invoices",
       "label": "invoices",
@@ -16002,7 +17013,7 @@
       "source_location": "L37"
     },
     {
-      "community": 14,
+      "community": 16,
       "file_type": "code",
       "id": "schema_invoices_invoicelines",
       "label": "invoiceLines",
@@ -16011,7 +17022,7 @@
       "source_location": "L113"
     },
     {
-      "community": 14,
+      "community": 16,
       "file_type": "code",
       "id": "schema_invoices_invoice",
       "label": "Invoice",
@@ -16020,7 +17031,7 @@
       "source_location": "L139"
     },
     {
-      "community": 14,
+      "community": 16,
       "file_type": "code",
       "id": "schema_invoices_invoiceline",
       "label": "InvoiceLine",
@@ -16029,7 +17040,7 @@
       "source_location": "L140"
     },
     {
-      "community": 20,
+      "community": 13,
       "file_type": "code",
       "id": "packages_db_schema_ledger_ts",
       "label": "ledger.ts",
@@ -16038,7 +17049,7 @@
       "source_location": "L1"
     },
     {
-      "community": 20,
+      "community": 13,
       "file_type": "code",
       "id": "schema_ledger_journalsource",
       "label": "journalSource",
@@ -16047,7 +17058,7 @@
       "source_location": "L31"
     },
     {
-      "community": 25,
+      "community": 13,
       "file_type": "code",
       "id": "schema_ledger_journalentries",
       "label": "journalEntries",
@@ -16056,7 +17067,7 @@
       "source_location": "L45"
     },
     {
-      "community": 20,
+      "community": 13,
       "file_type": "code",
       "id": "schema_ledger_entrydirection",
       "label": "entryDirection",
@@ -16065,7 +17076,7 @@
       "source_location": "L85"
     },
     {
-      "community": 25,
+      "community": 13,
       "file_type": "code",
       "id": "schema_ledger_ledgerentries",
       "label": "ledgerEntries",
@@ -16074,7 +17085,7 @@
       "source_location": "L87"
     },
     {
-      "community": 20,
+      "community": 13,
       "file_type": "code",
       "id": "schema_ledger_journalentry",
       "label": "JournalEntry",
@@ -16083,7 +17094,7 @@
       "source_location": "L119"
     },
     {
-      "community": 20,
+      "community": 13,
       "file_type": "code",
       "id": "schema_ledger_newjournalentry",
       "label": "NewJournalEntry",
@@ -16092,7 +17103,7 @@
       "source_location": "L120"
     },
     {
-      "community": 20,
+      "community": 13,
       "file_type": "code",
       "id": "schema_ledger_ledgerentry",
       "label": "LedgerEntry",
@@ -16101,7 +17112,7 @@
       "source_location": "L121"
     },
     {
-      "community": 20,
+      "community": 13,
       "file_type": "code",
       "id": "schema_ledger_newledgerentry",
       "label": "NewLedgerEntry",
@@ -16110,7 +17121,7 @@
       "source_location": "L122"
     },
     {
-      "community": 22,
+      "community": 23,
       "file_type": "code",
       "id": "packages_db_schema_payments_ts",
       "label": "payments.ts",
@@ -16119,7 +17130,7 @@
       "source_location": "L1"
     },
     {
-      "community": 22,
+      "community": 23,
       "file_type": "code",
       "id": "schema_payments_sessionstatus",
       "label": "sessionStatus",
@@ -16128,7 +17139,7 @@
       "source_location": "L39"
     },
     {
-      "community": 22,
+      "community": 23,
       "file_type": "code",
       "id": "schema_payments_paymentsessions",
       "label": "paymentSessions",
@@ -16137,7 +17148,7 @@
       "source_location": "L49"
     },
     {
-      "community": 22,
+      "community": 23,
       "file_type": "code",
       "id": "schema_payments_txnstatus",
       "label": "txnStatus",
@@ -16155,7 +17166,7 @@
       "source_location": "L115"
     },
     {
-      "community": 22,
+      "community": 23,
       "file_type": "code",
       "id": "schema_payments_refundstatus",
       "label": "refundStatus",
@@ -16164,7 +17175,7 @@
       "source_location": "L221"
     },
     {
-      "community": 22,
+      "community": 23,
       "file_type": "code",
       "id": "schema_payments_refunds",
       "label": "refunds",
@@ -16173,7 +17184,7 @@
       "source_location": "L230"
     },
     {
-      "community": 22,
+      "community": 23,
       "file_type": "code",
       "id": "schema_payments_providerevents",
       "label": "providerEvents",
@@ -16182,7 +17193,7 @@
       "source_location": "L269"
     },
     {
-      "community": 22,
+      "community": 23,
       "file_type": "code",
       "id": "schema_payments_idempotencykeys",
       "label": "idempotencyKeys",
@@ -16191,7 +17202,7 @@
       "source_location": "L308"
     },
     {
-      "community": 22,
+      "community": 23,
       "file_type": "code",
       "id": "schema_payments_deliverystatus",
       "label": "deliveryStatus",
@@ -16200,7 +17211,7 @@
       "source_location": "L335"
     },
     {
-      "community": 22,
+      "community": 23,
       "file_type": "code",
       "id": "schema_payments_webhookdeliveries",
       "label": "webhookDeliveries",
@@ -16209,7 +17220,7 @@
       "source_location": "L342"
     },
     {
-      "community": 22,
+      "community": 23,
       "file_type": "code",
       "id": "schema_payments_paymentsession",
       "label": "PaymentSession",
@@ -16218,7 +17229,7 @@
       "source_location": "L371"
     },
     {
-      "community": 22,
+      "community": 23,
       "file_type": "code",
       "id": "schema_payments_transaction",
       "label": "Transaction",
@@ -16227,7 +17238,7 @@
       "source_location": "L372"
     },
     {
-      "community": 22,
+      "community": 23,
       "file_type": "code",
       "id": "schema_payments_refund",
       "label": "Refund",
@@ -16236,7 +17247,7 @@
       "source_location": "L373"
     },
     {
-      "community": 22,
+      "community": 23,
       "file_type": "code",
       "id": "schema_payments_providerevent",
       "label": "ProviderEvent",
@@ -16245,7 +17256,7 @@
       "source_location": "L374"
     },
     {
-      "community": 22,
+      "community": 23,
       "file_type": "code",
       "id": "schema_payments_webhookdelivery",
       "label": "WebhookDelivery",
@@ -16335,7 +17346,7 @@
       "source_location": "L57"
     },
     {
-      "community": 14,
+      "community": 16,
       "file_type": "code",
       "id": "packages_db_schema_subscriptions_ts",
       "label": "subscriptions.ts",
@@ -16344,7 +17355,7 @@
       "source_location": "L1"
     },
     {
-      "community": 14,
+      "community": 16,
       "file_type": "code",
       "id": "schema_subscriptions_subscriptionstatus",
       "label": "subscriptionStatus",
@@ -16353,7 +17364,7 @@
       "source_location": "L27"
     },
     {
-      "community": 14,
+      "community": 16,
       "file_type": "code",
       "id": "schema_subscriptions_subscriptions",
       "label": "subscriptions",
@@ -16362,7 +17373,7 @@
       "source_location": "L37"
     },
     {
-      "community": 14,
+      "community": 16,
       "file_type": "code",
       "id": "schema_subscriptions_paymentmandates",
       "label": "paymentMandates",
@@ -16371,7 +17382,7 @@
       "source_location": "L91"
     },
     {
-      "community": 14,
+      "community": 16,
       "file_type": "code",
       "id": "schema_subscriptions_subscription",
       "label": "Subscription",
@@ -16470,7 +17481,7 @@
       "source_location": "L55"
     },
     {
-      "community": 33,
+      "community": 35,
       "file_type": "code",
       "id": "packages_db_seed_accounts_ts",
       "label": "accounts.ts",
@@ -16479,7 +17490,7 @@
       "source_location": "L1"
     },
     {
-      "community": 33,
+      "community": 35,
       "file_type": "code",
       "id": "seed_accounts_accountseed",
       "label": "AccountSeed",
@@ -16488,7 +17499,7 @@
       "source_location": "L12"
     },
     {
-      "community": 33,
+      "community": 35,
       "file_type": "code",
       "id": "seed_accounts_header",
       "label": "header()",
@@ -16497,7 +17508,7 @@
       "source_location": "L14"
     },
     {
-      "community": 33,
+      "community": 35,
       "file_type": "code",
       "id": "seed_accounts_leaf",
       "label": "leaf()",
@@ -16506,7 +17517,7 @@
       "source_location": "L29"
     },
     {
-      "community": 33,
+      "community": 35,
       "file_type": "code",
       "id": "seed_accounts_accountseeds",
       "label": "accountSeeds",
@@ -16641,7 +17652,7 @@
       "source_location": "L187"
     },
     {
-      "community": 20,
+      "community": 28,
       "file_type": "code",
       "id": "packages_db_seed_fiscal_periods_ts",
       "label": "fiscal-periods.ts",
@@ -16650,7 +17661,7 @@
       "source_location": "L1"
     },
     {
-      "community": 20,
+      "community": 28,
       "file_type": "code",
       "id": "seed_fiscal_periods_fiscalperiodseed",
       "label": "FiscalPeriodSeed",
@@ -16659,7 +17670,7 @@
       "source_location": "L25"
     },
     {
-      "community": 20,
+      "community": 28,
       "file_type": "code",
       "id": "seed_fiscal_periods_ktm",
       "label": "ktm()",
@@ -16668,7 +17679,7 @@
       "source_location": "L28"
     },
     {
-      "community": 20,
+      "community": 28,
       "file_type": "code",
       "id": "seed_fiscal_periods_bsmonthboundary",
       "label": "BsMonthBoundary",
@@ -16677,7 +17688,7 @@
       "source_location": "L31"
     },
     {
-      "community": 20,
+      "community": 28,
       "file_type": "code",
       "id": "seed_fiscal_periods_bscalendar",
       "label": "bsCalendar",
@@ -16722,7 +17733,7 @@
       "source_location": "L71"
     },
     {
-      "community": 25,
+      "community": 13,
       "file_type": "code",
       "id": "packages_db_seed_products_ts",
       "label": "products.ts",
@@ -16731,7 +17742,7 @@
       "source_location": "L1"
     },
     {
-      "community": 25,
+      "community": 13,
       "file_type": "code",
       "id": "seed_products_productseed",
       "label": "ProductSeed",
@@ -16740,7 +17751,7 @@
       "source_location": "L9"
     },
     {
-      "community": 25,
+      "community": 13,
       "file_type": "code",
       "id": "seed_products_productseeds",
       "label": "productSeeds",
@@ -16938,7 +17949,7 @@
       "source_location": "L16"
     },
     {
-      "community": 25,
+      "community": 13,
       "file_type": "code",
       "id": "packages_db_tests_ledger_test_ts",
       "label": "ledger.test.ts",
@@ -16947,7 +17958,7 @@
       "source_location": "L1"
     },
     {
-      "community": 25,
+      "community": 13,
       "file_type": "code",
       "id": "tests_ledger_test_unique",
       "label": "unique()",
@@ -16956,7 +17967,7 @@
       "source_location": "L25"
     },
     {
-      "community": 25,
+      "community": 13,
       "file_type": "code",
       "id": "tests_ledger_test_insertjournal",
       "label": "insertJournal()",
@@ -16965,7 +17976,7 @@
       "source_location": "L27"
     },
     {
-      "community": 25,
+      "community": 13,
       "file_type": "code",
       "id": "tests_ledger_test_headers",
       "label": "headers",
@@ -16974,7 +17985,7 @@
       "source_location": "L48"
     },
     {
-      "community": 25,
+      "community": 13,
       "file_type": "code",
       "id": "tests_ledger_test_leaves",
       "label": "leaves",
@@ -16983,7 +17994,7 @@
       "source_location": "L49"
     },
     {
-      "community": 25,
+      "community": 13,
       "file_type": "code",
       "id": "tests_ledger_test_ensureperiod",
       "label": "ensurePeriod()",
@@ -16992,7 +18003,7 @@
       "source_location": "L76"
     },
     {
-      "community": 25,
+      "community": 13,
       "file_type": "code",
       "id": "tests_ledger_test_trialbalance",
       "label": "trialBalance",
@@ -17019,7 +18030,7 @@
       "source_location": "L12"
     },
     {
-      "community": 55,
+      "community": 56,
       "file_type": "code",
       "id": "packages_payment_core_index_ts",
       "label": "index.ts",
@@ -17028,7 +18039,7 @@
       "source_location": "L1"
     },
     {
-      "community": 56,
+      "community": 57,
       "file_type": "code",
       "id": "packages_sdk_index_ts",
       "label": "index.ts",
@@ -17037,7 +18048,7 @@
       "source_location": "L1"
     },
     {
-      "community": 57,
+      "community": 58,
       "file_type": "code",
       "id": "packages_ui_index_ts",
       "label": "index.ts",
@@ -17046,7 +18057,7 @@
       "source_location": "L1"
     },
     {
-      "community": 48,
+      "community": 49,
       "file_type": "code",
       "id": "scripts_normalize_graphify_context_py",
       "label": "normalize-graphify-context.py",
@@ -17055,7 +18066,7 @@
       "source_location": "L1"
     },
     {
-      "community": 48,
+      "community": 49,
       "file_type": "code",
       "id": "scripts_normalize_graphify_context_normalize",
       "label": "normalize()",
@@ -17064,7 +18075,7 @@
       "source_location": "L15"
     },
     {
-      "community": 30,
+      "community": 31,
       "file_type": "document",
       "id": "claude_md",
       "label": "CLAUDE.md",
@@ -17073,7 +18084,7 @@
       "source_location": "L1"
     },
     {
-      "community": 30,
+      "community": 31,
       "file_type": "document",
       "id": "company_claude_claude_md",
       "label": "CLAUDE.md",
@@ -17082,7 +18093,7 @@
       "source_location": "L1"
     },
     {
-      "community": 30,
+      "community": 31,
       "file_type": "document",
       "id": "company_claude_graphify_read_this_first_then_docs_folder_phases_md",
       "label": "graphify - READ THIS FIRST then docs folder PHASES.md",
@@ -17091,7 +18102,7 @@
       "source_location": "L3"
     },
     {
-      "community": 30,
+      "community": 31,
       "file_type": "document",
       "id": "company_claude_what_you_must_do_at_the_start_of_every_session",
       "label": "What you MUST do at the start of every session",
@@ -17100,7 +18111,7 @@
       "source_location": "L7"
     },
     {
-      "community": 30,
+      "community": 31,
       "file_type": "document",
       "id": "company_claude_always_read_graph_nodes_before_editing",
       "label": "Always read graph nodes before editing",
@@ -17109,7 +18120,7 @@
       "source_location": "L16"
     },
     {
-      "community": 30,
+      "community": 31,
       "file_type": "document",
       "id": "company_claude_what_you_must_not_do",
       "label": "What you MUST NOT do",
@@ -17118,7 +18129,7 @@
       "source_location": "L21"
     },
     {
-      "community": 30,
+      "community": 31,
       "file_type": "document",
       "id": "company_claude_keeping_the_graph_fresh",
       "label": "Keeping the graph fresh",
@@ -17127,7 +18138,7 @@
       "source_location": "L27"
     },
     {
-      "community": 49,
+      "community": 50,
       "file_type": "document",
       "id": "readme_md",
       "label": "README.md",
@@ -17136,7 +18147,7 @@
       "source_location": "L1"
     },
     {
-      "community": 49,
+      "community": 50,
       "file_type": "document",
       "id": "company_readme_soft_cuddle",
       "label": "soft-cuddle",
@@ -17145,7 +18156,7 @@
       "source_location": "L1"
     },
     {
-      "community": 35,
+      "community": 36,
       "file_type": "document",
       "id": "apps_web_readme_md",
       "label": "README.md",
@@ -17154,7 +18165,7 @@
       "source_location": "L1"
     },
     {
-      "community": 35,
+      "community": 36,
       "file_type": "document",
       "id": "web_readme_getting_started",
       "label": "Getting Started",
@@ -17163,7 +18174,7 @@
       "source_location": "L3"
     },
     {
-      "community": 35,
+      "community": 36,
       "file_type": "document",
       "id": "web_readme_codeblock_1",
       "label": "code:bash (npm run dev)",
@@ -17172,7 +18183,7 @@
       "source_location": "L7"
     },
     {
-      "community": 35,
+      "community": 36,
       "file_type": "document",
       "id": "web_readme_learn_more",
       "label": "Learn More",
@@ -17181,7 +18192,7 @@
       "source_location": "L23"
     },
     {
-      "community": 35,
+      "community": 36,
       "file_type": "document",
       "id": "web_readme_deploy_on_vercel",
       "label": "Deploy on Vercel",
@@ -17478,7 +18489,7 @@
       "source_location": "L395"
     },
     {
-      "community": 15,
+      "community": 17,
       "file_type": "document",
       "id": "docs_architecture_md",
       "label": "ARCHITECTURE.md",
@@ -17487,7 +18498,7 @@
       "source_location": "L1"
     },
     {
-      "community": 15,
+      "community": 17,
       "file_type": "document",
       "id": "docs_architecture_architecture",
       "label": "Architecture",
@@ -17496,7 +18507,7 @@
       "source_location": "L1"
     },
     {
-      "community": 15,
+      "community": 17,
       "file_type": "document",
       "id": "docs_architecture_1_shape_of_the_system",
       "label": "1. Shape of the system",
@@ -17505,7 +18516,7 @@
       "source_location": "L3"
     },
     {
-      "community": 15,
+      "community": 17,
       "file_type": "document",
       "id": "docs_architecture_codeblock_1",
       "label": "code:block1 (┌─────────────────────────┐)",
@@ -17514,7 +18525,7 @@
       "source_location": "L8"
     },
     {
-      "community": 15,
+      "community": 17,
       "file_type": "document",
       "id": "docs_architecture_2_the_central_payment_principle",
       "label": "2. The central payment principle",
@@ -17523,7 +18534,7 @@
       "source_location": "L39"
     },
     {
-      "community": 15,
+      "community": 17,
       "file_type": "document",
       "id": "docs_architecture_codeblock_2",
       "label": "code:block2 (✗  HostelHub ──────▶ eSewa)",
@@ -17532,7 +18543,7 @@
       "source_location": "L44"
     },
     {
-      "community": 15,
+      "community": 17,
       "file_type": "document",
       "id": "docs_architecture_3_payment_flow_end_to_end",
       "label": "3. Payment flow, end to end",
@@ -17541,7 +18552,7 @@
       "source_location": "L58"
     },
     {
-      "community": 15,
+      "community": 17,
       "file_type": "document",
       "id": "docs_architecture_codeblock_3",
       "label": "code:block3 (Customer clicks \"Pay\" in HostelHub)",
@@ -17550,7 +18561,7 @@
       "source_location": "L60"
     },
     {
-      "community": 15,
+      "community": 17,
       "file_type": "document",
       "id": "docs_architecture_4_package_boundaries",
       "label": "4. Package boundaries",
@@ -17559,7 +18570,7 @@
       "source_location": "L116"
     },
     {
-      "community": 15,
+      "community": 17,
       "file_type": "document",
       "id": "docs_architecture_codeblock_4",
       "label": "code:block4 (packages/)",
@@ -17568,7 +18579,7 @@
       "source_location": "L118"
     },
     {
-      "community": 15,
+      "community": 17,
       "file_type": "document",
       "id": "docs_architecture_the_critical_boundary",
       "label": "The critical boundary",
@@ -17577,7 +18588,7 @@
       "source_location": "L128"
     },
     {
-      "community": 15,
+      "community": 17,
       "file_type": "document",
       "id": "docs_architecture_dependency_direction",
       "label": "Dependency direction",
@@ -17586,7 +18597,7 @@
       "source_location": "L141"
     },
     {
-      "community": 15,
+      "community": 17,
       "file_type": "document",
       "id": "docs_architecture_codeblock_5",
       "label": "code:block5 (apps/web  ──▶  sdk, ui, payment-core, accounting, db)",
@@ -17595,7 +18606,7 @@
       "source_location": "L143"
     },
     {
-      "community": 15,
+      "community": 17,
       "file_type": "document",
       "id": "docs_architecture_5_data_flow_into_the_ledger",
       "label": "5. Data flow into the ledger",
@@ -17604,7 +18615,7 @@
       "source_location": "L155"
     },
     {
-      "community": 15,
+      "community": 17,
       "file_type": "document",
       "id": "docs_architecture_codeblock_6",
       "label": "code:block6 (Verified provider result)",
@@ -17613,7 +18624,7 @@
       "source_location": "L159"
     },
     {
-      "community": 15,
+      "community": 17,
       "file_type": "document",
       "id": "docs_architecture_6_background_work",
       "label": "6. Background work",
@@ -17622,7 +18633,7 @@
       "source_location": "L182"
     },
     {
-      "community": 15,
+      "community": 17,
       "file_type": "document",
       "id": "docs_architecture_7_trust_boundaries",
       "label": "7. Trust boundaries",
@@ -17631,7 +18642,7 @@
       "source_location": "L207"
     },
     {
-      "community": 15,
+      "community": 17,
       "file_type": "document",
       "id": "docs_architecture_8_why_this_shape",
       "label": "8. Why this shape",
@@ -17640,7 +18651,7 @@
       "source_location": "L225"
     },
     {
-      "community": 9,
+      "community": 10,
       "file_type": "document",
       "id": "docs_changelog_md",
       "label": "CHANGELOG.md",
@@ -17649,7 +18660,7 @@
       "source_location": "L1"
     },
     {
-      "community": 9,
+      "community": 10,
       "file_type": "document",
       "id": "docs_changelog_changelog",
       "label": "Changelog",
@@ -17658,7 +18669,7 @@
       "source_location": "L1"
     },
     {
-      "community": 9,
+      "community": 10,
       "file_type": "document",
       "id": "docs_changelog_unreleased",
       "label": "[Unreleased]",
@@ -17667,7 +18678,7 @@
       "source_location": "L13"
     },
     {
-      "community": 9,
+      "community": 10,
       "file_type": "document",
       "id": "docs_changelog_added",
       "label": "Added",
@@ -17676,94 +18687,94 @@
       "source_location": "L15"
     },
     {
-      "community": 9,
+      "community": 10,
       "file_type": "document",
       "id": "docs_changelog_fixed",
       "label": "Fixed",
       "norm_label": "fixed",
       "source_file": "docs/CHANGELOG.md",
-      "source_location": "L35"
+      "source_location": "L38"
     },
     {
-      "community": 9,
+      "community": 10,
       "file_type": "document",
       "id": "docs_changelog_security",
       "label": "Security",
       "norm_label": "security",
       "source_file": "docs/CHANGELOG.md",
-      "source_location": "L41"
+      "source_location": "L44"
     },
     {
-      "community": 9,
+      "community": 10,
       "file_type": "document",
       "id": "docs_changelog_migration",
       "label": "Migration",
       "norm_label": "migration",
       "source_file": "docs/CHANGELOG.md",
-      "source_location": "L57"
+      "source_location": "L65"
     },
     {
-      "community": 9,
+      "community": 10,
       "file_type": "document",
       "id": "docs_changelog_phase_1_2026_08_14",
       "label": "[Phase 1] — 2026-08-14",
       "norm_label": "[phase 1] — 2026-08-14",
       "source_file": "docs/CHANGELOG.md",
-      "source_location": "L65"
+      "source_location": "L73"
     },
     {
-      "community": 9,
+      "community": 10,
       "file_type": "document",
-      "id": "docs_changelog_added_69",
+      "id": "docs_changelog_added_77",
       "label": "Added",
       "norm_label": "added",
       "source_file": "docs/CHANGELOG.md",
-      "source_location": "L69"
+      "source_location": "L77"
     },
     {
-      "community": 9,
+      "community": 10,
       "file_type": "document",
-      "id": "docs_changelog_security_88",
+      "id": "docs_changelog_security_96",
       "label": "Security",
       "norm_label": "security",
       "source_file": "docs/CHANGELOG.md",
-      "source_location": "L88"
+      "source_location": "L96"
     },
     {
-      "community": 9,
+      "community": 10,
       "file_type": "document",
-      "id": "docs_changelog_migration_109",
+      "id": "docs_changelog_migration_117",
       "label": "Migration",
       "norm_label": "migration",
       "source_file": "docs/CHANGELOG.md",
-      "source_location": "L109"
+      "source_location": "L117"
     },
     {
-      "community": 9,
+      "community": 10,
       "file_type": "document",
       "id": "docs_changelog_notes",
       "label": "Notes",
       "norm_label": "notes",
       "source_file": "docs/CHANGELOG.md",
-      "source_location": "L119"
+      "source_location": "L127"
     },
     {
-      "community": 9,
+      "community": 10,
       "file_type": "document",
       "id": "docs_changelog_entry_template",
       "label": "Entry template",
       "norm_label": "entry template",
       "source_file": "docs/CHANGELOG.md",
-      "source_location": "L130"
+      "source_location": "L138"
     },
     {
-      "community": 9,
+      "community": 10,
       "file_type": "document",
       "id": "docs_changelog_codeblock_1",
       "label": "code:markdown (## [Phase N] — YYYY-MM-DD)",
       "norm_label": "code:markdown (## [phase n] — yyyy-mm-dd)",
       "source_file": "docs/CHANGELOG.md",
-      "source_location": "L132"
+      "source_location": "L140"
     },
     {
       "community": 3,
@@ -18945,7 +19956,7 @@
       "source_location": "L340"
     },
     {
-      "community": 16,
+      "community": 18,
       "file_type": "document",
       "id": "docs_environment_md",
       "label": "ENVIRONMENT.md",
@@ -18954,7 +19965,7 @@
       "source_location": "L1"
     },
     {
-      "community": 16,
+      "community": 18,
       "file_type": "document",
       "id": "docs_environment_environment",
       "label": "Environment",
@@ -18963,7 +19974,7 @@
       "source_location": "L1"
     },
     {
-      "community": 16,
+      "community": 18,
       "file_type": "document",
       "id": "docs_environment_1_local_setup",
       "label": "1. Local setup",
@@ -18972,7 +19983,7 @@
       "source_location": "L5"
     },
     {
-      "community": 16,
+      "community": 18,
       "file_type": "document",
       "id": "docs_environment_codeblock_1",
       "label": "code:bash (pnpm install)",
@@ -18981,7 +19992,7 @@
       "source_location": "L7"
     },
     {
-      "community": 16,
+      "community": 18,
       "file_type": "document",
       "id": "docs_environment_codeblock_2",
       "label": "code:block2 (http://localhost:3000            public site   → softmato.co)",
@@ -18990,7 +20001,7 @@
       "source_location": "L19"
     },
     {
-      "community": 16,
+      "community": 18,
       "file_type": "document",
       "id": "docs_environment_codeblock_3",
       "label": "code:bash (curl -H 'Host: admin.localhost' http://127.0.0.1:3000/)",
@@ -18999,7 +20010,7 @@
       "source_location": "L33"
     },
     {
-      "community": 16,
+      "community": 18,
       "file_type": "document",
       "id": "docs_environment_codeblock_4",
       "label": "code:yaml (# docker-compose.yml)",
@@ -19008,7 +20019,7 @@
       "source_location": "L37"
     },
     {
-      "community": 16,
+      "community": 18,
       "file_type": "document",
       "id": "docs_environment_2_variables",
       "label": "2. Variables",
@@ -19017,7 +20028,7 @@
       "source_location": "L61"
     },
     {
-      "community": 16,
+      "community": 18,
       "file_type": "document",
       "id": "docs_environment_codeblock_5",
       "label": "code:bash (# ── Company ───────────────────────────────────────────────)",
@@ -19026,7 +20037,7 @@
       "source_location": "L63"
     },
     {
-      "community": 16,
+      "community": 18,
       "file_type": "document",
       "id": "docs_environment_3_file_storage",
       "label": "3. File storage",
@@ -19035,7 +20046,7 @@
       "source_location": "L132"
     },
     {
-      "community": 16,
+      "community": 18,
       "file_type": "document",
       "id": "docs_environment_codeblock_6",
       "label": "code:block6 (Admin views a payment proof)",
@@ -19044,7 +20055,7 @@
       "source_location": "L144"
     },
     {
-      "community": 16,
+      "community": 18,
       "file_type": "document",
       "id": "docs_environment_codeblock_7",
       "label": "code:block7 (proofs/{fiscal_year}/{transaction_id}/{uuid}.{ext})",
@@ -19053,7 +20064,7 @@
       "source_location": "L154"
     },
     {
-      "community": 16,
+      "community": 18,
       "file_type": "document",
       "id": "docs_environment_4_environments",
       "label": "4. Environments",
@@ -19062,7 +20073,7 @@
       "source_location": "L168"
     },
     {
-      "community": 16,
+      "community": 18,
       "file_type": "document",
       "id": "docs_environment_5_deployment",
       "label": "5. Deployment",
@@ -19071,7 +20082,7 @@
       "source_location": "L185"
     },
     {
-      "community": 16,
+      "community": 18,
       "file_type": "document",
       "id": "docs_environment_codeblock_8",
       "label": "code:json (// vercel.json)",
@@ -19080,7 +20091,7 @@
       "source_location": "L187"
     },
     {
-      "community": 16,
+      "community": 18,
       "file_type": "document",
       "id": "docs_environment_6_cron",
       "label": "6. Cron",
@@ -19089,7 +20100,7 @@
       "source_location": "L208"
     },
     {
-      "community": 16,
+      "community": 18,
       "file_type": "document",
       "id": "docs_environment_7_cost",
       "label": "7. Cost",
@@ -19098,7 +20109,7 @@
       "source_location": "L227"
     },
     {
-      "community": 16,
+      "community": 18,
       "file_type": "document",
       "id": "docs_environment_8_secrets",
       "label": "8. Secrets",
@@ -19107,7 +20118,7 @@
       "source_location": "L247"
     },
     {
-      "community": 19,
+      "community": 21,
       "file_type": "document",
       "id": "docs_folder_structure_md",
       "label": "FOLDER_STRUCTURE.md",
@@ -19116,7 +20127,7 @@
       "source_location": "L1"
     },
     {
-      "community": 19,
+      "community": 21,
       "file_type": "document",
       "id": "docs_folder_structure_folder_structure",
       "label": "Folder Structure",
@@ -19125,7 +20136,7 @@
       "source_location": "L1"
     },
     {
-      "community": 19,
+      "community": 21,
       "file_type": "document",
       "id": "docs_folder_structure_root",
       "label": "Root",
@@ -19134,7 +20145,7 @@
       "source_location": "L3"
     },
     {
-      "community": 19,
+      "community": 21,
       "file_type": "document",
       "id": "docs_folder_structure_codeblock_1",
       "label": "code:block1 (softmato/)",
@@ -19143,7 +20154,7 @@
       "source_location": "L5"
     },
     {
-      "community": 19,
+      "community": 21,
       "file_type": "document",
       "id": "docs_folder_structure_apps_web",
       "label": "`apps/web`",
@@ -19152,7 +20163,7 @@
       "source_location": "L25"
     },
     {
-      "community": 19,
+      "community": 21,
       "file_type": "document",
       "id": "docs_folder_structure_codeblock_2",
       "label": "code:block2 (apps/web/)",
@@ -19161,7 +20172,7 @@
       "source_location": "L29"
     },
     {
-      "community": 19,
+      "community": 21,
       "file_type": "document",
       "id": "docs_folder_structure_packages_db",
       "label": "`packages/db`",
@@ -19170,7 +20181,7 @@
       "source_location": "L125"
     },
     {
-      "community": 19,
+      "community": 21,
       "file_type": "document",
       "id": "docs_folder_structure_codeblock_3",
       "label": "code:block3 (db/)",
@@ -19179,7 +20190,7 @@
       "source_location": "L127"
     },
     {
-      "community": 19,
+      "community": 21,
       "file_type": "document",
       "id": "docs_folder_structure_packages_payment_core",
       "label": "`packages/payment-core`",
@@ -19188,7 +20199,7 @@
       "source_location": "L159"
     },
     {
-      "community": 19,
+      "community": 21,
       "file_type": "document",
       "id": "docs_folder_structure_codeblock_4",
       "label": "code:block4 (payment-core/)",
@@ -19197,7 +20208,7 @@
       "source_location": "L163"
     },
     {
-      "community": 19,
+      "community": 21,
       "file_type": "document",
       "id": "docs_folder_structure_packages_accounting",
       "label": "`packages/accounting`",
@@ -19206,7 +20217,7 @@
       "source_location": "L195"
     },
     {
-      "community": 19,
+      "community": 21,
       "file_type": "document",
       "id": "docs_folder_structure_codeblock_5",
       "label": "code:block5 (accounting/)",
@@ -19215,7 +20226,7 @@
       "source_location": "L199"
     },
     {
-      "community": 19,
+      "community": 21,
       "file_type": "document",
       "id": "docs_folder_structure_packages_sdk",
       "label": "`packages/sdk`",
@@ -19224,7 +20235,7 @@
       "source_location": "L229"
     },
     {
-      "community": 19,
+      "community": 21,
       "file_type": "document",
       "id": "docs_folder_structure_codeblock_6",
       "label": "code:block6 (sdk/)",
@@ -19233,7 +20244,7 @@
       "source_location": "L233"
     },
     {
-      "community": 19,
+      "community": 21,
       "file_type": "document",
       "id": "docs_folder_structure_packages_ui",
       "label": "`packages/ui`",
@@ -19242,7 +20253,7 @@
       "source_location": "L243"
     },
     {
-      "community": 19,
+      "community": 21,
       "file_type": "document",
       "id": "docs_folder_structure_codeblock_7",
       "label": "code:block7 (ui/)",
@@ -19251,7 +20262,7 @@
       "source_location": "L248"
     },
     {
-      "community": 19,
+      "community": 21,
       "file_type": "document",
       "id": "docs_folder_structure_naming",
       "label": "Naming",
@@ -19260,7 +20271,7 @@
       "source_location": "L260"
     },
     {
-      "community": 17,
+      "community": 19,
       "file_type": "document",
       "id": "docs_memory_md",
       "label": "MEMORY.md",
@@ -19269,7 +20280,7 @@
       "source_location": "L1"
     },
     {
-      "community": 17,
+      "community": 19,
       "file_type": "document",
       "id": "docs_memory_memory",
       "label": "Memory",
@@ -19278,7 +20289,7 @@
       "source_location": "L1"
     },
     {
-      "community": 17,
+      "community": 19,
       "file_type": "document",
       "id": "docs_memory_current_status",
       "label": "Current status",
@@ -19287,139 +20298,139 @@
       "source_location": "L11"
     },
     {
-      "community": 17,
+      "community": 19,
       "file_type": "document",
       "id": "docs_memory_where_the_code_is",
       "label": "Where the code is",
       "norm_label": "where the code is",
       "source_file": "docs/MEMORY.md",
-      "source_location": "L42"
+      "source_location": "L55"
     },
     {
-      "community": 17,
+      "community": 19,
       "file_type": "document",
       "id": "docs_memory_codeblock_1",
       "label": "code:bash (pnpm install && pnpm dev      # localhost:3000, admin.localh)",
       "norm_label": "code:bash (pnpm install && pnpm dev      # localhost:3000, admin.localh)",
       "source_file": "docs/MEMORY.md",
-      "source_location": "L64"
+      "source_location": "L79"
     },
     {
-      "community": 17,
+      "community": 19,
       "file_type": "document",
       "id": "docs_memory_phase_progress",
       "label": "Phase progress",
       "norm_label": "phase progress",
       "source_file": "docs/MEMORY.md",
-      "source_location": "L81"
+      "source_location": "L96"
     },
     {
-      "community": 17,
+      "community": 19,
       "file_type": "document",
       "id": "docs_memory_blocked_on_the_founder",
       "label": "Blocked on the founder",
       "norm_label": "blocked on the founder",
       "source_file": "docs/MEMORY.md",
-      "source_location": "L99"
+      "source_location": "L114"
     },
     {
-      "community": 17,
+      "community": 19,
       "file_type": "document",
       "id": "docs_memory_blocked_on_external_parties",
       "label": "Blocked on external parties",
       "norm_label": "blocked on external parties",
       "source_file": "docs/MEMORY.md",
-      "source_location": "L117"
+      "source_location": "L132"
     },
     {
-      "community": 17,
+      "community": 19,
       "file_type": "document",
       "id": "docs_memory_decisions_made",
       "label": "Decisions made",
       "norm_label": "decisions made",
       "source_file": "docs/MEMORY.md",
-      "source_location": "L128"
+      "source_location": "L143"
     },
     {
-      "community": 17,
+      "community": 19,
       "file_type": "document",
       "id": "docs_memory_things_learned_the_hard_way",
       "label": "Things learned the hard way",
       "norm_label": "things learned the hard way",
       "source_file": "docs/MEMORY.md",
-      "source_location": "L150"
+      "source_location": "L165"
     },
     {
-      "community": 17,
+      "community": 19,
       "file_type": "document",
       "id": "docs_memory_deviations_from_the_docs",
       "label": "Deviations from the docs",
       "norm_label": "deviations from the docs",
       "source_file": "docs/MEMORY.md",
-      "source_location": "L223"
+      "source_location": "L238"
     },
     {
-      "community": 17,
+      "community": 19,
       "file_type": "document",
       "id": "docs_memory_session_log",
       "label": "Session log",
       "norm_label": "session log",
       "source_file": "docs/MEMORY.md",
-      "source_location": "L261"
+      "source_location": "L276"
     },
     {
-      "community": 17,
+      "community": 19,
       "file_type": "document",
       "id": "docs_memory_session_3_2026_08_14",
       "label": "Session 3 — 2026-08-14",
       "norm_label": "session 3 — 2026-08-14",
       "source_file": "docs/MEMORY.md",
-      "source_location": "L265"
+      "source_location": "L280"
     },
     {
-      "community": 17,
+      "community": 19,
       "file_type": "document",
       "id": "docs_memory_session_2_2026_08_12",
       "label": "Session 2 — 2026-08-12",
       "norm_label": "session 2 — 2026-08-12",
       "source_file": "docs/MEMORY.md",
-      "source_location": "L304"
+      "source_location": "L319"
     },
     {
-      "community": 17,
+      "community": 19,
       "file_type": "document",
       "id": "docs_memory_session_1_2026_08_12",
       "label": "Session 1 — 2026-08-12",
       "norm_label": "session 1 — 2026-08-12",
       "source_file": "docs/MEMORY.md",
-      "source_location": "L331"
+      "source_location": "L346"
     },
     {
-      "community": 17,
+      "community": 19,
       "file_type": "document",
       "id": "docs_memory_session_0_2026_08_12_planning",
       "label": "Session 0 — 2026-08-12 (planning)",
       "norm_label": "session 0 — 2026-08-12 (planning)",
       "source_file": "docs/MEMORY.md",
-      "source_location": "L360"
+      "source_location": "L375"
     },
     {
-      "community": 17,
+      "community": 19,
       "file_type": "document",
       "id": "docs_memory_template_for_a_new_entry",
       "label": "Template for a new entry",
       "norm_label": "template for a new entry",
       "source_file": "docs/MEMORY.md",
-      "source_location": "L371"
+      "source_location": "L386"
     },
     {
-      "community": 17,
+      "community": 19,
       "file_type": "document",
       "id": "docs_memory_codeblock_2",
       "label": "code:markdown (### Session N — YYYY-MM-DD)",
       "norm_label": "code:markdown (### session n — yyyy-mm-dd)",
       "source_file": "docs/MEMORY.md",
-      "source_location": "L373"
+      "source_location": "L388"
     },
     {
       "community": 26,
@@ -19530,7 +20541,7 @@
       "source_location": "L239"
     },
     {
-      "community": 11,
+      "community": 14,
       "file_type": "document",
       "id": "docs_prd_md",
       "label": "PRD.md",
@@ -19539,7 +20550,7 @@
       "source_location": "L1"
     },
     {
-      "community": 11,
+      "community": 14,
       "file_type": "document",
       "id": "docs_prd_prd_softmato_platform",
       "label": "PRD — Softmato Platform",
@@ -19548,7 +20559,7 @@
       "source_location": "L1"
     },
     {
-      "community": 11,
+      "community": 14,
       "file_type": "document",
       "id": "docs_prd_1_the_company",
       "label": "1. The company",
@@ -19557,7 +20568,7 @@
       "source_location": "L3"
     },
     {
-      "community": 11,
+      "community": 14,
       "file_type": "document",
       "id": "docs_prd_2_the_problem",
       "label": "2. The problem",
@@ -19566,7 +20577,7 @@
       "source_location": "L29"
     },
     {
-      "community": 11,
+      "community": 14,
       "file_type": "document",
       "id": "docs_prd_3_what_we_re_building",
       "label": "3. What we're building",
@@ -19575,7 +20586,7 @@
       "source_location": "L45"
     },
     {
-      "community": 11,
+      "community": 14,
       "file_type": "document",
       "id": "docs_prd_4_users",
       "label": "4. Users",
@@ -19584,7 +20595,7 @@
       "source_location": "L65"
     },
     {
-      "community": 11,
+      "community": 14,
       "file_type": "document",
       "id": "docs_prd_founders_2_3_people_the_only_admin_users_in_v1",
       "label": "Founders (2–3 people, the only admin users in v1)",
@@ -19593,7 +20604,7 @@
       "source_location": "L67"
     },
     {
-      "community": 11,
+      "community": 14,
       "file_type": "document",
       "id": "docs_prd_saas_product_developers_currently_the_founders",
       "label": "SaaS product developers (currently the founders)",
@@ -19602,7 +20613,7 @@
       "source_location": "L74"
     },
     {
-      "community": 11,
+      "community": 14,
       "file_type": "document",
       "id": "docs_prd_paying_customers_hostel_owners_businesses",
       "label": "Paying customers (hostel owners, businesses)",
@@ -19611,7 +20622,7 @@
       "source_location": "L80"
     },
     {
-      "community": 11,
+      "community": 14,
       "file_type": "document",
       "id": "docs_prd_agency_clients",
       "label": "Agency clients",
@@ -19620,7 +20631,7 @@
       "source_location": "L86"
     },
     {
-      "community": 11,
+      "community": 14,
       "file_type": "document",
       "id": "docs_prd_public_visitors",
       "label": "Public visitors",
@@ -19629,7 +20640,7 @@
       "source_location": "L91"
     },
     {
-      "community": 11,
+      "community": 14,
       "file_type": "document",
       "id": "docs_prd_5_features",
       "label": "5. Features",
@@ -19638,7 +20649,7 @@
       "source_location": "L98"
     },
     {
-      "community": 11,
+      "community": 14,
       "file_type": "document",
       "id": "docs_prd_5_1_public_site",
       "label": "5.1 Public site",
@@ -19647,7 +20658,7 @@
       "source_location": "L100"
     },
     {
-      "community": 11,
+      "community": 14,
       "file_type": "document",
       "id": "docs_prd_5_2_payment_platform",
       "label": "5.2 Payment platform",
@@ -19656,7 +20667,7 @@
       "source_location": "L111"
     },
     {
-      "community": 11,
+      "community": 14,
       "file_type": "document",
       "id": "docs_prd_5_3_accounting",
       "label": "5.3 Accounting",
@@ -19665,7 +20676,7 @@
       "source_location": "L126"
     },
     {
-      "community": 11,
+      "community": 14,
       "file_type": "document",
       "id": "docs_prd_5_4_subscriptions",
       "label": "5.4 Subscriptions",
@@ -19674,7 +20685,7 @@
       "source_location": "L134"
     },
     {
-      "community": 11,
+      "community": 14,
       "file_type": "document",
       "id": "docs_prd_5_5_client_portal",
       "label": "5.5 Client portal",
@@ -19683,7 +20694,7 @@
       "source_location": "L140"
     },
     {
-      "community": 11,
+      "community": 14,
       "file_type": "document",
       "id": "docs_prd_6_success_criteria",
       "label": "6. Success criteria",
@@ -19692,7 +20703,7 @@
       "source_location": "L147"
     },
     {
-      "community": 11,
+      "community": 14,
       "file_type": "document",
       "id": "docs_prd_7_explicitly_out_of_scope_for_v1",
       "label": "7. Explicitly out of scope for v1",
@@ -19701,7 +20712,7 @@
       "source_location": "L162"
     },
     {
-      "community": 11,
+      "community": 14,
       "file_type": "document",
       "id": "docs_prd_8_constraints",
       "label": "8. Constraints",
@@ -19710,7 +20721,7 @@
       "source_location": "L175"
     },
     {
-      "community": 36,
+      "community": 37,
       "file_type": "document",
       "id": "docs_readme_md",
       "label": "README.md",
@@ -19719,7 +20730,7 @@
       "source_location": "L1"
     },
     {
-      "community": 36,
+      "community": 37,
       "file_type": "document",
       "id": "docs_readme_softmato_platform_documentation",
       "label": "Softmato Platform — Documentation",
@@ -19728,7 +20739,7 @@
       "source_location": "L1"
     },
     {
-      "community": 36,
+      "community": 37,
       "file_type": "document",
       "id": "docs_readme_the_one_paragraph_version",
       "label": "The one-paragraph version",
@@ -19737,7 +20748,7 @@
       "source_location": "L28"
     },
     {
-      "community": 36,
+      "community": 37,
       "file_type": "document",
       "id": "docs_readme_before_you_start_a_session",
       "label": "Before you start a session",
@@ -19746,7 +20757,7 @@
       "source_location": "L42"
     },
     {
-      "community": 36,
+      "community": 37,
       "file_type": "document",
       "id": "docs_readme_before_you_end_a_session",
       "label": "Before you end a session",
@@ -19755,7 +20766,7 @@
       "source_location": "L48"
     },
     {
-      "community": 23,
+      "community": 25,
       "file_type": "document",
       "id": "docs_rules_md",
       "label": "RULES.md",
@@ -19764,7 +20775,7 @@
       "source_location": "L1"
     },
     {
-      "community": 23,
+      "community": 25,
       "file_type": "document",
       "id": "docs_rules_rules",
       "label": "Rules",
@@ -19773,7 +20784,7 @@
       "source_location": "L1"
     },
     {
-      "community": 23,
+      "community": 25,
       "file_type": "document",
       "id": "docs_rules_1_when_to_stop_and_ask",
       "label": "1. When to stop and ask",
@@ -19782,7 +20793,7 @@
       "source_location": "L7"
     },
     {
-      "community": 23,
+      "community": 25,
       "file_type": "document",
       "id": "docs_rules_2_money_absolute_rules",
       "label": "2. Money — absolute rules",
@@ -19791,7 +20802,7 @@
       "source_location": "L27"
     },
     {
-      "community": 23,
+      "community": 25,
       "file_type": "document",
       "id": "docs_rules_3_never_weaken_a_constraint",
       "label": "3. Never weaken a constraint",
@@ -19800,7 +20811,7 @@
       "source_location": "L52"
     },
     {
-      "community": 23,
+      "community": 25,
       "file_type": "document",
       "id": "docs_rules_4_libraries",
       "label": "4. Libraries",
@@ -19809,7 +20820,7 @@
       "source_location": "L75"
     },
     {
-      "community": 23,
+      "community": 25,
       "file_type": "document",
       "id": "docs_rules_use",
       "label": "Use",
@@ -19818,7 +20829,7 @@
       "source_location": "L77"
     },
     {
-      "community": 23,
+      "community": 25,
       "file_type": "document",
       "id": "docs_rules_do_not_use",
       "label": "Do not use",
@@ -19827,7 +20838,7 @@
       "source_location": "L99"
     },
     {
-      "community": 23,
+      "community": 25,
       "file_type": "document",
       "id": "docs_rules_5_error_handling",
       "label": "5. Error handling",
@@ -19836,7 +20847,7 @@
       "source_location": "L118"
     },
     {
-      "community": 23,
+      "community": 25,
       "file_type": "document",
       "id": "docs_rules_codeblock_1",
       "label": "code:ts (// Wrong)",
@@ -19845,7 +20856,7 @@
       "source_location": "L123"
     },
     {
-      "community": 23,
+      "community": 25,
       "file_type": "document",
       "id": "docs_rules_codeblock_2",
       "label": "code:ts (class PaymentError extends Error {)",
@@ -19854,7 +20865,7 @@
       "source_location": "L142"
     },
     {
-      "community": 23,
+      "community": 25,
       "file_type": "document",
       "id": "docs_rules_6_security",
       "label": "6. Security",
@@ -19863,7 +20874,7 @@
       "source_location": "L168"
     },
     {
-      "community": 23,
+      "community": 25,
       "file_type": "document",
       "id": "docs_rules_7_wrong_even_if_it_works",
       "label": "7. Wrong even if it works",
@@ -19872,7 +20883,7 @@
       "source_location": "L185"
     },
     {
-      "community": 23,
+      "community": 25,
       "file_type": "document",
       "id": "docs_rules_8_working_method",
       "label": "8. Working method",
@@ -19881,7 +20892,7 @@
       "source_location": "L206"
     },
     {
-      "community": 10,
+      "community": 12,
       "file_type": "document",
       "id": "docs_testing_md",
       "label": "TESTING.md",
@@ -19890,7 +20901,7 @@
       "source_location": "L1"
     },
     {
-      "community": 10,
+      "community": 12,
       "file_type": "document",
       "id": "docs_testing_testing",
       "label": "Testing",
@@ -19899,7 +20910,7 @@
       "source_location": "L1"
     },
     {
-      "community": 10,
+      "community": 12,
       "file_type": "document",
       "id": "docs_testing_1_stack",
       "label": "1. Stack",
@@ -19908,7 +20919,7 @@
       "source_location": "L8"
     },
     {
-      "community": 10,
+      "community": 12,
       "file_type": "document",
       "id": "docs_testing_2_ledger_must_pass_before_any_provider_goes_live",
       "label": "2. Ledger — must pass before any provider goes live",
@@ -19917,7 +20928,7 @@
       "source_location": "L26"
     },
     {
-      "community": 10,
+      "community": 12,
       "file_type": "document",
       "id": "docs_testing_codeblock_1",
       "label": "code:ts (test('database rejects an unbalanced journal', async () => {)",
@@ -19926,7 +20937,7 @@
       "source_location": "L28"
     },
     {
-      "community": 10,
+      "community": 12,
       "file_type": "document",
       "id": "docs_testing_3_idempotency",
       "label": "3. Idempotency",
@@ -19935,7 +20946,7 @@
       "source_location": "L65"
     },
     {
-      "community": 10,
+      "community": 12,
       "file_type": "document",
       "id": "docs_testing_codeblock_2",
       "label": "code:ts (test('five identical callbacks produce one journal entry', a)",
@@ -19944,7 +20955,7 @@
       "source_location": "L69"
     },
     {
-      "community": 10,
+      "community": 12,
       "file_type": "document",
       "id": "docs_testing_4_forgery_and_trust",
       "label": "4. Forgery and trust",
@@ -19953,7 +20964,7 @@
       "source_location": "L104"
     },
     {
-      "community": 10,
+      "community": 12,
       "file_type": "document",
       "id": "docs_testing_codeblock_3",
       "label": "code:ts (test('a forged return URL marks nothing paid', async () => {)",
@@ -19962,7 +20973,7 @@
       "source_location": "L106"
     },
     {
-      "community": 10,
+      "community": 12,
       "file_type": "document",
       "id": "docs_testing_5_amount_integrity",
       "label": "5. Amount integrity",
@@ -19971,7 +20982,7 @@
       "source_location": "L136"
     },
     {
-      "community": 10,
+      "community": 12,
       "file_type": "document",
       "id": "docs_testing_codeblock_4",
       "label": "code:ts (test('a provider amount mismatch sets reconciliation_require)",
@@ -19980,7 +20991,7 @@
       "source_location": "L138"
     },
     {
-      "community": 10,
+      "community": 12,
       "file_type": "document",
       "id": "docs_testing_6_authorization",
       "label": "6. Authorization",
@@ -19989,7 +21000,7 @@
       "source_location": "L160"
     },
     {
-      "community": 10,
+      "community": 12,
       "file_type": "document",
       "id": "docs_testing_codeblock_5",
       "label": "code:ts (test('application A cannot read application B transactions',)",
@@ -19998,7 +21009,7 @@
       "source_location": "L162"
     },
     {
-      "community": 10,
+      "community": 12,
       "file_type": "document",
       "id": "docs_testing_7_money_formatting",
       "label": "7. Money formatting",
@@ -20007,7 +21018,7 @@
       "source_location": "L187"
     },
     {
-      "community": 10,
+      "community": 12,
       "file_type": "document",
       "id": "docs_testing_codeblock_6",
       "label": "code:ts (test.each([)",
@@ -20016,7 +21027,7 @@
       "source_location": "L191"
     },
     {
-      "community": 10,
+      "community": 12,
       "file_type": "document",
       "id": "docs_testing_8_accounting",
       "label": "8. Accounting",
@@ -20025,7 +21036,7 @@
       "source_location": "L218"
     },
     {
-      "community": 10,
+      "community": 12,
       "file_type": "document",
       "id": "docs_testing_codeblock_7",
       "label": "code:ts (test('an annual subscription invoice defers revenue, not rec)",
@@ -20034,7 +21045,7 @@
       "source_location": "L220"
     },
     {
-      "community": 10,
+      "community": 12,
       "file_type": "document",
       "id": "docs_testing_9_end_to_end_playwright",
       "label": "9. End to end (Playwright)",
@@ -20043,7 +21054,7 @@
       "source_location": "L252"
     },
     {
-      "community": 10,
+      "community": 12,
       "file_type": "document",
       "id": "docs_testing_codeblock_8",
       "label": "code:block8 (Manual QR    create session → checkout → upload proof → admi)",
@@ -20052,7 +21063,7 @@
       "source_location": "L254"
     },
     {
-      "community": 10,
+      "community": 12,
       "file_type": "document",
       "id": "docs_testing_10_before_accepting_any_phase",
       "label": "10. Before accepting any phase",
@@ -20061,7 +21072,7 @@
       "source_location": "L275"
     },
     {
-      "community": 10,
+      "community": 12,
       "file_type": "document",
       "id": "docs_testing_11_what_not_to_test",
       "label": "11. What not to test",
@@ -20070,7 +21081,34 @@
       "source_location": "L289"
     },
     {
-      "community": 9,
+      "community": 10,
+      "file_type": "document",
+      "id": "docs_changelog_added_69",
+      "label": "Added",
+      "norm_label": "added",
+      "source_file": "docs/CHANGELOG.md",
+      "source_location": "L69"
+    },
+    {
+      "community": 10,
+      "file_type": "document",
+      "id": "docs_changelog_security_88",
+      "label": "Security",
+      "norm_label": "security",
+      "source_file": "docs/CHANGELOG.md",
+      "source_location": "L88"
+    },
+    {
+      "community": 10,
+      "file_type": "document",
+      "id": "docs_changelog_migration_109",
+      "label": "Migration",
+      "norm_label": "migration",
+      "source_file": "docs/CHANGELOG.md",
+      "source_location": "L109"
+    },
+    {
+      "community": 10,
       "file_type": "document",
       "id": "docs_changelog_added_53",
       "label": "Added",
@@ -20079,7 +21117,7 @@
       "source_location": "L53"
     },
     {
-      "community": 9,
+      "community": 10,
       "file_type": "document",
       "id": "docs_changelog_security_72",
       "label": "Security",
@@ -20088,7 +21126,7 @@
       "source_location": "L72"
     },
     {
-      "community": 9,
+      "community": 10,
       "file_type": "document",
       "id": "docs_changelog_migration_93",
       "label": "Migration",
@@ -20097,7 +21135,7 @@
       "source_location": "L93"
     },
     {
-      "community": 9,
+      "community": 10,
       "file_type": "document",
       "id": "docs_changelog_added_33",
       "label": "Added",
@@ -20106,7 +21144,7 @@
       "source_location": "L33"
     },
     {
-      "community": 9,
+      "community": 10,
       "file_type": "document",
       "id": "docs_changelog_migration_73",
       "label": "Migration",
@@ -20151,7 +21189,7 @@
       "source_location": "L211"
     },
     {
-      "community": 9,
+      "community": 10,
       "file_type": "document",
       "id": "docs_changelog_added_31",
       "label": "Added",
@@ -20160,7 +21198,7 @@
       "source_location": "L31"
     },
     {
-      "community": 9,
+      "community": 10,
       "file_type": "document",
       "id": "docs_changelog_migration_69",
       "label": "Migration",

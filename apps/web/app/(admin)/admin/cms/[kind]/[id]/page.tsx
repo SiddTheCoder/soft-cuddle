@@ -2,6 +2,7 @@
 import { notFound } from 'next/navigation';
 
 import { contentKind, getContent, isContentKind } from '@/lib/cms';
+import { r2Configured } from '@/lib/env';
 import { Breadcrumbs } from '@/components/admin/breadcrumbs';
 import { ContentForm } from '@/components/admin/content-form';
 import { PublicationPanel } from '@/components/admin/publication-panel';
@@ -42,7 +43,12 @@ export default async function ContentEditPage({
         <StatusBadge status={row.status} />
       </div>
 
-      <ContentForm kindSlug={kind.slug} fields={kind.fields} row={row} />
+      <ContentForm
+        kindSlug={kind.slug}
+        fields={kind.fields}
+        row={row}
+        uploadEnabled={r2Configured}
+      />
 
       <PublicationPanel
         kindSlug={kind.slug}

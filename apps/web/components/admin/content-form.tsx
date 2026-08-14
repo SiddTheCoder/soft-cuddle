@@ -18,10 +18,13 @@ export function ContentForm({
   kindSlug,
   fields,
   row,
+  uploadEnabled,
 }: {
   kindSlug: string;
   fields: FieldSpec[];
   row: ContentRow;
+  /** Decided on the server: image fields offer an upload only when R2 exists. */
+  uploadEnabled: boolean;
 }) {
   const [state, action] = useActionState(saveContent, undefined);
 
@@ -36,6 +39,7 @@ export function ContentForm({
           spec={spec}
           defaultValue={formatValue(row[spec.name])}
           error={state?.fieldErrors?.[spec.name]}
+          uploadEnabled={uploadEnabled}
         />
       ))}
 

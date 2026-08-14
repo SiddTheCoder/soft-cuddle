@@ -18,17 +18,30 @@ is lost — fill in the rest as you build.
 content, admin editors, the whole public site reading from the CMS, the contact
 form, and SEO (metadata, Open Graph, sitemap, robots).
 
-**Still to build:** R2 public bucket + image upload from the CMS (photo and
-image fields currently take a URL typed by hand), and a Lighthouse run to
-confirm ≥ 95 performance and accessibility. Then real content, which is the
-founder's part.
+**Also done:** CMS image upload to R2 — validation, object keys, the client,
+the action and the field. **It has never run against a real bucket**: no R2
+credentials exist yet, so the path from `putCmsObject` onward is unverified.
+The validation is covered by 15 unit tests, which is the part that matters for
+security.
 
-**Next action:** R2 upload. `@aws-sdk/client-s3` is already the approved
-choice (`RULES.md` §4) and `ENVIRONMENT.md` §3 fixes the key layout as
-`cms/{uuid}-{slug}.{ext}` in the public bucket. Team photos and blog covers
-are `<img>` rather than `next/image` on purpose — the R2 host is not in
-`next.config.ts` `remotePatterns`, and an unconfigured host fails the build
-rather than degrading. Add the host and switch them over together.
+**Still to do in Phase 2:**
+
+1. **R2 credentials**, then verify a real upload end to end. Set all five of
+   `R2_ACCOUNT_ID`, `R2_ACCESS_KEY_ID`, `R2_SECRET_ACCESS_KEY`,
+   `R2_PUBLIC_BUCKET`, `R2_PUBLIC_BASE_URL` — the app refuses to boot on a
+   partial set. Until they exist the image fields are plain URL inputs, which
+   is deliberate.
+2. **Lighthouse ≥ 95** performance and accessibility (acceptance 4). Not yet
+   measured. Acceptance 5 — keyboard navigation, visible focus,
+   `prefers-reduced-motion` — is verified.
+3. **Real content.** Everything in the CMS is placeholder and every row is
+   draft, so the public site 404s today. That is correct, not broken: a draft
+   page is not a page. It comes alive when the founder publishes real copy.
+
+**Note on images:** team photos, blog covers and product screenshots render as
+`<img>`, not `next/image`. The R2 host is not in `next.config.ts`
+`remotePatterns`, and an unconfigured host fails the build rather than
+degrading. Add the host and switch them over together, in one change.
 
 **Uncommitted at hand-off:** nothing.
 
@@ -54,6 +67,8 @@ production.** Replace it before the first real deployment.
 | Public pages                      | `apps/web/app/(public)/`                            |
 | Contact form                      | `apps/web/app/(public)/contact/`, `lib/contact/`    |
 | BS date formatting                | `apps/web/lib/format/date.ts`                       |
+| Upload validation (magic bytes)   | `apps/web/lib/storage/image-validation.ts`          |
+| R2 client (public bucket only)    | `apps/web/lib/storage/r2.ts`                        |
 | The four guarantees               | `packages/db/migrations/0001_ledger_guarantees.sql` |
 | Ledger tests                      | `packages/db/tests/ledger.test.ts`                  |
 | Auth (argon2id + TOTP)            | `apps/web/lib/auth.ts`                              |

@@ -28,7 +28,7 @@ export const blogKind: ContentKind = {
       hint: 'Shown on the blog index and used as the social description.',
     },
     { name: 'body', label: 'Body', kind: 'markdown' },
-    { name: 'coverImageUrl', label: 'Cover image URL', kind: 'text' },
+    { name: 'coverImageUrl', label: 'Cover image', kind: 'image' },
     { name: 'tags', label: 'Tags', kind: 'tags', hint: 'Comma separated.' },
     ...SEO_FIELDS,
   ],
